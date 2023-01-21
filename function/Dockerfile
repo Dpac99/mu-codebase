@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/provided:al2 as build
+FROM public.ecr.aws/lambda/provided:al2-arm64 as build
 # install compiler
 RUN yum install -y golang
 RUN go env -w GOPROXY=direct
