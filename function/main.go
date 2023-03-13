@@ -4,13 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"time"
 
+	// "github.com/shirou/gopsutil/process"
 	// "github.com/aws/aws-lambda-go/events"
 	// "github.com/aws/aws-lambda-go/lambda"
 	"github.com/struCoder/pidusage"
@@ -67,9 +67,22 @@ type PollRequest struct {
 	Memory float64 `json: "memory"`
 }
 
+// func GetSelf() *process.Process {
+// 	pid := int32(os.Getpid())
+// 	procs, err := process.Processes()
+// 	if err != nil {
+// 		os.Exit(1)
+// 	}
+// 	for i := 0; i < len(procs); i++ {
+// 		if procs[i].Pid == pid {
+// 			return procs[i]
+// 		}
+// 	}
+// 	return nil
+// }
+
 func poll() {
-	stop := false
-	for !stop {
+	for {
 		log.Println("Polling...")
 
 		sysInfo, err := pidusage.GetStat(os.Getpid())
@@ -82,7 +95,7 @@ func poll() {
 		pr.Memory = sysInfo.Memory
 		pr.UUID = id
 
-		log.Printf("UUID: %s \nMemory: %f \nCPU:%f\n", id, sysInfo.Memory, sysInfo.CPU)
+		log.Printf("UUID: %s \nMemory: %f \nCPU:%f\n", pr.UUID, pr.Memory, pr.CPU)
 		json_data, err := json.Marshal(pr)
 		if err != nil {
 			log.Fatalf("could not marshall data: %s", err)
@@ -92,18 +105,17 @@ func poll() {
 
 		_, err = http.Post(shimURL+"poll", "application/json", bytes.NewBuffer(json_data))
 		if err != nil {
+			log.Println("err")
 			os.Exit(1)
 		}
+
 		time.Sleep(2 * time.Second)
 	}
-	fmt.Printf("Done")
 }
 
 func main() {
 	log.Println("Hello!")
 	launch()
-	go poll()
+	poll()
 	// lambda.Start(HandleRequest)
-	for true {
-	}
 }

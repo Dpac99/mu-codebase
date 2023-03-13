@@ -1,23 +1,25 @@
 const express = require('express')
-const bodyParser = require('body-parser');
-const crypto = require('crypto');
+const bodyParser = require('body-parser')
+const crypto = require('crypto')
 var Docker = require('dockerode')
 
-
 const app = express()
-app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.json({ extended: true }))
 const port = 1234
 
-var docker = new Docker();
+var docker = new Docker()
 let image
 
-async function loadImages() {
+async function loadImages () {
   image = await docker.listImages().then((data) => {
-    return data.find((image) => image.RepoTags[0] === 'test_function:latest')
+    return data.find((image) => {
+      if (image && image.RepoTags) {
+        return image.RepoTags[0] === 'test_function:latest'
+      }
+    })
   })
   console.log(image)
 }
-
 
 let workers = []
 let pool = []
@@ -31,20 +33,30 @@ app.post('/register', (req, res) => {
   console.log(uuid)
   console.log(req.body)
   workers.push({
-    "UUID": uuid,
-    "Memory": null,
-    "CPU": null,
-    "nTasks": 1,
+    'UUID': uuid,
+    'Memory': null,
+    'CPU': null,
+    'nTasks': 1
   })
   console.log(workers)
   res.send(JSON.stringify(uuid))
 })
 
-app.post('/poll', (req, res) => {
+function delay (time) {
+  return new Promise(resolve => setTimeout(resolve, time))
+}
+
+app.post('/poll', async (req, res) => {
   let stats = req.body
   let index = workers.findIndex((w) => w.UUID === stats.UUID)
   workers[index].Memory = stats.Memory
   workers[index].CPU = stats.CPU
+
+  console.log(workers[index])
+
+  // await delay(1000)
+
+  res.send()
 })
 
 app.post('/invoke', (req, res) => {
