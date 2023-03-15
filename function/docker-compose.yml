@@ -4,3 +4,5 @@ services:
     build: .
     extra_hosts:
     - "host.docker.internal:host-gateway"
+    ports:
+      - "9000:8080"

@@ -8,9 +8,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"serverless/tasks"
 	"time"
 
-	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/struCoder/pidusage"
 )
@@ -18,13 +18,6 @@ import (
 const shimURL = "http://host.docker.internal:1234/"
 
 var id string
-
-func HandleRequest(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	return events.APIGatewayProxyResponse{
-		Body:       "Hello!",
-		StatusCode: 200,
-	}, nil
-}
 
 type RegisterResponse struct {
 	UUID string
@@ -97,5 +90,5 @@ func main() {
 	log.Println("Hello!")
 	launch()
 	go poll()
-	lambda.Start(HandleRequest)
+	lambda.Start(tasks.ExecuteTask)
 }

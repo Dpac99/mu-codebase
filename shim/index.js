@@ -1,28 +1,27 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const crypto = require('crypto')
-var Docker = require('dockerode')
+const axios = require('axios')
+// var Docker = require('dockerode')
 
 const app = express()
 app.use(bodyParser.json({ extended: true }))
 const port = 1234
 
-var docker = new Docker()
-let image
+// var docker = new Docker()
+// let image
 
-async function loadImages () {
-  image = await docker.listImages().then((data) => {
-    return data.find((image) => {
-      if (image && image.RepoTags) {
-        return image.RepoTags[0] === 'test_function:latest'
-      }
-    })
-  })
-  console.log(image)
-}
+// async function loadImages () {
+//   let image = await docker.listImages().then((data) => {
+//     return data.find((image) => {
+//       if (image && image.RepoTags) {
+//         return image.RepoTags[0] === 'test_function:latest'
+//       }
+//     })
+//   })
+// }
 
 let workers = []
-let pool = []
 
 app.get('/', (req, res) => {
   res.send('Hello World2!')
@@ -30,21 +29,14 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   var uuid = crypto.randomUUID()
-  console.log(uuid)
-  console.log(req.body)
   workers.push({
     'UUID': uuid,
     'Memory': null,
     'CPU': null,
     'nTasks': 1
   })
-  console.log(workers)
   res.send(JSON.stringify(uuid))
 })
-
-function delay (time) {
-  return new Promise(resolve => setTimeout(resolve, time))
-}
 
 app.post('/poll', async (req, res) => {
   let stats = req.body
@@ -54,16 +46,15 @@ app.post('/poll', async (req, res) => {
 
   console.log(workers[index])
 
-  // await delay(1000)
+  res.send()
+})
+
+app.post('/invoke', async (req, res) => {
+  await axios.post('http://localhost:9000/2015-03-31/functions/function/invocations', req.body)
 
   res.send()
 })
 
-app.post('/invoke', (req, res) => {
-
-})
-
 app.listen(port, () => {
-  loadImages()
   console.log(`Example app listening on port ${port}`)
 })
