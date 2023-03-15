@@ -10,24 +10,21 @@ import (
 	"os"
 	"time"
 
-	// "github.com/shirou/gopsutil/process"
-	// "github.com/aws/aws-lambda-go/events"
-	// "github.com/aws/aws-lambda-go/lambda"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/struCoder/pidusage"
 )
 
-// const shimURL = "http://host.docker.internal:1234/"
-
-const shimURL = "http://localhost:1234/"
+const shimURL = "http://host.docker.internal:1234/"
 
 var id string
 
-// func HandleRequest(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-// 	return events.APIGatewayProxyResponse{
-// 		Body:       "Hello!",
-// 		StatusCode: 200,
-// 	}, nil
-// }
+func HandleRequest(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{
+		Body:       "Hello!",
+		StatusCode: 200,
+	}, nil
+}
 
 type RegisterResponse struct {
 	UUID string
@@ -67,23 +64,8 @@ type PollRequest struct {
 	Memory float64 `json: "memory"`
 }
 
-// func GetSelf() *process.Process {
-// 	pid := int32(os.Getpid())
-// 	procs, err := process.Processes()
-// 	if err != nil {
-// 		os.Exit(1)
-// 	}
-// 	for i := 0; i < len(procs); i++ {
-// 		if procs[i].Pid == pid {
-// 			return procs[i]
-// 		}
-// 	}
-// 	return nil
-// }
-
 func poll() {
 	for {
-		log.Println("Polling...")
 
 		sysInfo, err := pidusage.GetStat(os.Getpid())
 		if err != nil {
@@ -101,8 +83,6 @@ func poll() {
 			log.Fatalf("could not marshall data: %s", err)
 		}
 
-		log.Println(string(json_data))
-
 		_, err = http.Post(shimURL+"poll", "application/json", bytes.NewBuffer(json_data))
 		if err != nil {
 			log.Println("err")
@@ -116,6 +96,6 @@ func poll() {
 func main() {
 	log.Println("Hello!")
 	launch()
-	poll()
-	// lambda.Start(HandleRequest)
+	go poll()
+	lambda.Start(HandleRequest)
 }
