@@ -3,14 +3,11 @@ package tasks
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"log"
+	"serverless/types"
 	"time"
 )
-
-type Request struct {
-	ID   string                 `json:"id"`
-	Args map[string]interface{} `json:"args"`
-}
 
 type CPURequest struct {
 	N       int         `json:"n"`
@@ -21,40 +18,41 @@ type SleepRequest struct {
 	Duration int `json:"duration"`
 }
 
-func ExecuteTask(req *Request) ([]byte, error) {
-	log.Println(req)
-	switch req.ID {
+func ExecuteTask(req types.TaskRequest) (interface{}, error) {
+	log.Println("Executing request of type " + req.Type + " with args " + string(fmt.Sprintf("%v", req.Args)))
+	switch req.Type {
 	case "sleep":
-		duration := req.Args["duration"].(int)
-		ret := placeHolderSleep(int(duration))
-		b, err := json.Marshal(ret)
-		if err != nil {
-			return nil, err
-		}
+		duration := req.Args["duration"].(float64)
+		log.Println(duration)
+		ret := placeHolderSleep(float64(duration))
 
-		return b, nil
+		return ret, nil
 
-	// case "cpu":
-	// var r CPURequest
-	// err := json.Unmarshal(req.Args, &r)
-	// if err != nil {
-	// 	return nil, err
-	// }
-	// ret := CPUintensive(&r)
-	// b, err := json.Marshal(ret)
-	// if err != nil {
-	// 	return nil, err
-	// }
+	case "cpu":
+		var r CPURequest
+		jsonData, _ := json.Marshal(req.Args)
+		json.Unmarshal(jsonData, &r)
+		// r.N = int(req.Args["n"].(float64))
+		// r.Vectors = req.Args["vectors"].([][]float64)
+		ret := CPUintensive(&r)
 
-	// return b, nil
+		return ret, nil
+
+	case "test":
+		name := req.Args["name"].(string)
+		ret := testfunction(name)
+		log.Println(ret)
+
+		return ret, nil
+
 	default:
 		return nil, errors.New("unrecognized request")
 	}
 }
 
-func placeHolderSleep(duration int) int {
+func placeHolderSleep(duration float64) int {
 
-	time.Sleep(time.Duration(duration * int(time.Second)))
+	time.Sleep(time.Duration(duration * float64(time.Second)))
 
 	return 1
 }
@@ -73,4 +71,8 @@ func dotProduct(a []float64, b []float64) (result float64) {
 		result += a[i] * b[i]
 	}
 	return
+}
+
+func testfunction(name string) string {
+	return "hello " + name + "!"
 }

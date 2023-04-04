@@ -6,3 +6,7 @@ services:
     - "host.docker.internal:host-gateway"
     ports:
       - "9000:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
