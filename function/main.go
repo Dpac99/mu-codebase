@@ -40,8 +40,9 @@ func Listen(r StartReq) (string, error) {
 
 func launch() {
 	log.Println(totalMem)
+	log.Println(shimURL)
 	var rr = &types.RegisterResponse{}
-	res, err := http.Post(shimURL+"register", "application/json", nil)
+	res, err := http.Post(shimURL+"/register", "application/json", nil)
 	if err != nil {
 		log.Fatalf("Could not communicate with coordinator")
 	}
@@ -84,7 +85,7 @@ func poll() {
 		/* END collecting data */
 
 		/* Send data to coordinator */
-		res, err := http.Post(shimURL+"poll", "application/json", bytes.NewBuffer(json_data))
+		res, err := http.Post(shimURL+"/poll", "application/json", bytes.NewBuffer(json_data))
 		res.Close = true
 		if err != nil {
 			log.Fatalf("Error sending data to central: %s\n", err)
@@ -134,7 +135,7 @@ func poll() {
 				if err != nil {
 					log.Fatalf("could not marshall data: %s\n", err)
 				}
-				_, err = http.Post(shimURL+"sendResult/"+pollResponse.ID, "application/json", bytes.NewBuffer(json_data))
+				_, err = http.Post(shimURL+"/sendResult/"+pollResponse.ID, "application/json", bytes.NewBuffer(json_data))
 				log.Println("Results sent")
 			}()
 			res.Body.Close()
