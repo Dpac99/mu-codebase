@@ -24,14 +24,12 @@ var id string
 
 type T = struct{}
 
-type StartReq struct {
-	Url string `json:"url"`
-}
-
 var end_channel = make(chan T)
 
-func Listen(r StartReq) (string, error) {
-	shimURL = r.Url
+func Listen(url string) (string, error) {
+	log.Println("Hello!")
+	shimURL = url
+	log.Println(url)
 	launch()
 	go poll()
 	end_channel <- struct{}{}
@@ -39,8 +37,6 @@ func Listen(r StartReq) (string, error) {
 }
 
 func launch() {
-	log.Println(totalMem)
-	log.Println(shimURL)
 	var rr = &types.RegisterResponse{}
 	res, err := http.Post(shimURL+"/register", "application/json", nil)
 	if err != nil {
