@@ -1,6 +1,6 @@
 {
   "server": {
-    "host": "http://ec2-52-47-117-124.eu-west-3.compute.amazonaws.com",
+    "host": "http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com",
     "port": 1234,
     "trigger": "https://46e2mxujieaiiqrrelpflxittu0zjuov.lambda-url.eu-west-3.on.aws/"
   }

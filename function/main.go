@@ -25,15 +25,12 @@ var id string
 
 type T = struct{}
 
-type URL struct {
-	Url string `json:"url"`
-}
-
 var end_channel = make(chan T)
 
-func Listen(_ context.Context, U URL) (string, error) {
-	log.Println("Hello!")
-	shimURL = U.Url
+func Listen(_ context.Context, U map[string]interface{}) (string, error) {
+	log.Println("Hello!2")
+	log.Println(U["url"].(string))
+	shimURL = U["url"].(string)
 	log.Println(shimURL)
 	launch()
 	go poll()
