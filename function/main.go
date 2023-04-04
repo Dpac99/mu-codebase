@@ -16,7 +16,7 @@ import (
 	"github.com/struCoder/pidusage"
 )
 
-var shimURL = "http://host.docker.internal:1233/"
+var shimURL = "http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com"
 
 var totalMem = float64(memory.TotalMemory())
 
@@ -26,10 +26,10 @@ type T = struct{}
 
 var end_channel = make(chan T)
 
-func Listen(url string) (string, error) {
+func Listen(T) (string, error) {
 	log.Println("Hello!")
-	shimURL = url
-	log.Println(url)
+	// shimURL = url
+	log.Println(shimURL)
 	launch()
 	go poll()
 	end_channel <- struct{}{}
