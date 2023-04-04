@@ -2,11 +2,12 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const axios = require('axios')
+const config = require('config')
 
 const app = express()
 app.use(bodyParser.json({ extended: true }))
-const port = 1234
-const url = 'http://host.docker.internal:1234/'
+const port = config.get('server.port')
+const url = config.get('server.host') + ':' + port
 
 let workers = []
 let pool = {

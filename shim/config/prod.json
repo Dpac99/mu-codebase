@@ -1,0 +1,6 @@
+{
+  "server": {
+    "host": "http://ec2-52-47-117-124.eu-west-3.compute.amazonaws.com",
+    "port": 80
+  }
+}
