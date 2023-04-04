@@ -1,6 +1,7 @@
 {
   "server": {
     "host": "http://localhost",
-    "port": 1234
+    "port": 1234,
+    "trigger": "http://localhost:9000/2015-03-31/functions/function/invocations"
   }
 }
