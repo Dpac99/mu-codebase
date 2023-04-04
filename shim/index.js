@@ -207,7 +207,12 @@ async function registerRequest (request) {
 
   if (workers.length === 0 || request.lock) {
     console.log('Launching new worker')
-    let res = await axios.post(config.get('server.trigger'), { url: url })
+    let res
+    try {
+      res = await axios.post(config.get('server.trigger'), { url: url })
+    } catch (e) {
+      console.log(e)
+    }
 
     console.log('Worker ' + res.data + ' shutting down')
     let i = workers.findIndex(k => k.id === res.data)
