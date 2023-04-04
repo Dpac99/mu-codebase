@@ -7,7 +7,7 @@ const config = require('config')
 const app = express()
 app.use(bodyParser.json({ extended: true }))
 const port = config.get('server.port')
-const url = config.get('server.host') + ':' + port
+const url = config.get('server.host')
 
 let workers = []
 let pool = {
