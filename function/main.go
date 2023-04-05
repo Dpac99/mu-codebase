@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"context"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -27,11 +26,7 @@ type T = struct{}
 
 var end_channel = make(chan T)
 
-func Listen(_ context.Context, U map[string]interface{}) (string, error) {
-	log.Println("Hello!2")
-	log.Println(U["url"].(string))
-	shimURL = U["url"].(string)
-	log.Println(shimURL)
+func Listen() (string, error) {
 	launch()
 	go poll()
 	end_channel <- struct{}{}

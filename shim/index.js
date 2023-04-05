@@ -209,7 +209,7 @@ async function registerRequest (request) {
     console.log('Launching new worker')
     let res
     try {
-      res = await axios.post(config.get('server.trigger'), { url: url })
+      res = await axios.post(config.get('server.trigger'))
     } catch (e) {
       console.log(e)
     }
