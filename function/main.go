@@ -11,6 +11,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/pbnjay/memory"
 	"github.com/struCoder/pidusage"
@@ -26,7 +27,10 @@ type T = struct{}
 
 var end_channel = make(chan T)
 
-func Listen() (string, error) {
+func Listen(req events.LambdaFunctionURLRequest) (string, error) {
+	if req.Body != nil {
+		shimURL = req.Body
+	}
 	launch()
 	go poll()
 	end_channel <- struct{}{}

@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   function:
-    build: .
+    build: ./function/
     extra_hosts:
     - "host.docker.internal:host-gateway"
     ports:
@@ -10,3 +10,7 @@ services:
       resources:
         limits:
           memory: 128M
+  baseline:
+    build: ./baseline/
+    ports:
+      - "9001:8080"
