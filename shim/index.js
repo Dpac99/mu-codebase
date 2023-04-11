@@ -179,7 +179,7 @@ app.post('/sendResult/:reqID', (req, res) => {
       console.log('Function ' + k.id + ' has been profiled as ' + p)
     }
     w.requests.splice(i, 1)
-    r.response(JSON.stringify('test'))
+    r.response(JSON.stringify(response.data))
   }
   res.send()
 })
