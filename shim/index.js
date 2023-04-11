@@ -50,7 +50,7 @@ function profile (cpu, memory) {
   if (cpu.cpu < 20 && memory.memory < 20) {
     return Profiles.A
   }
-  if (cpu.cpu > 50 && memory.memory > 50) {
+  if ((cpu.cpu > 50 && memory.memory > 50) || cpu.cpu > 80 || memory.memory > 80) {
     return Profiles.D
   }
   if (approx(cpu.cpu, memory.memory)) {

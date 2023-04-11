@@ -26,8 +26,8 @@ futures = []
 
 
 with ThreadPoolExecutor() as pool:
-    for i in range(15):
+    for i in range(256):
         futures.append(pool.submit(post, {"id": "matrix", "args": {
-            "a": matrix1.tolist(), "b": matrix2.tolist()}}, i))
-    for i in range(15):
+            "a": m1.tolist(), "b": m2.tolist()}}, i))
+    for i in range(256):
         futures[i].result()

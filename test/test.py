@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import requests
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 import time
 
 function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
@@ -17,20 +17,27 @@ matrix2 = np.random.randint(1000, size=(dim, dim))
 matrix2_trans = matrix2.transpose()
 
 
-def request_baseline(m1, m2):
+def request_baseline(m1, m2, i):
+    print("Submitted request {}".format(i), flush=True)
+
     start = time.time()
-    x = requests.post(
+    requests.post(
         baseline_url, json={"a": m1.tolist(), "b": m2.tolist()})
     end = time.time()
+    print("Received request {}".format(i), flush=True)
+
     return end-start
 
 
-def request_func(m1, m2):
+def request_func(m1, m2, i):
+    print("Submitted request {}".format(i), flush=True)
     start = time.time()
     body = {"id": "matrix", "args": {"a": m1.tolist(), "b": m2.tolist()}}
-    x = requests.post(
+    requests.post(
         function_url, json=body)
     end = time.time()
+    print("Received request {}".format(i), flush=True)
+
     return end-start
 
 
@@ -63,22 +70,26 @@ def runSequential(n):
 
 
 def run(n, func):
-    print("Startint test for {} with {}".format(func, n))
-    with ThreadPoolExecutor() as pool:
+    print("Starting test for {} with {}".format(func, n))
+
+    with ProcessPoolExecutor() as pool:
         m_size = n//n_req
+        start = time.time()
+
         futures = []
         results = []
-        start = time.time()
         for i in range(n_req):
             a = i*m_size
             b = (i+1)*m_size
             futures.append(pool.submit(func,
-                           matrix1[a:b], matrix2_trans[a:b].transpose()))
+                           matrix1[a:b], matrix2_trans[a:b].transpose(), i))
+
         for i in range(n_req):
             results.append(futures[i].result())
         end = time.time()
         stats = analyze(results)
-        print(output.format(func, n, end-start, stats[0], stats[1], stats[2]))
+        print(output.format(func, n, end-start,
+              stats[0], stats[1], stats[2]), flush=True)
         return [stats, end-start]
 
 
@@ -91,8 +102,8 @@ def run(n, func):
 # sequentialTimes.append(runSequential(4096))
 # sequentialTimes.append(runSequential(8192))
 
-# baselineStats = []
-# baselineStats.append(run(256, request_baseline))
+baselineStats = []
+baselineStats.append(run(256, request_baseline))
 # baselineStats.append(run(512, request_baseline))
 # baselineStats.append(run(1024, request_baseline))
 # baselineStats.append(run(2048, request_baseline))
