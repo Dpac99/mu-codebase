@@ -232,7 +232,7 @@ async function registerRequest (request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (workers.length === 0 || request.lock || pool.standard.length - 5 > workers.length) {
+  if (workers.length === 0 || request.lock || pool.standard.length > 3 * workers.length) {
     launchWorker()
   }
 }
@@ -240,7 +240,7 @@ async function registerRequest (request) {
 setInterval(function () {
   console.log('Workers: ' + workers.length)
   console.log('Pool: ' + pool.standard.length)
-  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length - 5 > workers.length) {
+  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 3 * workers.length) {
     launchWorker()
   }
 }, 500)
