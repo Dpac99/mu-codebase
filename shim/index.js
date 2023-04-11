@@ -179,6 +179,8 @@ app.post('/sendResult/:reqID', (req, res) => {
     r.response(JSON.stringify(response.data))
     nResults++
     console.log(nResults + ' have been fulfilled so far')
+  } else {
+    console.log('BIG ERROR: REQUEST MISSING: ' + id)
   }
 })
 
