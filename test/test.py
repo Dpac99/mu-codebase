@@ -18,25 +18,25 @@ matrix2_trans = matrix2.transpose()
 
 
 def request_baseline(m1, m2, i):
-    print("Submitted request {}".format(i), flush=True)
+    # print("Submitted request {}".format(i), flush=True)
 
     start = time.time()
     requests.post(
         baseline_url, json={"a": m1.tolist(), "b": m2.tolist()})
     end = time.time()
-    print("Received request {}".format(i), flush=True)
+    # print("Received request {}".format(i), flush=True)
 
     return end-start
 
 
 def request_func(m1, m2, i):
-    print("Submitted request {}".format(i), flush=True)
+    # print("Submitted request {}".format(i), flush=True)
     start = time.time()
     body = {"id": "matrix", "args": {"a": m1.tolist(), "b": m2.tolist()}}
     requests.post(
         function_url, json=body)
     end = time.time()
-    print("Received request {}".format(i), flush=True)
+    # print("Received request {}".format(i), flush=True)
 
     return end-start
 
@@ -103,7 +103,7 @@ def run(n, func):
 # sequentialTimes.append(runSequential(8192))
 
 baselineStats = []
-baselineStats.append(run(256, request_baseline))
+# baselineStats.append(run(256, request_baseline))
 # baselineStats.append(run(512, request_baseline))
 # baselineStats.append(run(1024, request_baseline))
 # baselineStats.append(run(2048, request_baseline))
@@ -117,10 +117,10 @@ baselineStats.append(run(256, request_baseline))
 
 functionStats = []
 functionStats.append(run(256, request_func))
-functionStats.append(run(512, request_func))
-functionStats.append(run(1024, request_func))
-functionStats.append(run(2048, request_func))
-functionStats.append(run(4096, request_func))
+# functionStats.append(run(512, request_func))
+# functionStats.append(run(1024, request_func))
+# functionStats.append(run(2048, request_func))
+# functionStats.append(run(4096, request_func))
 
 functionTotals = [x[1] for x in functionStats]
 functionAverages = [x[0][0] for x in functionStats]

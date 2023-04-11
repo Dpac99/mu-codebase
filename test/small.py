@@ -2,6 +2,7 @@ import requests
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait
+import time
 
 
 m1 = np.random.rand(2, 2)
@@ -14,19 +15,27 @@ matrix2 = np.random.randint(1000, size=(dim, dim))
 
 
 def post(body, i):
+    start = time.time()
     x = requests.post(function_url, json=body)
-    print("Request {} done".format(i))
-    return x.text
+    end = time.time()
+    print("Request {} done".format(i), flush=True)
+    return end-start
 
 
 post({"id": "matrix", "args": {
             "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 
 
-lim = 70
+lim = 150
 
 with ThreadPoolExecutor() as pool:
     futures = [pool.submit(post, {"id": "matrix", "args": {
         "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
     for i in range(lim):
-        futures[i].result(timeout=2)
+        try:
+            print("Waiting on future {}".format(i), flush=True)
+            futures[i].result(timeout=2)
+            print("Done Waiting on future {}".format(i), flush=True)
+        except:
+            print("Future {} timedout".format(i), flush=True)
+    pool.shutdown(wait=False)

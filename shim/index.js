@@ -160,8 +160,6 @@ app.post('/poll', (req, res) => {
 var nResults = 0
 
 app.post('/sendResult/:reqID', (req, res) => {
-  nResults++
-  console.log(nResults + ' have been fulfilled so far')
   let response = req.body
   let id = req.params.reqID
   console.log('Received results of task id ' + id + 'from worker ' + response.id)
@@ -179,6 +177,8 @@ app.post('/sendResult/:reqID', (req, res) => {
     }
     w.requests.splice(i, 1)
     r.response(JSON.stringify(response.data))
+    nResults++
+    console.log(nResults + ' have been fulfilled so far')
   }
 })
 
@@ -238,8 +238,6 @@ async function registerRequest (request) {
 }
 
 setInterval(function () {
-  console.log('Workers: ' + workers.length)
-  console.log('Pool: ' + pool.standard.length)
   if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 3 * workers.length) {
     launchWorker()
   }
