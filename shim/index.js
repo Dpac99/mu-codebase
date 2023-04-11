@@ -88,13 +88,11 @@ app.post('/poll', (req, res) => {
   console.log('Poll request received')
 
   let stats = req.body
-  console.log(stats)
   let worker = workers.find((w) => w.uuid === stats.uuid)
   if (!worker) {
     return res.send({ id: '-1' })
   }
   worker.clock++
-  console.log('Clock = ' + worker.clock)
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
     worker.cpu.tick = worker.clock
@@ -104,8 +102,6 @@ app.post('/poll', (req, res) => {
     worker.memory.memory = stats.memory
     worker.memory.tick = worker.clock
   }
-  console.log('Nworkers: ' + workers.length)
-  console.log('Ntasks: ' + pool.standard.length)
 
   if (worker.requests.length === 0 && pool.trial.length > 0) {
     let request = pool.trial.shift()
@@ -171,8 +167,6 @@ app.post('/sendResult/:reqID', (req, res) => {
   if (w) {
     let i = w.requests.findIndex(k => k.id === id)
     let r = w.requests[i]
-    console.log(w)
-    console.log(i)
     if (w.locked) {
       let p = profile(w.cpu, w.memory)
       let k = registeredFunctions.find(k => k.id === r.type)
@@ -220,8 +214,6 @@ async function registerRequest (request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  console.log('Nworkers: ' + workers.length)
-  console.log('Ntasks: ' + pool.standard.length)
   if (workers.length === 0 || request.lock || pool.standard.length - 5 > workers.length) {
     console.log('Launching new worker')
     let res

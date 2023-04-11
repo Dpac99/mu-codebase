@@ -8,30 +8,30 @@
 [33m[nodemon] watching extensions: js,mjs,json[39m
 [32m[nodemon] starting `node index.js`[39m
 Coordinator listening on http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com
-Received request of type matrix with id 7a178b69-2ce9-4287-99bb-ef29b80cfd9a
+Received request of type matrix with id bd27e8f0-01a3-46a1-883c-f24a38d8f052
 New function found, registering type matrix
 Nworkers: 0
 Ntasks: 0
 Launching new worker
-New container registered with id 38c614a8-ed94-47a7-a6c2-4948bdd5f7c3
+New container registered with id 361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0
 Poll request received
 {
-  uuid: '38c614a8-ed94-47a7-a6c2-4948bdd5f7c3',
-  cpu: 3.4482758620666942,
-  memory: 3.074231442139465
+  uuid: '361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0',
+  cpu: 0.0031967265520107414,
+  memory: 5.009164375572774
 }
 Clock = 1
 Nworkers: 1
 Ntasks: 0
-Employing worker 38c614a8-ed94-47a7-a6c2-4948bdd5f7c3 to profile function matrix
-Received results of task id 7a178b69-2ce9-4287-99bb-ef29b80cfd9a
+Employing worker 361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0 to profile function matrix
+Received results of task id bd27e8f0-01a3-46a1-883c-f24a38d8f052from worker 361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0
 {
-  uuid: '38c614a8-ed94-47a7-a6c2-4948bdd5f7c3',
-  memory: { memory: 3.074231442139465, tick: 1 },
-  cpu: { cpu: 3.4482758620666942, tick: 1 },
+  uuid: '361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0',
+  memory: { memory: 5.009164375572774, tick: 1 },
+  cpu: { cpu: 0.0031967265520107414, tick: 1 },
   requests: [
     {
-      id: '7a178b69-2ce9-4287-99bb-ef29b80cfd9a',
+      id: 'bd27e8f0-01a3-46a1-883c-f24a38d8f052',
       type: 'matrix',
       args: [Object],
       response: [Function: response],
@@ -45,83 +45,192 @@ Received results of task id 7a178b69-2ce9-4287-99bb-ef29b80cfd9a
 Function matrix has been profiled as A
 Poll request received
 {
-  uuid: '38c614a8-ed94-47a7-a6c2-4948bdd5f7c3',
-  cpu: 0,
-  memory: 3.9740064983754064
+  uuid: '361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0',
+  cpu: 3.846153846153981,
+  memory: 5.569440973090061
 }
 Clock = 2
 Nworkers: 1
 Ntasks: 0
-Signaling worker 38c614a8-ed94-47a7-a6c2-4948bdd5f7c3 to shutdown
-Worker 38c614a8-ed94-47a7-a6c2-4948bdd5f7c3 shutting down
-Received request of type matrix with id 9ab9abab-44a2-48b1-8c68-e50653bb5c1c
+Signaling worker 361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0 to shutdown
+Worker 361ac8cc-5ec9-4cc8-9e3b-6b548922e0b0 shutting down
+Received request of type matrix with id 3c5737b6-1992-459d-a8ad-6c3f63a0ea83
 Nworkers: 0
 Ntasks: 1
 Launching new worker
-Received request of type matrix with id 85e13a2f-637f-4873-993c-c325fdba3047
+Received request of type matrix with id 0c117990-a568-4e4e-be88-ce8c12e4d4a4
 Nworkers: 0
 Ntasks: 2
 Launching new worker
-Received request of type matrix with id f8b92f84-9fa7-45f9-8235-a50f5b896408
-Nworkers: 0
-Ntasks: 3
-Launching new worker
-Received request of type matrix with id 7a676131-aee0-4303-a80c-4fd6a11b9c77
-Nworkers: 0
-Ntasks: 4
-Launching new worker
-Received request of type matrix with id 4f3b24b3-1d23-4f24-bc69-03e5979a4560
-Nworkers: 0
-Ntasks: 5
-Launching new worker
-Received request of type matrix with id 8f083d59-5774-49e7-87fd-b6c270a7c8d5
-Nworkers: 0
-Ntasks: 6
-Launching new worker
-Received request of type matrix with id f4f53507-9346-465e-ad0b-22ef67bb3a05
-Nworkers: 0
-Ntasks: 7
-Launching new worker
-Received request of type matrix with id dfc7d980-5b66-48a9-99d0-6f0bf977cf4e
-Nworkers: 0
-Ntasks: 8
-Launching new worker
-New container registered with id 55050751-ce5a-4637-90b3-e0048f5e91dc
-Received request of type matrix with id 676918e3-4b59-4160-8b7f-8e0d5e88f6b2
-Nworkers: 1
-Ntasks: 9
-Launching new worker
-Received request of type matrix with id 1774e6ba-123c-48a5-a14c-264ba665c3c1
-Nworkers: 1
-Ntasks: 10
-Launching new worker
-Received request of type matrix with id 34420f61-ecfd-49b3-bbe7-ec960707c841
-Nworkers: 1
-Ntasks: 11
-Launching new worker
-Received request of type matrix with id 8f4328ce-3eff-4739-b53a-8b484b364569
-Nworkers: 1
-Ntasks: 12
-Launching new worker
+New container registered with id 8bcd5b46-269b-491b-8195-f1060d875ef0
 Poll request received
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
   cpu: 0,
-  memory: 4.342664333916521
+  memory: 5.569440973090061
 }
 Clock = 1
 Nworkers: 1
-Ntasks: 12
-Worker 55050751-ce5a-4637-90b3-e0048f5e91dc has profile A
-Sending task id 9ab9abab-44a2-48b1-8c68-e50653bb5c1cto worker 55050751-ce5a-4637-90b3-e0048f5e91dc
-Received results of task id 9ab9abab-44a2-48b1-8c68-e50653bb5c1c
+Ntasks: 2
+Worker 8bcd5b46-269b-491b-8195-f1060d875ef0 has profile A
+Sending task id 3c5737b6-1992-459d-a8ad-6c3f63a0ea83to worker 8bcd5b46-269b-491b-8195-f1060d875ef0
+Received request of type matrix with id 9ce59f6d-831b-43b1-84b7-7cb47c65a961
+Nworkers: 1
+Ntasks: 2
+Received request of type matrix with id f8ac1f76-ab20-4b10-9e48-09af6dbc0dcb
+Nworkers: 1
+Ntasks: 3
+Received request of type matrix with id e11e31a3-6db8-4c71-ae06-270bbb1cef67
+Nworkers: 1
+Ntasks: 4
+New container registered with id 5feefd27-cacc-40e2-b900-29ba7d732552
+Poll request received
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 4.342664333916521, tick: 1 },
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  cpu: 0.0031895891809134986,
+  memory: 3.7032408564525534
+}
+Clock = 1
+Nworkers: 2
+Ntasks: 4
+Worker 5feefd27-cacc-40e2-b900-29ba7d732552 has profile A
+Sending task id 0c117990-a568-4e4e-be88-ce8c12e4d4a4to worker 5feefd27-cacc-40e2-b900-29ba7d732552
+Received request of type matrix with id 1a6395bb-f0dc-4d85-8b66-e2c1622d7eca
+Nworkers: 2
+Ntasks: 4
+Received request of type matrix with id af68b061-6635-4406-a5a6-f0e094166eda
+Nworkers: 2
+Ntasks: 5
+Received request of type matrix with id 70d617ae-7624-4817-8932-1c7140b2c13a
+Nworkers: 2
+Ntasks: 6
+Received results of task id 0c117990-a568-4e4e-be88-ce8c12e4d4a4from worker 5feefd27-cacc-40e2-b900-29ba7d732552
+{
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  memory: { memory: 3.7032408564525534, tick: 1 },
+  cpu: { cpu: 0.0031895891809134986, tick: 1 },
+  requests: [
+    {
+      id: '0c117990-a568-4e4e-be88-ce8c12e4d4a4',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 1
+}
+0
+Received request of type matrix with id ec2071f5-2bad-4ce8-83f4-ebab12ed781a
+Nworkers: 2
+Ntasks: 7
+Received results of task id 3c5737b6-1992-459d-a8ad-6c3f63a0ea83from worker 8bcd5b46-269b-491b-8195-f1060d875ef0
+{
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  memory: { memory: 5.569440973090061, tick: 1 },
   cpu: { cpu: 0, tick: 1 },
   requests: [
     {
-      id: '9ab9abab-44a2-48b1-8c68-e50653bb5c1c',
+      id: '3c5737b6-1992-459d-a8ad-6c3f63a0ea83',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 1
+}
+0
+Received request of type matrix with id b194b81e-a80a-4f7e-b605-d6fdea7a6fd4
+Nworkers: 2
+Ntasks: 8
+Launching new worker
+Received request of type matrix with id 3f400cd7-38a4-43b6-8b94-23c7f1b5adc2
+Nworkers: 2
+Ntasks: 9
+Launching new worker
+Received request of type matrix with id 0bc806bd-4f7e-44c8-8990-24af99ca2bbf
+Nworkers: 2
+Ntasks: 10
+Launching new worker
+New container registered with id 136a69fe-ce62-4607-b406-ce7deac53ef8
+Poll request received
+{
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  cpu: 0,
+  memory: 4.003165875197867
+}
+Clock = 1
+Nworkers: 3
+Ntasks: 10
+Worker 136a69fe-ce62-4607-b406-ce7deac53ef8 has profile A
+Sending task id 9ce59f6d-831b-43b1-84b7-7cb47c65a961to worker 136a69fe-ce62-4607-b406-ce7deac53ef8
+New container registered with id 91413c57-fb0b-4fd6-853b-12f2a67f08da
+Poll request received
+{
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  cpu: 0,
+  memory: 4.353078397067399
+}
+Clock = 1
+Nworkers: 4
+Ntasks: 9
+Worker 91413c57-fb0b-4fd6-853b-12f2a67f08da has profile A
+Sending task id f8ac1f76-ab20-4b10-9e48-09af6dbc0dcbto worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
+New container registered with id 28ba34b0-5765-423c-9987-717f937c4c2a
+Poll request received
+{
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
+  cpu: 0,
+  memory: 3.9615096225943516
+}
+Clock = 1
+Nworkers: 5
+Ntasks: 8
+Worker 28ba34b0-5765-423c-9987-717f937c4c2a has profile A
+Sending task id e11e31a3-6db8-4c71-ae06-270bbb1cef67to worker 28ba34b0-5765-423c-9987-717f937c4c2a
+Poll request received
+{
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  cpu: 0,
+  memory: 5.569440973090061
+}
+Clock = 2
+Nworkers: 5
+Ntasks: 7
+Worker 8bcd5b46-269b-491b-8195-f1060d875ef0 has profile A
+Sending task id 1a6395bb-f0dc-4d85-8b66-e2c1622d7ecato worker 8bcd5b46-269b-491b-8195-f1060d875ef0
+Received results of task id 9ce59f6d-831b-43b1-84b7-7cb47c65a961from worker 136a69fe-ce62-4607-b406-ce7deac53ef8
+{
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  memory: { memory: 4.003165875197867, tick: 1 },
+  cpu: { cpu: 0, tick: 1 },
+  requests: [
+    {
+      id: '9ce59f6d-831b-43b1-84b7-7cb47c65a961',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 1
+}
+0
+Received results of task id f8ac1f76-ab20-4b10-9e48-09af6dbc0dcbfrom worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
+{
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  memory: { memory: 4.353078397067399, tick: 1 },
+  cpu: { cpu: 0, tick: 1 },
+  requests: [
+    {
+      id: 'f8ac1f76-ab20-4b10-9e48-09af6dbc0dcb',
       type: 'matrix',
       args: [Object],
       response: [Function: response],
@@ -135,36 +244,61 @@ Received results of task id 9ab9abab-44a2-48b1-8c68-e50653bb5c1c
 0
 Poll request received
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  cpu: 3.846153846153981,
-  memory: 4.875864367241523
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  cpu: 5.0000000000045475,
+  memory: 4.578022161126385
 }
 Clock = 2
-Nworkers: 1
-Ntasks: 11
-Worker 55050751-ce5a-4637-90b3-e0048f5e91dc has profile A
-Sending task id 85e13a2f-637f-4873-993c-c325fdba3047to worker 55050751-ce5a-4637-90b3-e0048f5e91dc
-New container registered with id b0be2088-6007-4bd9-b729-c69acae6b6de
-Poll request received
+Nworkers: 5
+Ntasks: 6
+Worker 5feefd27-cacc-40e2-b900-29ba7d732552 has profile A
+Sending task id af68b061-6635-4406-a5a6-f0e094166edato worker 5feefd27-cacc-40e2-b900-29ba7d732552
+Received results of task id 1a6395bb-f0dc-4d85-8b66-e2c1622d7ecafrom worker 8bcd5b46-269b-491b-8195-f1060d875ef0
 {
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 19.99999999992724,
-  memory: 2.9450970590685666
-}
-Clock = 1
-Nworkers: 2
-Ntasks: 10
-Worker b0be2088-6007-4bd9-b729-c69acae6b6de has profile A
-Sending task id f8b92f84-9fa7-45f9-8235-a50f5b896408to worker b0be2088-6007-4bd9-b729-c69acae6b6de
-New container registered with id 3505483a-b3ac-4610-80ed-ac3f263da9e8
-Received results of task id 85e13a2f-637f-4873-993c-c325fdba3047
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 4.875864367241523, tick: 2 },
-  cpu: { cpu: 3.846153846153981, tick: 2 },
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  memory: { memory: 5.569440973090061, tick: 1 },
+  cpu: { cpu: 0, tick: 1 },
   requests: [
     {
-      id: '85e13a2f-637f-4873-993c-c325fdba3047',
+      id: '1a6395bb-f0dc-4d85-8b66-e2c1622d7eca',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 2
+}
+0
+Received results of task id e11e31a3-6db8-4c71-ae06-270bbb1cef67from worker 28ba34b0-5765-423c-9987-717f937c4c2a
+{
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
+  memory: { memory: 3.9615096225943516, tick: 1 },
+  cpu: { cpu: 0, tick: 1 },
+  requests: [
+    {
+      id: 'e11e31a3-6db8-4c71-ae06-270bbb1cef67',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 1
+}
+0
+Received results of task id af68b061-6635-4406-a5a6-f0e094166edafrom worker 5feefd27-cacc-40e2-b900-29ba7d732552
+{
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  memory: { memory: 4.578022161126385, tick: 2 },
+  cpu: { cpu: 5.0000000000045475, tick: 2 },
+  requests: [
+    {
+      id: 'af68b061-6635-4406-a5a6-f0e094166eda',
       type: 'matrix',
       args: [Object],
       response: [Function: response],
@@ -178,873 +312,261 @@ Received results of task id 85e13a2f-637f-4873-993c-c325fdba3047
 0
 Poll request received
 {
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
   cpu: 0,
-  memory: 2.9534283095892695
+  memory: 5.034158127134883
 }
-Clock = 1
-Nworkers: 3
-Ntasks: 9
-Worker 3505483a-b3ac-4610-80ed-ac3f263da9e8 has profile A
-Sending task id 7a676131-aee0-4303-a80c-4fd6a11b9c77to worker 3505483a-b3ac-4610-80ed-ac3f263da9e8
-New container registered with id 4ed669f7-128d-4d4e-b395-79c34cdb892a
-New container registered with id 5448ba3e-5da4-4bde-8a9e-5a55e102b0fd
-New container registered with id 7353e7a4-ce0a-462e-887f-49d4e8c6581e
-New container registered with id 2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 0,
-  memory: 3.369990835624427
-}
-Clock = 1
-Nworkers: 7
-Ntasks: 8
-Worker 2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c has profile A
-Sending task id 4f3b24b3-1d23-4f24-bc69-03e5979a4560to worker 2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 3.4741314671332164
-}
-Clock = 1
-Nworkers: 7
-Ntasks: 7
-Worker 4ed669f7-128d-4d4e-b395-79c34cdb892a has profile A
-Sending task id 8f083d59-5774-49e7-87fd-b6c270a7c8d5to worker 4ed669f7-128d-4d4e-b395-79c34cdb892a
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 2.9742564358910273
-}
-Clock = 1
-Nworkers: 7
-Ntasks: 6
-Worker 5448ba3e-5da4-4bde-8a9e-5a55e102b0fd has profile A
-Sending task id f4f53507-9346-465e-ad0b-22ef67bb3a05to worker 5448ba3e-5da4-4bde-8a9e-5a55e102b0fd
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 14.28571428572728,
-  memory: 3.2804298925268682
-}
-Clock = 1
-Nworkers: 7
+Clock = 2
+Nworkers: 5
 Ntasks: 5
-Worker 7353e7a4-ce0a-462e-887f-49d4e8c6581e has profile A
-Sending task id dfc7d980-5b66-48a9-99d0-6f0bf977cf4eto worker 7353e7a4-ce0a-462e-887f-49d4e8c6581e
-New container registered with id 81ac064b-d38a-40dc-a095-8b61d3342a23
-New container registered with id b6119229-0d43-4fda-80f2-06e6dbae733c
-New container registered with id c8cb8e38-fb92-4f70-895a-80d33cfb714e
+Worker 136a69fe-ce62-4607-b406-ce7deac53ef8 has profile A
+Sending task id 70d617ae-7624-4817-8932-1c7140b2c13ato worker 136a69fe-ce62-4607-b406-ce7deac53ef8
 Poll request received
 {
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 14.28571428572728,
-  memory: 3.0492376905773555
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  cpu: 0,
+  memory: 4.863367491460469
 }
-Clock = 1
-Nworkers: 10
+Clock = 2
+Nworkers: 5
 Ntasks: 4
-Worker 81ac064b-d38a-40dc-a095-8b61d3342a23 has profile A
-Sending task id 676918e3-4b59-4160-8b7f-8e0d5e88f6b2to worker 81ac064b-d38a-40dc-a095-8b61d3342a23
-New container registered with id 689e9037-94c3-4d05-b305-1b1a231b4def
+Worker 91413c57-fb0b-4fd6-853b-12f2a67f08da has profile A
+Sending task id ec2071f5-2bad-4ce8-83f4-ebab12ed781ato worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
 Poll request received
 {
-  uuid: 'b6119229-0d43-4fda-80f2-06e6dbae733c',
-  cpu: 0,
-  memory: 3.4095642755977673
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
+  cpu: 4.761904761909093,
+  memory: 4.594684662167792
 }
-Clock = 1
-Nworkers: 11
+Clock = 2
+Nworkers: 5
 Ntasks: 3
-Worker b6119229-0d43-4fda-80f2-06e6dbae733c has profile A
-Sending task id 1774e6ba-123c-48a5-a14c-264ba665c3c1to worker b6119229-0d43-4fda-80f2-06e6dbae733c
+Worker 28ba34b0-5765-423c-9987-717f937c4c2a has profile A
+Sending task id b194b81e-a80a-4f7e-b605-d6fdea7a6fd4to worker 28ba34b0-5765-423c-9987-717f937c4c2a
 Poll request received
 {
-  uuid: 'c8cb8e38-fb92-4f70-895a-80d33cfb714e',
-  cpu: 0,
-  memory: 3.1200533200033327
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  cpu: 4.545454545453982,
+  memory: 5.696492543530784
 }
-Clock = 1
-Nworkers: 11
+Clock = 3
+Nworkers: 5
 Ntasks: 2
-Worker c8cb8e38-fb92-4f70-895a-80d33cfb714e has profile A
-Sending task id 34420f61-ecfd-49b3-bbe7-ec960707c841to worker c8cb8e38-fb92-4f70-895a-80d33cfb714e
+Worker 8bcd5b46-269b-491b-8195-f1060d875ef0 has profile A
+Sending task id 3f400cd7-38a4-43b6-8b94-23c7f1b5adc2to worker 8bcd5b46-269b-491b-8195-f1060d875ef0
 Poll request received
 {
-  uuid: '689e9037-94c3-4d05-b305-1b1a231b4def',
-  cpu: 0,
-  memory: 3.2658502041156376
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  cpu: 4.545454545453982,
+  memory: 5.26326751645422
 }
-Clock = 1
-Nworkers: 11
+Clock = 3
+Nworkers: 5
 Ntasks: 1
-Worker 689e9037-94c3-4d05-b305-1b1a231b4def has profile A
-Sending task id 8f4328ce-3eff-4739-b53a-8b484b364569to worker 689e9037-94c3-4d05-b305-1b1a231b4def
-Received request of type matrix with id 91bba6a5-c406-4c3b-b3a8-7ce59a8a9db3
-Nworkers: 11
-Ntasks: 1
-Received results of task id f8b92f84-9fa7-45f9-8235-a50f5b896408
+Worker 5feefd27-cacc-40e2-b900-29ba7d732552 has profile A
+Sending task id 0bc806bd-4f7e-44c8-8990-24af99ca2bbfto worker 5feefd27-cacc-40e2-b900-29ba7d732552
+Received results of task id b194b81e-a80a-4f7e-b605-d6fdea7a6fd4from worker 28ba34b0-5765-423c-9987-717f937c4c2a
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 4.875864367241523, tick: 2 },
-  cpu: { cpu: 3.846153846153981, tick: 2 },
-  requests: [],
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
+  memory: { memory: 4.594684662167792, tick: 2 },
+  cpu: { cpu: 4.761904761909093, tick: 2 },
+  requests: [
+    {
+      id: 'b194b81e-a80a-4f7e-b605-d6fdea7a6fd4',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
   locked: false,
   clock: 2
 }
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 676918e3-4b59-4160-8b7f-8e0d5e88f6b2
+0
+Received request of type matrix with id f5fdede3-fbbf-406c-b94b-4338a73dc780
+Nworkers: 5
+Ntasks: 1
+Received results of task id 70d617ae-7624-4817-8932-1c7140b2c13afrom worker 136a69fe-ce62-4607-b406-ce7deac53ef8
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 4.875864367241523, tick: 2 },
-  cpu: { cpu: 3.846153846153981, tick: 2 },
-  requests: [],
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  memory: { memory: 5.034158127134883, tick: 2 },
+  cpu: { cpu: 0, tick: 1 },
+  requests: [
+    {
+      id: '70d617ae-7624-4817-8932-1c7140b2c13a',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
   locked: false,
   clock: 2
 }
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 7a676131-aee0-4303-a80c-4fd6a11b9c77
+0
+Received results of task id ec2071f5-2bad-4ce8-83f4-ebab12ed781afrom worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
 {
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 4.875864367241523, tick: 2 },
-  cpu: { cpu: 3.846153846153981, tick: 2 },
-  requests: [],
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  memory: { memory: 4.863367491460469, tick: 2 },
+  cpu: { cpu: 0, tick: 1 },
+  requests: [
+    {
+      id: 'ec2071f5-2bad-4ce8-83f4-ebab12ed781a',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
   locked: false,
   clock: 2
 }
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-New container registered with id 8ff4ebcd-c2d4-4e8d-901a-5af66725d762
-Poll request received
-{
-  uuid: '8ff4ebcd-c2d4-4e8d-901a-5af66725d762',
-  cpu: 0,
-  memory: 3.222111138881946
-}
-Clock = 1
-Nworkers: 12
-Ntasks: 1
-Worker 8ff4ebcd-c2d4-4e8d-901a-5af66725d762 has profile A
-Sending task id 91bba6a5-c406-4c3b-b3a8-7ce59a8a9db3to worker 8ff4ebcd-c2d4-4e8d-901a-5af66725d762
-Poll request received
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  cpu: 4.545454545453982,
-  memory: 5.454886278430393
-}
-Clock = 3
-Nworkers: 12
-Ntasks: 0
-Signaling worker 55050751-ce5a-4637-90b3-e0048f5e91dc to shutdown
-Received results of task id f4f53507-9346-465e-ad0b-22ef67bb3a05
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-Worker 55050751-ce5a-4637-90b3-e0048f5e91dc shutting down
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id dfc7d980-5b66-48a9-99d0-6f0bf977cf4e
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 4f3b24b3-1d23-4f24-bc69-03e5979a4560
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 1774e6ba-123c-48a5-a14c-264ba665c3c1
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 8f083d59-5774-49e7-87fd-b6c270a7c8d5
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 34420f61-ecfd-49b3-bbe7-ec960707c841
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Received results of task id 8f4328ce-3eff-4739-b53a-8b484b364569
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 3.696992418562026
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 4.166666666666509,
-  memory: 3.7032408564525534
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Received results of task id 91bba6a5-c406-4c3b-b3a8-7ce59a8a9db3
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 0,
-  memory: 3.765725235357827
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 4.166666666666509,
-  memory: 4.0531533783220866
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: 'b6119229-0d43-4fda-80f2-06e6dbae733c',
-  cpu: 4.545454545453982,
-  memory: 3.93235024577189
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 4.166666666666509,
-  memory: 4.003165875197867
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 3.986503374156461
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: 'c8cb8e38-fb92-4f70-895a-80d33cfb714e',
-  cpu: 4,
-  memory: 3.857368991085562
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Poll request received
-{
-  uuid: '689e9037-94c3-4d05-b305-1b1a231b4def',
-  cpu: 4,
-  memory: 3.8802799300174953
-}
-Clock = 2
-Nworkers: 11
-Ntasks: 0
-Received request of type matrix with id f833535f-12d8-4d47-b1d0-58e533958ffe
-Nworkers: 11
-Ntasks: 1
-Poll request received
-{
-  uuid: '8ff4ebcd-c2d4-4e8d-901a-5af66725d762',
-  cpu: 4.545454545453982,
-  memory: 4.103140881446305
-}
-Worker 8ff4ebcd-c2d4-4e8d-901a-5af66725d762 shutting down
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 3.696992418562026
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 1
-Worker b0be2088-6007-4bd9-b729-c69acae6b6de has profile A
-Sending task id f833535f-12d8-4d47-b1d0-58e533958ffeto worker b0be2088-6007-4bd9-b729-c69acae6b6de
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 0,
-  memory: 3.765725235357827
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 0,
-  memory: 4.0531533783220866
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: 'b6119229-0d43-4fda-80f2-06e6dbae733c',
-  cpu: 0,
-  memory: 3.93235024577189
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 4.003165875197867
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 3.986503374156461
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Received results of task id f833535f-12d8-4d47-b1d0-58e533958ffe
-{
-  uuid: '55050751-ce5a-4637-90b3-e0048f5e91dc',
-  memory: { memory: 5.454886278430393, tick: 3 },
-  cpu: { cpu: 4.545454545453982, tick: 3 },
-  requests: [],
-  locked: false,
-  clock: 3
-}
--1
-TypeError: Cannot read properties of undefined (reading 'response')
-    at /home/ubuntu/ServerlessThesis/shim/index.js:182:7
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:144:13)
-    at Route.dispatch (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/route.js:114:3)
-    at Layer.handle [as handle_request] (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/layer.js:95:5)
-    at /home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:284:15
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:365:14)
-    at param (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:376:14)
-    at Function.process_params (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:421:3)
-    at next (/home/ubuntu/ServerlessThesis/shim/node_modules/express/lib/router/index.js:280:10)
-Poll request received
-{
-  uuid: 'c8cb8e38-fb92-4f70-895a-80d33cfb714e',
-  cpu: 0,
-  memory: 3.857368991085562
-}
-Clock = 3
-Nworkers: 10
-Ntasks: 0
-Poll request received
-{
-  uuid: '689e9037-94c3-4d05-b305-1b1a231b4def',
-  cpu: 0,
-  memory: 4.1989502624343915
-}
-Worker 689e9037-94c3-4d05-b305-1b1a231b4def shutting down
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 4.545454545453982,
-  memory: 4.238523702407732
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 0,
-  memory: 3.765725235357827
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 0,
-  memory: 4.0531533783220866
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: 'b6119229-0d43-4fda-80f2-06e6dbae733c',
-  cpu: 5.0000000000045475,
-  memory: 3.93235024577189
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 4.003165875197867
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 9.523809523807875,
-  memory: 3.986503374156461
-}
-Clock = 4
-Nworkers: 9
-Ntasks: 0
-Poll request received
-{
-  uuid: 'c8cb8e38-fb92-4f70-895a-80d33cfb714e',
-  cpu: 0,
-  memory: 3.857368991085562
-}
-Worker c8cb8e38-fb92-4f70-895a-80d33cfb714e shutting down
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Poll request received
-{
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 0,
-  memory: 3.765725235357827
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 0,
-  memory: 4.0531533783220866
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Poll request received
-{
-  uuid: 'b6119229-0d43-4fda-80f2-06e6dbae733c',
-  cpu: 0,
-  memory: 3.93235024577189
-}
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 4.003165875197867
-}
-Clock = 5
-Nworkers: 8
-Ntasks: 0
-Worker b6119229-0d43-4fda-80f2-06e6dbae733c shutting down
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 3.986503374156461
-}
-Clock = 5
-Nworkers: 7
-Ntasks: 0
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
-}
-Clock = 6
-Nworkers: 7
-Ntasks: 0
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 6
-Nworkers: 7
-Ntasks: 0
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Clock = 6
-Nworkers: 7
-Ntasks: 0
-Poll request received
-{
-  uuid: '81ac064b-d38a-40dc-a095-8b61d3342a23',
-  cpu: 0,
-  memory: 3.765725235357827
-}
-Worker 81ac064b-d38a-40dc-a095-8b61d3342a23 shutting down
-Poll request received
-{
-  uuid: '2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c',
-  cpu: 0,
-  memory: 4.0531533783220866
-}
-Worker 2731c6c4-72fc-4fc4-9a6f-b13f6aa21d3c shutting down
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 4.003165875197867
-}
-Clock = 6
+0
+Received request of type matrix with id 1e658beb-071c-444b-b182-93590f854028
 Nworkers: 5
-Ntasks: 0
-Poll request received
+Ntasks: 2
+Received results of task id 3f400cd7-38a4-43b6-8b94-23c7f1b5adc2from worker 8bcd5b46-269b-491b-8195-f1060d875ef0
 {
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 3.986503374156461
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  memory: { memory: 5.696492543530784, tick: 3 },
+  cpu: { cpu: 4.545454545453982, tick: 3 },
+  requests: [
+    {
+      id: '3f400cd7-38a4-43b6-8b94-23c7f1b5adc2',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 3
 }
-Clock = 6
+0
+Received results of task id 0bc806bd-4f7e-44c8-8990-24af99ca2bbffrom worker 5feefd27-cacc-40e2-b900-29ba7d732552
+{
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  memory: { memory: 5.26326751645422, tick: 3 },
+  cpu: { cpu: 5.0000000000045475, tick: 2 },
+  requests: [
+    {
+      id: '0bc806bd-4f7e-44c8-8990-24af99ca2bbf',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 3
+}
+0
+Received request of type matrix with id f2b0d08a-162a-4716-94d3-f606dea24432
 Nworkers: 5
-Ntasks: 0
+Ntasks: 3
 Poll request received
 {
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  cpu: 4.545454545453982,
+  memory: 5.611097225693577
 }
-Clock = 7
+Clock = 3
 Nworkers: 5
-Ntasks: 0
+Ntasks: 3
+Worker 136a69fe-ce62-4607-b406-ce7deac53ef8 has profile A
+Sending task id f5fdede3-fbbf-406c-b94b-4338a73dc780to worker 136a69fe-ce62-4607-b406-ce7deac53ef8
 Poll request received
 {
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 7
-Nworkers: 5
-Ntasks: 0
-Poll request received
-{
-  uuid: '7353e7a4-ce0a-462e-887f-49d4e8c6581e',
-  cpu: 0,
-  memory: 3.9615096225943516
-}
-Worker 7353e7a4-ce0a-462e-887f-49d4e8c6581e shutting down
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
-  cpu: 0,
-  memory: 4.003165875197867
-}
-Clock = 7
-Nworkers: 4
-Ntasks: 0
-Poll request received
-{
-  uuid: '5448ba3e-5da4-4bde-8a9e-5a55e102b0fd',
-  cpu: 0,
-  memory: 3.986503374156461
-}
-Worker 5448ba3e-5da4-4bde-8a9e-5a55e102b0fd shutting down
-Poll request received
-{
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
-}
-Clock = 8
-Nworkers: 3
-Ntasks: 0
-Poll request received
-{
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
-}
-Clock = 8
-Nworkers: 3
-Ntasks: 0
-Poll request received
-{
-  uuid: '4ed669f7-128d-4d4e-b395-79c34cdb892a',
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
   cpu: 4.761904761903938,
-  memory: 4.003165875197867
+  memory: 5.344497209031076
 }
-Worker 4ed669f7-128d-4d4e-b395-79c34cdb892a shutting down
+Clock = 3
+Nworkers: 5
+Ntasks: 2
+Worker 28ba34b0-5765-423c-9987-717f937c4c2a has profile A
+Sending task id 1e658beb-071c-444b-b182-93590f854028to worker 28ba34b0-5765-423c-9987-717f937c4c2a
 Poll request received
 {
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  cpu: 3.846153846153981,
+  memory: 5.438223777388986
 }
-Clock = 9
-Nworkers: 2
+Clock = 3
+Nworkers: 5
+Ntasks: 1
+Worker 91413c57-fb0b-4fd6-853b-12f2a67f08da has profile A
+Sending task id f2b0d08a-162a-4716-94d3-f606dea24432to worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
+Received results of task id f5fdede3-fbbf-406c-b94b-4338a73dc780from worker 136a69fe-ce62-4607-b406-ce7deac53ef8
+{
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  memory: { memory: 5.611097225693577, tick: 3 },
+  cpu: { cpu: 4.545454545453982, tick: 3 },
+  requests: [
+    {
+      id: 'f5fdede3-fbbf-406c-b94b-4338a73dc780',
+      type: 'matrix',
+      args: [Object],
+      response: [Function: response],
+      lock: false,
+      profile: 'A'
+    }
+  ],
+  locked: false,
+  clock: 3
+}
+0
+Poll request received
+{
+  uuid: '5feefd27-cacc-40e2-b900-29ba7d732552',
+  cpu: 0,
+  memory: 5.523619095226193
+}
+Clock = 4
+Nworkers: 5
 Ntasks: 0
+Signaling worker 5feefd27-cacc-40e2-b900-29ba7d732552 to shutdown
 Poll request received
 {
-  uuid: '3505483a-b3ac-4610-80ed-ac3f263da9e8',
-  cpu: 0,
-  memory: 3.7032408564525534
+  uuid: '8bcd5b46-269b-491b-8195-f1060d875ef0',
+  cpu: 4.166666666666509,
+  memory: 6.177622261101392
 }
-Worker 3505483a-b3ac-4610-80ed-ac3f263da9e8 shutting down
+Clock = 4
+Nworkers: 5
+Ntasks: 0
+Signaling worker 8bcd5b46-269b-491b-8195-f1060d875ef0 to shutdown
+Worker 5feefd27-cacc-40e2-b900-29ba7d732552 shutting down
+Worker 8bcd5b46-269b-491b-8195-f1060d875ef0 shutting down
+Received results of task id 1e658beb-071c-444b-b182-93590f854028from worker 28ba34b0-5765-423c-9987-717f937c4c2a
+Received results of task id f2b0d08a-162a-4716-94d3-f606dea24432from worker 91413c57-fb0b-4fd6-853b-12f2a67f08da
 Poll request received
 {
-  uuid: 'b0be2088-6007-4bd9-b729-c69acae6b6de',
-  cpu: 0,
-  memory: 4.646754977922186
+  uuid: '136a69fe-ce62-4607-b406-ce7deac53ef8',
+  cpu: 4.999999999998863,
+  memory: 5.998500374906274
 }
-Worker b0be2088-6007-4bd9-b729-c69acae6b6de shutting down
+Clock = 4
+Nworkers: 3
+Ntasks: 0
+Signaling worker 136a69fe-ce62-4607-b406-ce7deac53ef8 to shutdown
+Worker 136a69fe-ce62-4607-b406-ce7deac53ef8 shutting down
+Poll request received
+{
+  uuid: '28ba34b0-5765-423c-9987-717f937c4c2a',
+  cpu: 9.090909090907964,
+  memory: 5.344497209031076
+}
+Worker 28ba34b0-5765-423c-9987-717f937c4c2a shutting down
+Poll request received
+{
+  uuid: '91413c57-fb0b-4fd6-853b-12f2a67f08da',
+  cpu: 4.545454545453982,
+  memory: 5.552778472048654
+}
+Worker 91413c57-fb0b-4fd6-853b-12f2a67f08da shutting down
