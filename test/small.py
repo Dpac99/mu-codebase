@@ -1,6 +1,7 @@
 import requests
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import wait
 
 
 m1 = np.random.rand(2, 2)
@@ -13,7 +14,6 @@ matrix2 = np.random.randint(1000, size=(dim, dim))
 
 
 def post(body, i):
-    print("Request {} starting ...".format(i))
     x = requests.post(function_url, json=body)
     print("Request {} done".format(i))
     return x.text
@@ -22,12 +22,11 @@ def post(body, i):
 post({"id": "matrix", "args": {
             "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 
-futures = []
 
+lim = 70
 
 with ThreadPoolExecutor() as pool:
-    for i in range(256):
-        futures.append(pool.submit(post, {"id": "matrix", "args": {
-            "a": m1.tolist(), "b": m2.tolist()}}, i))
-    for i in range(256):
-        futures[i].result()
+    futures = [pool.submit(post, {"id": "matrix", "args": {
+        "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
+    for i in range(lim):
+        futures[i].result(timeout=2)

@@ -211,6 +211,20 @@ app.post('/invoke', async (req, res) => {
   registerRequest(request)
 })
 
+async function launchWorker () {
+  console.log('Launching new worker')
+  let res
+  try {
+    res = await axios.post(config.get('server.trigger'), { 'url': url })
+  } catch (e) {
+    console.log(e)
+  }
+
+  console.log('Worker ' + res.data + ' shutting down')
+  let i = workers.findIndex(k => k.id === res.data)
+  workers.splice(i, 1)
+}
+
 async function registerRequest (request) {
   if (request.lock) {
     pool.trial.push(request)
@@ -219,19 +233,17 @@ async function registerRequest (request) {
     pool.standard.length++
   }
   if (workers.length === 0 || request.lock || pool.standard.length - 5 > workers.length) {
-    console.log('Launching new worker')
-    let res
-    try {
-      res = await axios.post(config.get('server.trigger'), { 'url': url })
-    } catch (e) {
-      console.log(e)
-    }
-
-    console.log('Worker ' + res.data + ' shutting down')
-    let i = workers.findIndex(k => k.id === res.data)
-    workers.splice(i, 1)
+    launchWorker()
   }
 }
+
+setInterval(function () {
+  console.log('Workers: ' + workers.length)
+  console.log('Pool: ' + pool.standard.length)
+  if (workers.length === 0 || pool.standard.length - 5 > workers.length) {
+    launchWorker()
+  }
+}, 500)
 
 app.listen(port, () => {
   console.log(`Coordinator listening on ${url}`)
