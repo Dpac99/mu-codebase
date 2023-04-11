@@ -224,7 +224,7 @@ async function launchWorker () {
   }
 
   console.log('Worker ' + res.data + ' shutting down')
-  let i = workers.findIndex(k => k.id === res.data)
+  let i = workers.findIndex(k => k.uuid === res.data)
   console.log(workers.splice(i, 1))
 }
 
