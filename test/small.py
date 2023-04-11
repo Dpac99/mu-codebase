@@ -12,21 +12,22 @@ matrix1 = np.random.randint(1000, size=(dim, dim))
 matrix2 = np.random.randint(1000, size=(dim, dim))
 
 
-def post(body):
+def post(body, i):
+    print("Request {} starting ...".format(i))
     x = requests.post(function_url, json=body)
+    print("Request {} done".format(i))
     return x.text
 
 
 post({"id": "matrix", "args": {
-            "a": matrix1.tolist(), "b": matrix2.tolist()}})
+            "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 
 futures = []
-results = []
+
 
 with ThreadPoolExecutor() as pool:
     for i in range(15):
         futures.append(pool.submit(post, {"id": "matrix", "args": {
-            "a": matrix1.tolist(), "b": matrix2.tolist()}}))
+            "a": matrix1.tolist(), "b": matrix2.tolist()}}, i))
     for i in range(15):
-        results.append(futures[i].result())
-    print(results)
+        futures[i].result()
