@@ -169,6 +169,8 @@ app.post('/sendResult/:reqID', (req, res) => {
   if (w) {
     let i = w.requests.findIndex(k => k.id === id)
     let r = w.requests[i]
+    console.log(w)
+    console.log(i)
     if (w.locked) {
       let p = profile(w.cpu, w.memory)
       let k = registeredFunctions.find(k => k.id === r.type)
