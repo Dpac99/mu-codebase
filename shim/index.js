@@ -124,20 +124,23 @@ app.post('/poll', (req, res) => {
     let request = null
     if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
       request = pool.standard.D.shift()
+      pool.standard.length--
     } else {
       let pr = profile(worker.cpu, worker.memory)
       console.log('Worker ' + worker.uuid + ' has profile ' + pr)
       if (pool.standard[pr].length !== 0) {
         request = pool.standard[pr].shift()
+        pool.standard.length--
       } else if (pool.standard[matchProfile(pr)].length !== 0) {
         request = pool.standard[matchProfile(pr)].shift()
+        pool.standard.length--
       } else if (pr !== Profiles.A && pool.standard[Profiles.A].length !== 0) {
         request = pool.standard[Profiles.A].shift()
+        pool.standard.length--
       }
     }
 
     if (request !== null) {
-      pool.standard.length--
       console.log('Sending task id ' + request.id + 'to worker ' + worker.uuid)
       let response = {
         id: request.id,
@@ -180,6 +183,7 @@ app.post('/sendResult/:reqID', (req, res) => {
 
 app.post('/invoke', async (req, res) => {
   let type = req.body.id
+  await new Promise(resolve => setTimeout(resolve, 10000))
   let request = {
     id: crypto.randomUUID(),
     type: type,
@@ -212,7 +216,8 @@ async function registerRequest (request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-
+  console.log('Nworkers: ' + workers.length)
+  console.log('Ntasks: ' + pool.standard.length)
   if (workers.length === 0 || request.lock || pool.standard.length - 10 > workers.length) {
     console.log('Launching new worker')
     let res

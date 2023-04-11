@@ -98,9 +98,9 @@ func poll() {
 			log.Println("Received shutdown signal")
 			end = true
 			wg.Wait()
+			log.Println("Ending poll")
 			<-end_channel
 			res.Body.Close()
-			log.Println("Ending poll")
 		} else if pollResponse.ID == "0" {
 			log.Println("Continuing as normal")
 			// Continue polling
