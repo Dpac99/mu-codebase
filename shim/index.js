@@ -191,6 +191,7 @@ app.post('/invoke', (req, res) => {
     lock: false
   }
   console.log('Received request of type ' + type + ' with id ' + request.id)
+  console.log(request)
 
   let k = registeredFunctions.find(k => k.id === type)
   if (!k) {
