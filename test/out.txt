@@ -1,448 +1,999 @@
-Request -1 done
-Waiting on future 0
-Request 2 done
-Request 3 done
-Request 1 done
-Request 4 done
-Request 0 done
-Done Waiting on future 0
-Waiting on future 1
-Done Waiting on future 1
-Request 7 done
-Request 6 done
-Waiting on future 2
-Request 8 done
-Request 5 done
-Done Waiting on future 2
-Request 9 done
-Waiting on future 3
-Done Waiting on future 3
-Request 10 done
-Waiting on future 4
-Done Waiting on future 4
-Waiting on future 5
-Done Waiting on future 5
-Waiting on future 6
-Done Waiting on future 6
-Waiting on future 7
-Done Waiting on future 7
-Waiting on future 8
-Done Waiting on future 8
-Waiting on future 9
-Done Waiting on future 9
-Waiting on future 10
-Done Waiting on future 10
-Waiting on future 11
-Request 11 done
-Done Waiting on future 11
-Waiting on future 12
-Request 12 done
-Done Waiting on future 12
-Waiting on future 13
-Request 14 done
-Request 15 done
-Request 13 done
-Request 18 done
-Done Waiting on future 13
-Request 20 done
-Request 21 done
-Request 17 done
-Request 22 done
-Request 16 done
-Waiting on future 14
-Request 19 done
-Done Waiting on future 14
-Request 23 done
-Waiting on future 15
-Done Waiting on future 15
-Waiting on future 16
-Done Waiting on future 16
-Waiting on future 17
-Done Waiting on future 17
-Waiting on future 18
-Done Waiting on future 18
-Waiting on future 19
-Done Waiting on future 19
-Waiting on future 20
-Done Waiting on future 20
-Waiting on future 21
-Done Waiting on future 21
-Waiting on future 22
-Done Waiting on future 22
-Waiting on future 23
-Done Waiting on future 23
-Waiting on future 24
-Request 24 done
-Done Waiting on future 24
-Waiting on future 25
-Request 25 done
-Done Waiting on future 25
-Waiting on future 26
-Request 29 done
-Request 27 done
-Request 26 done
-Done Waiting on future 26
-Waiting on future 27
-Done Waiting on future 27
-Waiting on future 28
-Request 28 done
-Done Waiting on future 28
-Waiting on future 29
-Done Waiting on future 29
-Waiting on future 30
-Request 31 done
-Request 33 done
-Request 35 done
-Request 30 done
-Done Waiting on future 30
-Waiting on future 31
-Done Waiting on future 31
-Waiting on future 32
-Request 32 done
-Done Waiting on future 32
-Waiting on future 33
-Done Waiting on future 33
-Waiting on future 34
-Request 34 done
-Done Waiting on future 34
-Waiting on future 35
-Done Waiting on future 35
-Waiting on future 36
-Request 36 done
-Done Waiting on future 36
-Waiting on future 37
-Request 37 done
-Done Waiting on future 37
-Waiting on future 38
-Request 38 done
-Done Waiting on future 38
-Waiting on future 39
-Request 39 done
-Done Waiting on future 39
-Waiting on future 40
-Request 40 done
-Done Waiting on future 40
-Waiting on future 41
-Request 41 done
-Done Waiting on future 41
-Request 42 done
-Waiting on future 42
-Done Waiting on future 42
-Waiting on future 43
-Request 43 done
-Done Waiting on future 43
-Waiting on future 44
-Request 44 done
-Done Waiting on future 44
-Waiting on future 45
-Request 46 done
-Request 47 done
-Request 48 done
-Request 49 done
-Request 50 done
-Request 51 done
-Request 52 done
-Request 53 done
-Request 54 done
-Request 55 done
-Request 56 done
-Request 57 done
-Request 58 done
-Request 59 done
-Request 60 done
-Request 61 done
-Request 62 done
-Request 64 done
-Request 63 done
-Request 65 done
-Request 66 done
-Request 67 done
-Request 68 done
-Request 69 done
-Request 70 done
-Request 71 done
-Request 72 done
-Request 74 done
-Future 45 timedout
-Waiting on future 46
-Done Waiting on future 46
-Waiting on future 47
-Done Waiting on future 47
-Waiting on future 48
-Done Waiting on future 48
-Waiting on future 49
-Done Waiting on future 49
-Waiting on future 50
-Done Waiting on future 50
-Waiting on future 51
-Done Waiting on future 51
-Waiting on future 52
-Done Waiting on future 52
-Waiting on future 53
-Done Waiting on future 53
-Waiting on future 54
-Done Waiting on future 54
-Waiting on future 55
-Done Waiting on future 55
-Waiting on future 56
-Done Waiting on future 56
-Waiting on future 57
-Done Waiting on future 57
-Waiting on future 58
-Done Waiting on future 58
-Waiting on future 59
-Done Waiting on future 59
-Waiting on future 60
-Done Waiting on future 60
-Waiting on future 61
-Done Waiting on future 61
-Waiting on future 62
-Done Waiting on future 62
-Waiting on future 63
-Done Waiting on future 63
-Waiting on future 64
-Done Waiting on future 64
-Waiting on future 65
-Done Waiting on future 65
-Waiting on future 66
-Done Waiting on future 66
-Waiting on future 67
-Done Waiting on future 67
-Waiting on future 68
-Done Waiting on future 68
-Waiting on future 69
-Done Waiting on future 69
-Waiting on future 70
-Done Waiting on future 70
-Waiting on future 71
-Done Waiting on future 71
-Waiting on future 72
-Done Waiting on future 72
-Waiting on future 73
-Request 73 done
-Done Waiting on future 73
-Waiting on future 74
-Done Waiting on future 74
-Waiting on future 75
-Request 75 done
-Done Waiting on future 75
-Request 76 done
-Waiting on future 76
-Done Waiting on future 76
-Waiting on future 77
-Request 77 done
-Done Waiting on future 77
-Waiting on future 78
-Request 78 done
-Done Waiting on future 78
-Waiting on future 79
-Request 80 done
-Request 82 done
-Request 81 done
-Request 83 done
-Request 84 done
-Request 85 done
-Request 86 done
-Request 87 done
-Request 89 done
-Request 88 done
-Request 90 done
-Request 91 done
-Request 92 done
-Request 93 done
-Request 94 done
-Request 95 done
-Request 96 done
-Request 97 done
-Request 98 done
-Request 99 done
-Request 100 done
-Request 101 done
-Future 79 timedout
-Waiting on future 80
-Done Waiting on future 80
-Waiting on future 81
-Done Waiting on future 81
-Waiting on future 82
-Done Waiting on future 82
-Waiting on future 83
-Done Waiting on future 83
-Waiting on future 84
-Done Waiting on future 84
-Waiting on future 85
-Done Waiting on future 85
-Waiting on future 86
-Done Waiting on future 86
-Waiting on future 87
-Done Waiting on future 87
-Waiting on future 88
-Done Waiting on future 88
-Waiting on future 89
-Done Waiting on future 89
-Waiting on future 90
-Done Waiting on future 90
-Waiting on future 91
-Done Waiting on future 91
-Waiting on future 92
-Done Waiting on future 92
-Waiting on future 93
-Done Waiting on future 93
-Waiting on future 94
-Done Waiting on future 94
-Waiting on future 95
-Done Waiting on future 95
-Waiting on future 96
-Done Waiting on future 96
-Waiting on future 97
-Done Waiting on future 97
-Waiting on future 98
-Done Waiting on future 98
-Waiting on future 99
-Done Waiting on future 99
-Waiting on future 100
-Done Waiting on future 100
-Waiting on future 101
-Done Waiting on future 101
-Waiting on future 102
-Request 102 done
-Request 103 done
-Done Waiting on future 102
-Waiting on future 103
-Done Waiting on future 103
-Waiting on future 104
-Request 104 done
-Done Waiting on future 104
-Waiting on future 105
-Request 105 done
-Done Waiting on future 105
-Waiting on future 106
-Request 106 done
-Done Waiting on future 106
-Waiting on future 107
-Request 107 done
-Done Waiting on future 107
-Waiting on future 108
-Request 109 done
-Request 108 done
-Done Waiting on future 108
-Waiting on future 109
-Done Waiting on future 109
-Waiting on future 110
-Request 110 done
-Done Waiting on future 110
-Waiting on future 111
-Request 111 done
-Done Waiting on future 111
-Waiting on future 112
-Request 112 done
-Done Waiting on future 112
-Waiting on future 113
-Request 113 done
-Done Waiting on future 113
-Waiting on future 114
-Request 115 done
-Request 116 done
-Request 117 done
-Request 118 done
-Request 119 done
-Request 120 done
-Request 121 done
-Request 122 done
-Request 123 done
-Request 124 done
-Request 125 done
-Request 126 done
-Request 128 done
-Request 127 done
-Request 129 done
-Request 130 done
-Request 131 done
-Request 132 done
-Request 133 done
-Request 134 done
-Future 114 timedout
-Waiting on future 115
-Done Waiting on future 115
-Waiting on future 116
-Done Waiting on future 116
-Waiting on future 117
-Done Waiting on future 117
-Waiting on future 118
-Done Waiting on future 118
-Waiting on future 119
-Done Waiting on future 119
-Waiting on future 120
-Done Waiting on future 120
-Waiting on future 121
-Done Waiting on future 121
-Waiting on future 122
-Done Waiting on future 122
-Waiting on future 123
-Done Waiting on future 123
-Waiting on future 124
-Done Waiting on future 124
-Waiting on future 125
-Done Waiting on future 125
-Waiting on future 126
-Done Waiting on future 126
-Waiting on future 127
-Done Waiting on future 127
-Waiting on future 128
-Done Waiting on future 128
-Waiting on future 129
-Done Waiting on future 129
-Waiting on future 130
-Done Waiting on future 130
-Waiting on future 131
-Done Waiting on future 131
-Waiting on future 132
-Done Waiting on future 132
-Waiting on future 133
-Done Waiting on future 133
-Waiting on future 134
-Done Waiting on future 134
-Waiting on future 135
-Request 135 done
-Done Waiting on future 135
-Waiting on future 136
-Request 137 done
-Request 136 done
-Done Waiting on future 136
-Waiting on future 137
-Done Waiting on future 137
-Waiting on future 138
-Request 138 done
-Done Waiting on future 138
-Waiting on future 139
-Request 139 done
-Done Waiting on future 139
-Waiting on future 140
-Request 140 done
-Done Waiting on future 140
-Waiting on future 141
-Request 142 done
-Request 141 done
-Done Waiting on future 141
-Waiting on future 142
-Done Waiting on future 142
-Waiting on future 143
-Request 143 done
-Done Waiting on future 143
-Waiting on future 144
-Request 144 done
-Done Waiting on future 144
-Waiting on future 145
-Request 145 done
-Done Waiting on future 145
-Waiting on future 146
-Request 146 done
-Done Waiting on future 146
-Waiting on future 147
-Request 147 done
-Done Waiting on future 147
-Waiting on future 148
-Request 148 done
-Done Waiting on future 148
-Waiting on future 149
-Request 149 done
-Done Waiting on future 149
+
+> shim_layer@1.0.0 prod
+> export NODE_ENV=prod && nodemon index.js
+
+[33m[nodemon] 2.0.20[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+Coordinator listening on http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com
+Received request of type matrix with id fd4639b2-e852-4d72-815e-63652411cd95
+New function found, registering type matrix
+Launching new worker
+New container registered with id 2369b8db-b91b-4dd2-808c-ef1dbc198f37
+Poll request received
+Employing worker 2369b8db-b91b-4dd2-808c-ef1dbc198f37 to profile function matrix
+Received results of task id fd4639b2-e852-4d72-815e-63652411cd95from worker 2369b8db-b91b-4dd2-808c-ef1dbc198f37
+Function matrix has been profiled as A
+1 have been fulfilled so far
+Poll request received
+Signaling worker 2369b8db-b91b-4dd2-808c-ef1dbc198f37 to shutdown
+Worker 2369b8db-b91b-4dd2-808c-ef1dbc198f37 shutting down
+Received request of type matrix with id dd857170-0cdd-4698-86b5-c679a8b033c6
+Launching new worker
+Received request of type matrix with id 7c1cd1d3-45bb-421a-b03f-314c3d92c941
+Launching new worker
+New container registered with id 288f0ac1-9cff-453a-886a-f929428b7a5b
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id dd857170-0cdd-4698-86b5-c679a8b033c6to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id dd857170-0cdd-4698-86b5-c679a8b033c6from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+2 have been fulfilled so far
+Received request of type matrix with id 6469b7de-545b-490f-a1dc-8bc3d4fa8c41
+Received request of type matrix with id 0c4cde9a-fa94-4839-aba4-2838ad55fd14
+Received request of type matrix with id 5cd203ce-09d3-4d9b-af13-5b0a3c57f86a
+Launching new worker
+Received request of type matrix with id b294e624-7d2d-47bd-9892-ca3b273a675a
+Launching new worker
+New container registered with id a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received request of type matrix with id 3776ad35-bdcd-4977-9148-865e12421daa
+Received request of type matrix with id ce090355-7b78-4a84-83c9-2a332b1bb25e
+Launching new worker
+Received request of type matrix with id 7996eb0a-c0d4-40ae-a69a-2b718a2b3154
+Launching new worker
+Received request of type matrix with id 31881377-80ca-4814-9998-2bda7650e88a
+Launching new worker
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 7c1cd1d3-45bb-421a-b03f-314c3d92c941to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received request of type matrix with id 27d296c2-035f-4e70-919a-52341e47d42e
+Launching new worker
+Received request of type matrix with id c38d90ee-908e-49ca-b7c3-7a40349474db
+Launching new worker
+Received results of task id 7c1cd1d3-45bb-421a-b03f-314c3d92c941from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+3 have been fulfilled so far
+New container registered with id 4ccca733-7310-44ad-b541-74fbb5275fe4
+New container registered with id 58975365-7b49-4423-aaf4-7f4788413d1a
+New container registered with id 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+New container registered with id 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+New container registered with id 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 6469b7de-545b-490f-a1dc-8bc3d4fa8c41to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 0c4cde9a-fa94-4839-aba4-2838ad55fd14to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 5cd203ce-09d3-4d9b-af13-5b0a3c57f86ato worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id b294e624-7d2d-47bd-9892-ca3b273a675ato worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+New container registered with id b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 6469b7de-545b-490f-a1dc-8bc3d4fa8c41from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+4 have been fulfilled so far
+Received results of task id 0c4cde9a-fa94-4839-aba4-2838ad55fd14from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+5 have been fulfilled so far
+Received results of task id 5cd203ce-09d3-4d9b-af13-5b0a3c57f86afrom worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+6 have been fulfilled so far
+Received results of task id b294e624-7d2d-47bd-9892-ca3b273a675afrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+7 have been fulfilled so far
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 3776ad35-bdcd-4977-9148-865e12421daato worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+New container registered with id 3e10a8e3-9fea-412c-9731-da40bda6577f
+Received results of task id 3776ad35-bdcd-4977-9148-865e12421daafrom worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+8 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id ce090355-7b78-4a84-83c9-2a332b1bb25eto worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Poll request received
+Worker 3e10a8e3-9fea-412c-9731-da40bda6577f has profile A
+Sending task id 7996eb0a-c0d4-40ae-a69a-2b718a2b3154to worker 3e10a8e3-9fea-412c-9731-da40bda6577f
+Received results of task id ce090355-7b78-4a84-83c9-2a332b1bb25efrom worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+9 have been fulfilled so far
+Received results of task id 7996eb0a-c0d4-40ae-a69a-2b718a2b3154from worker 3e10a8e3-9fea-412c-9731-da40bda6577f
+10 have been fulfilled so far
+Received request of type matrix with id d50fbd17-454d-4639-91ae-13580ee8fd80
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 31881377-80ca-4814-9998-2bda7650e88ato worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id 31881377-80ca-4814-9998-2bda7650e88afrom worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+11 have been fulfilled so far
+Received request of type matrix with id 4c5394d3-c156-458d-8d16-5312b8dda351
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 27d296c2-035f-4e70-919a-52341e47d42eto worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 27d296c2-035f-4e70-919a-52341e47d42efrom worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+12 have been fulfilled so far
+Received request of type matrix with id 41f4ec0f-4be1-46d3-9191-b271cf6c2fe4
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id c38d90ee-908e-49ca-b7c3-7a40349474dbto worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Received results of task id c38d90ee-908e-49ca-b7c3-7a40349474dbfrom worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+13 have been fulfilled so far
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id d50fbd17-454d-4639-91ae-13580ee8fd80to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 4c5394d3-c156-458d-8d16-5312b8dda351to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id d50fbd17-454d-4639-91ae-13580ee8fd80from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+14 have been fulfilled so far
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 41f4ec0f-4be1-46d3-9191-b271cf6c2fe4to worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received request of type matrix with id aeae8f65-d9dd-44ff-b631-eca2231be0b7
+Received results of task id 4c5394d3-c156-458d-8d16-5312b8dda351from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+15 have been fulfilled so far
+Received results of task id 41f4ec0f-4be1-46d3-9191-b271cf6c2fe4from worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+16 have been fulfilled so far
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id aeae8f65-d9dd-44ff-b631-eca2231be0b7to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received request of type matrix with id 23884d55-5726-4441-a06d-e7b1259fb068
+Received results of task id aeae8f65-d9dd-44ff-b631-eca2231be0b7from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+17 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 23884d55-5726-4441-a06d-e7b1259fb068to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Poll request received
+Signaling worker 3e10a8e3-9fea-412c-9731-da40bda6577f to shutdown
+Received request of type matrix with id 035ff9bc-f20f-4f6c-a81e-46ebe64fd755
+Received results of task id 23884d55-5726-4441-a06d-e7b1259fb068from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+18 have been fulfilled so far
+Worker 3e10a8e3-9fea-412c-9731-da40bda6577f shutting down
+Received request of type matrix with id ad76af57-2bd9-4ef0-ab59-a4a86608b24c
+Received request of type matrix with id d03c27ed-1576-4f30-b392-f1c2668dedfc
+Received request of type matrix with id 86e82fdf-0654-4472-b460-5c042580d204
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 035ff9bc-f20f-4f6c-a81e-46ebe64fd755to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received request of type matrix with id 225c6c5c-eed1-45e3-910a-0869c4341751
+Received results of task id 035ff9bc-f20f-4f6c-a81e-46ebe64fd755from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+19 have been fulfilled so far
+Received request of type matrix with id f405169a-9fe6-45b3-84b8-6738abe947bb
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id ad76af57-2bd9-4ef0-ab59-a4a86608b24cto worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id ad76af57-2bd9-4ef0-ab59-a4a86608b24cfrom worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+20 have been fulfilled so far
+Received request of type matrix with id 3c8ca564-e72b-45b5-812d-7612483be6f5
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id d03c27ed-1576-4f30-b392-f1c2668dedfcto worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 86e82fdf-0654-4472-b460-5c042580d204to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id d03c27ed-1576-4f30-b392-f1c2668dedfcfrom worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+21 have been fulfilled so far
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 225c6c5c-eed1-45e3-910a-0869c4341751to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received request of type matrix with id 3122f1da-bf8e-4775-8191-e69a5a950a6e
+Received results of task id 225c6c5c-eed1-45e3-910a-0869c4341751from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+22 have been fulfilled so far
+Received results of task id 86e82fdf-0654-4472-b460-5c042580d204from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+23 have been fulfilled so far
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id f405169a-9fe6-45b3-84b8-6738abe947bbto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received request of type matrix with id cd24a88a-afba-45a4-83b3-20893db96ea9
+Received request of type matrix with id f2d9646a-34bd-4663-a93a-d0d57e20966f
+Received results of task id f405169a-9fe6-45b3-84b8-6738abe947bbfrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+24 have been fulfilled so far
+Received request of type matrix with id af0c4ef3-35ec-42c6-9539-bbdfa046f1a7
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 3c8ca564-e72b-45b5-812d-7612483be6f5to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 3122f1da-bf8e-4775-8191-e69a5a950a6eto worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received request of type matrix with id 4e2e22e1-c05a-4837-a2f5-b39387cb53a9
+Received results of task id 3c8ca564-e72b-45b5-812d-7612483be6f5from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+25 have been fulfilled so far
+Received results of task id 3122f1da-bf8e-4775-8191-e69a5a950a6efrom worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+26 have been fulfilled so far
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id cd24a88a-afba-45a4-83b3-20893db96ea9to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received request of type matrix with id ac02b8b1-775c-44f8-b082-1ea680d9a64b
+Received results of task id cd24a88a-afba-45a4-83b3-20893db96ea9from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+27 have been fulfilled so far
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id f2d9646a-34bd-4663-a93a-d0d57e20966fto worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received request of type matrix with id 28c9e70f-f01a-46b4-89df-5d76295524de
+Received results of task id f2d9646a-34bd-4663-a93a-d0d57e20966ffrom worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+28 have been fulfilled so far
+Received request of type matrix with id 245aa52f-fca5-4cc3-8165-4826a6068c89
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id af0c4ef3-35ec-42c6-9539-bbdfa046f1a7to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Received results of task id af0c4ef3-35ec-42c6-9539-bbdfa046f1a7from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+29 have been fulfilled so far
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 4e2e22e1-c05a-4837-a2f5-b39387cb53a9to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id ac02b8b1-775c-44f8-b082-1ea680d9a64bto worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id 4e2e22e1-c05a-4837-a2f5-b39387cb53a9from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+30 have been fulfilled so far
+Received request of type matrix with id fea1459b-5225-4e61-af26-d6f9105f825c
+Received results of task id ac02b8b1-775c-44f8-b082-1ea680d9a64bfrom worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+31 have been fulfilled so far
+Received request of type matrix with id a12b1a5f-c086-4608-8743-456679e9f3d4
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 28c9e70f-f01a-46b4-89df-5d76295524deto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received request of type matrix with id 11e8ac0b-7267-4a39-b114-05334f00cacd
+Received results of task id 28c9e70f-f01a-46b4-89df-5d76295524defrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+32 have been fulfilled so far
+Received request of type matrix with id 4053782b-984c-4e7e-af54-a7ee3a9e6cb6
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 245aa52f-fca5-4cc3-8165-4826a6068c89to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id fea1459b-5225-4e61-af26-d6f9105f825cto worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 245aa52f-fca5-4cc3-8165-4826a6068c89from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+33 have been fulfilled so far
+Received results of task id fea1459b-5225-4e61-af26-d6f9105f825cfrom worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+34 have been fulfilled so far
+Received request of type matrix with id 5d5535a9-732e-4007-b507-c06bcd0f7d60
+Received request of type matrix with id f3176797-da16-43d6-b74b-f5f267d825f4
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id a12b1a5f-c086-4608-8743-456679e9f3d4to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id a12b1a5f-c086-4608-8743-456679e9f3d4from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+35 have been fulfilled so far
+Received request of type matrix with id 2906a56f-d84e-48f1-b430-518d2730313d
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 11e8ac0b-7267-4a39-b114-05334f00cacdto worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 11e8ac0b-7267-4a39-b114-05334f00cacdfrom worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+36 have been fulfilled so far
+Received request of type matrix with id 376a6f50-8aee-436b-843b-8a717e04bf05
+Received request of type matrix with id 1a38e23e-c9d1-4c09-b56f-70da62757aa1
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 4053782b-984c-4e7e-af54-a7ee3a9e6cb6to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Received request of type matrix with id 30eef746-97f5-4264-99f7-396aa95a4caf
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 5d5535a9-732e-4007-b507-c06bcd0f7d60to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id 4053782b-984c-4e7e-af54-a7ee3a9e6cb6from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+37 have been fulfilled so far
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id f3176797-da16-43d6-b74b-f5f267d825f4to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id 5d5535a9-732e-4007-b507-c06bcd0f7d60from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+38 have been fulfilled so far
+Received results of task id f3176797-da16-43d6-b74b-f5f267d825f4from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+39 have been fulfilled so far
+Received request of type matrix with id 09084226-ba56-4df7-8868-851793b62069
+Received request of type matrix with id a523fd59-ad5a-406f-9960-cf9e83ef72b8
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 2906a56f-d84e-48f1-b430-518d2730313dto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received results of task id 2906a56f-d84e-48f1-b430-518d2730313dfrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+40 have been fulfilled so far
+Received request of type matrix with id 860c6ea3-5a4e-4c14-9940-4a0fdcc2ab9c
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 376a6f50-8aee-436b-843b-8a717e04bf05to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 1a38e23e-c9d1-4c09-b56f-70da62757aa1to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 376a6f50-8aee-436b-843b-8a717e04bf05from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+41 have been fulfilled so far
+Received results of task id 1a38e23e-c9d1-4c09-b56f-70da62757aa1from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+42 have been fulfilled so far
+Received request of type matrix with id 9aa3a70a-4b83-444b-8a31-722120d91e10
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 30eef746-97f5-4264-99f7-396aa95a4cafto worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id 30eef746-97f5-4264-99f7-396aa95a4caffrom worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+43 have been fulfilled so far
+Received request of type matrix with id 4f978a49-af5f-45c3-9993-45429e980d0f
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 09084226-ba56-4df7-8868-851793b62069to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 09084226-ba56-4df7-8868-851793b62069from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+44 have been fulfilled so far
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id a523fd59-ad5a-406f-9960-cf9e83ef72b8to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 860c6ea3-5a4e-4c14-9940-4a0fdcc2ab9cto worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id a523fd59-ad5a-406f-9960-cf9e83ef72b8from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+45 have been fulfilled so far
+Received request of type matrix with id 5d7ab1a2-3e01-4999-a3e8-8ec6abee7a28
+Received request of type matrix with id 06c64ec6-e9f2-4594-862f-29521300d906
+Received results of task id 860c6ea3-5a4e-4c14-9940-4a0fdcc2ab9cfrom worker 58975365-7b49-4423-aaf4-7f4788413d1a
+46 have been fulfilled so far
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 9aa3a70a-4b83-444b-8a31-722120d91e10to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 4f978a49-af5f-45c3-9993-45429e980d0fto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received results of task id 9aa3a70a-4b83-444b-8a31-722120d91e10from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+47 have been fulfilled so far
+Received results of task id 4f978a49-af5f-45c3-9993-45429e980d0ffrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+48 have been fulfilled so far
+Received request of type matrix with id 7fb7f24d-f324-4d20-b602-085eded50581
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 5d7ab1a2-3e01-4999-a3e8-8ec6abee7a28to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 06c64ec6-e9f2-4594-862f-29521300d906to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 5d7ab1a2-3e01-4999-a3e8-8ec6abee7a28from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+49 have been fulfilled so far
+Received request of type matrix with id 84a83784-678b-4bb3-84de-d2dab7531206
+Received results of task id 06c64ec6-e9f2-4594-862f-29521300d906from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+50 have been fulfilled so far
+Received request of type matrix with id 70351631-e20a-4560-b57f-a06907d006c3
+Received request of type matrix with id ced082f8-3607-4bc4-bdef-c22e694b1138
+Received request of type matrix with id 3da78566-cfa8-4e1a-9fb8-912053b0b627
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 7fb7f24d-f324-4d20-b602-085eded50581to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id 7fb7f24d-f324-4d20-b602-085eded50581from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+51 have been fulfilled so far
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 84a83784-678b-4bb3-84de-d2dab7531206to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 84a83784-678b-4bb3-84de-d2dab7531206from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+52 have been fulfilled so far
+Received request of type matrix with id 85d97aa9-8ee5-4fa0-944a-03d577474ebc
+Received request of type matrix with id a240fef4-fded-40c5-bd07-69dcef80f2ad
+Received request of type matrix with id 5c0c2a67-642a-4ffe-a336-131945c19809
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 70351631-e20a-4560-b57f-a06907d006c3to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id ced082f8-3607-4bc4-bdef-c22e694b1138to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id 70351631-e20a-4560-b57f-a06907d006c3from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+53 have been fulfilled so far
+Received request of type matrix with id 208a50df-bf15-4b5b-aacc-d6d713737fe0
+Received results of task id ced082f8-3607-4bc4-bdef-c22e694b1138from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+54 have been fulfilled so far
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 3da78566-cfa8-4e1a-9fb8-912053b0b627to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 85d97aa9-8ee5-4fa0-944a-03d577474ebcto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received results of task id 3da78566-cfa8-4e1a-9fb8-912053b0b627from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+55 have been fulfilled so far
+Received results of task id 85d97aa9-8ee5-4fa0-944a-03d577474ebcfrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+56 have been fulfilled so far
+Received request of type matrix with id 9914e696-f9c3-4027-a084-cb8dd67a4f23
+Received request of type matrix with id 7f4567af-758b-4719-a1c3-1aeaf7ac39c2
+Received request of type matrix with id 0e980c66-8a8e-48f9-8945-62b4bf7962ae
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id a240fef4-fded-40c5-bd07-69dcef80f2adto worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received results of task id a240fef4-fded-40c5-bd07-69dcef80f2adfrom worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+57 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 5c0c2a67-642a-4ffe-a336-131945c19809to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 5c0c2a67-642a-4ffe-a336-131945c19809from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+58 have been fulfilled so far
+Received request of type matrix with id a1ed469a-8190-4dc7-8735-b78d233d555e
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 208a50df-bf15-4b5b-aacc-d6d713737fe0to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id 208a50df-bf15-4b5b-aacc-d6d713737fe0from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+59 have been fulfilled so far
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 9914e696-f9c3-4027-a084-cb8dd67a4f23to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received request of type matrix with id 2e66b3e8-4c7c-450c-affa-5a095dc5eec4
+Received results of task id 9914e696-f9c3-4027-a084-cb8dd67a4f23from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+60 have been fulfilled so far
+Received request of type matrix with id 6aa7af6f-5d79-4b8b-bd21-4e6b5dbd6a8f
+Received request of type matrix with id 93166543-b4ab-4c84-98ca-9af7b75504e9
+Received request of type matrix with id d4b16aa6-b793-45c0-b396-d0eee8c25099
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 7f4567af-758b-4719-a1c3-1aeaf7ac39c2to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 0e980c66-8a8e-48f9-8945-62b4bf7962aeto worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id 7f4567af-758b-4719-a1c3-1aeaf7ac39c2from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+61 have been fulfilled so far
+Received results of task id 0e980c66-8a8e-48f9-8945-62b4bf7962aefrom worker 58975365-7b49-4423-aaf4-7f4788413d1a
+62 have been fulfilled so far
+Received request of type matrix with id 1cdeaeed-5547-4dd3-84f2-51c1d5c01ad2
+Received request of type matrix with id 475cea20-40a2-4638-9ce6-0db194bdf4a3
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id a1ed469a-8190-4dc7-8735-b78d233d555eto worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 2e66b3e8-4c7c-450c-affa-5a095dc5eec4to worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received results of task id a1ed469a-8190-4dc7-8735-b78d233d555efrom worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+63 have been fulfilled so far
+Received results of task id 2e66b3e8-4c7c-450c-affa-5a095dc5eec4from worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+64 have been fulfilled so far
+Received request of type matrix with id 610b336c-95bb-4ab6-8965-c9d4639aa6b3
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 6aa7af6f-5d79-4b8b-bd21-4e6b5dbd6a8fto worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received results of task id 6aa7af6f-5d79-4b8b-bd21-4e6b5dbd6a8ffrom worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+65 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 93166543-b4ab-4c84-98ca-9af7b75504e9to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 93166543-b4ab-4c84-98ca-9af7b75504e9from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+66 have been fulfilled so far
+Received request of type matrix with id 9416b70c-0e39-4506-8bb0-6773f4afc51a
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id d4b16aa6-b793-45c0-b396-d0eee8c25099to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id d4b16aa6-b793-45c0-b396-d0eee8c25099from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+67 have been fulfilled so far
+Received request of type matrix with id f40d5697-ffa0-4cc0-bc9a-486e0de93bf8
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 1cdeaeed-5547-4dd3-84f2-51c1d5c01ad2to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 1cdeaeed-5547-4dd3-84f2-51c1d5c01ad2from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+68 have been fulfilled so far
+Received request of type matrix with id f02383fe-013c-433a-a7c4-07b17dd2a109
+Received request of type matrix with id c5821367-fdec-4ad6-b685-6e727265eada
+Received request of type matrix with id 458c98e6-ceb7-4f4b-a5ef-5528e4ca47fc
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 475cea20-40a2-4638-9ce6-0db194bdf4a3to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 610b336c-95bb-4ab6-8965-c9d4639aa6b3to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id 475cea20-40a2-4638-9ce6-0db194bdf4a3from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+69 have been fulfilled so far
+Received results of task id 610b336c-95bb-4ab6-8965-c9d4639aa6b3from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+70 have been fulfilled so far
+Received request of type matrix with id 62080c89-8dae-47c3-868b-16eb41e923fc
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id 9416b70c-0e39-4506-8bb0-6773f4afc51ato worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id f40d5697-ffa0-4cc0-bc9a-486e0de93bf8to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id 9416b70c-0e39-4506-8bb0-6773f4afc51afrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+71 have been fulfilled so far
+Received results of task id f40d5697-ffa0-4cc0-bc9a-486e0de93bf8from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+72 have been fulfilled so far
+Received request of type matrix with id 4db709e7-addd-4da5-85be-b3c346580b73
+Received request of type matrix with id 433fe65c-0faf-4007-a254-707ed46bca95
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id f02383fe-013c-433a-a7c4-07b17dd2a109to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received results of task id f02383fe-013c-433a-a7c4-07b17dd2a109from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+73 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id c5821367-fdec-4ad6-b685-6e727265eadato worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id c5821367-fdec-4ad6-b685-6e727265eadafrom worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+74 have been fulfilled so far
+Received request of type matrix with id f3dc4d19-53b2-42c0-84ef-3ef31240c75f
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id 458c98e6-ceb7-4f4b-a5ef-5528e4ca47fcto worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id 458c98e6-ceb7-4f4b-a5ef-5528e4ca47fcfrom worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+75 have been fulfilled so far
+Received request of type matrix with id 5a4cb228-6068-44b1-aec1-9905ffd29d52
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 62080c89-8dae-47c3-868b-16eb41e923fcto worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 62080c89-8dae-47c3-868b-16eb41e923fcfrom worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+76 have been fulfilled so far
+Received request of type matrix with id 09295100-0bf4-49c8-9375-79447d182d35
+Received request of type matrix with id 5d52d058-095d-4415-889a-7f835eccac9e
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id 4db709e7-addd-4da5-85be-b3c346580b73to worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 433fe65c-0faf-4007-a254-707ed46bca95to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id 4db709e7-addd-4da5-85be-b3c346580b73from worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+77 have been fulfilled so far
+Received results of task id 433fe65c-0faf-4007-a254-707ed46bca95from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+78 have been fulfilled so far
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id f3dc4d19-53b2-42c0-84ef-3ef31240c75fto worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 5a4cb228-6068-44b1-aec1-9905ffd29d52to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id f3dc4d19-53b2-42c0-84ef-3ef31240c75ffrom worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+79 have been fulfilled so far
+Received request of type matrix with id d2e55933-a705-484b-9c03-e0e9c0244591
+Received request of type matrix with id 3d8daa96-5819-4301-841b-087ef3471784
+Received results of task id 5a4cb228-6068-44b1-aec1-9905ffd29d52from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+80 have been fulfilled so far
+Received request of type matrix with id e9035fd2-d9c3-44ba-a366-c5fb5d102bbf
+Received request of type matrix with id 31b45c0c-6161-4898-abde-4828ec8d58c2
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 09295100-0bf4-49c8-9375-79447d182d35to worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received results of task id 09295100-0bf4-49c8-9375-79447d182d35from worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+81 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 5d52d058-095d-4415-889a-7f835eccac9eto worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 5d52d058-095d-4415-889a-7f835eccac9efrom worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+82 have been fulfilled so far
+Received request of type matrix with id c5548828-d990-4e09-8cd0-06dc039e4011
+Poll request received
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b has profile A
+Sending task id d2e55933-a705-484b-9c03-e0e9c0244591to worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+Received results of task id d2e55933-a705-484b-9c03-e0e9c0244591from worker 288f0ac1-9cff-453a-886a-f929428b7a5b
+83 have been fulfilled so far
+Received request of type matrix with id 5a8bba0d-d33a-4d05-bca1-974b0e7d36b9
+Poll request received
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a has profile A
+Sending task id 3d8daa96-5819-4301-841b-087ef3471784to worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+Received results of task id 3d8daa96-5819-4301-841b-087ef3471784from worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a
+84 have been fulfilled so far
+Received request of type matrix with id 95101885-2698-4e01-a2d5-a0bd69fe2f3e
+Received request of type matrix with id 96eec566-ce26-4630-9165-af1857dd77c9
+Poll request received
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 has profile A
+Sending task id e9035fd2-d9c3-44ba-a366-c5fb5d102bbfto worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a has profile A
+Sending task id 31b45c0c-6161-4898-abde-4828ec8d58c2to worker 58975365-7b49-4423-aaf4-7f4788413d1a
+Received results of task id e9035fd2-d9c3-44ba-a366-c5fb5d102bbffrom worker 4ccca733-7310-44ad-b541-74fbb5275fe4
+85 have been fulfilled so far
+Received results of task id 31b45c0c-6161-4898-abde-4828ec8d58c2from worker 58975365-7b49-4423-aaf4-7f4788413d1a
+86 have been fulfilled so far
+Poll request received
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 has profile A
+Sending task id c5548828-d990-4e09-8cd0-06dc039e4011to worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+Received results of task id c5548828-d990-4e09-8cd0-06dc039e4011from worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468
+87 have been fulfilled so far
+Received request of type matrix with id 16d3a80d-cf8d-4bc9-8771-81316648c682
+Received request of type matrix with id 4493d7bf-9ace-4e66-9929-63d856c0e533
+Poll request received
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 has profile A
+Sending task id 5a8bba0d-d33a-4d05-bca1-974b0e7d36b9to worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+Received results of task id 5a8bba0d-d33a-4d05-bca1-974b0e7d36b9from worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0
+88 have been fulfilled so far
+Received request of type matrix with id 5f68eba1-9994-4900-bcbf-fbf8d19bd098
+Poll request received
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce has profile A
+Sending task id 95101885-2698-4e01-a2d5-a0bd69fe2f3eto worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+Received request of type matrix with id c746b493-d543-45ed-b46a-cefe22625b22
+Received results of task id 95101885-2698-4e01-a2d5-a0bd69fe2f3efrom worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce
+89 have been fulfilled so far
+Poll request received
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 has profile A
+Sending task id 96eec566-ce26-4630-9165-af1857dd77c9to worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+Received results of task id 96eec566-ce26-4630-9165-af1857dd77c9from worker b47018d1-96ae-4c56-a558-d5f851c3d6a6
+90 have been fulfilled so far
+Received request of type matrix with id b01b0595-8e40-4785-9384-e6a94218b62f
+Poll request received
+Signaling worker 288f0ac1-9cff-453a-886a-f929428b7a5b to shutdown
+Worker 288f0ac1-9cff-453a-886a-f929428b7a5b shutting down
+Poll request received
+Signaling worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a to shutdown
+Received request of type matrix with id a44d1314-8b96-4e8b-9581-17b326ade828
+Worker a480ce3c-b7b1-4608-8c6b-c6b4bb096b1a shutting down
+Received request of type matrix with id 5c32f871-84bc-401f-bace-1d0c29256953
+Received request of type matrix with id 57d7d146-f814-4632-a528-0c01570135fe
+Poll request received
+Signaling worker 4ccca733-7310-44ad-b541-74fbb5275fe4 to shutdown
+Poll request received
+Signaling worker 58975365-7b49-4423-aaf4-7f4788413d1a to shutdown
+Received request of type matrix with id a53f6a8c-d049-4f09-a29e-a8204830650b
+Worker 4ccca733-7310-44ad-b541-74fbb5275fe4 shutting down
+Poll request received
+Worker 58975365-7b49-4423-aaf4-7f4788413d1a shutting down
+Received request of type matrix with id c551263e-602d-477f-84b2-2215cba6d2af
+Worker 713ed6c8-d6bd-4ae4-bb89-f572c62b8468 shutting down
+Poll request received
+Received request of type matrix with id a509320c-e79d-435b-a7fd-4a4bdfbbecb8
+Launching new worker
+Worker 7cdc905f-ca23-4085-8dba-ab6ce00055c0 shutting down
+Poll request received
+Received request of type matrix with id dc96f12e-5c84-477d-bdf3-7b7a567fe6eb
+Launching new worker
+Worker 36298fd0-9b90-42b5-bf90-2afa83dcfdce shutting down
+Poll request received
+New container registered with id 4dc1e6a8-442a-4923-8bb3-d2ff25a15ced
+Worker b47018d1-96ae-4c56-a558-d5f851c3d6a6 shutting down
+Poll request received
+Worker 4dc1e6a8-442a-4923-8bb3-d2ff25a15ced shutting down
+New container registered with id 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 16d3a80d-cf8d-4bc9-8771-81316648c682to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 16d3a80d-cf8d-4bc9-8771-81316648c682from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+91 have been fulfilled so far
+Received request of type matrix with id ace1bf5e-22f5-4653-90c3-1c83f1875694
+Launching new worker
+New container registered with id 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id 4493d7bf-9ace-4e66-9929-63d856c0e533to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Received results of task id 4493d7bf-9ace-4e66-9929-63d856c0e533from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+92 have been fulfilled so far
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 5f68eba1-9994-4900-bcbf-fbf8d19bd098to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 5f68eba1-9994-4900-bcbf-fbf8d19bd098from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+93 have been fulfilled so far
+Launching new worker
+New container registered with id 2d167645-2e01-4be4-9764-9202beefbf08
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id c746b493-d543-45ed-b46a-cefe22625b22to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id c746b493-d543-45ed-b46a-cefe22625b22from worker 2d167645-2e01-4be4-9764-9202beefbf08
+94 have been fulfilled so far
+Received request of type matrix with id 0b98b7f8-9797-4126-b005-d89168efc6c1
+Launching new worker
+Received request of type matrix with id 2fc686f2-b531-4d14-af71-d550aa533394
+Launching new worker
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id b01b0595-8e40-4785-9384-e6a94218b62fto worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+New container registered with id 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id b01b0595-8e40-4785-9384-e6a94218b62ffrom worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+95 have been fulfilled so far
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id a44d1314-8b96-4e8b-9581-17b326ade828to worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+New container registered with id 682ad629-084b-407c-a65c-9f159a0e218e
+Received results of task id a44d1314-8b96-4e8b-9581-17b326ade828from worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+96 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 5c32f871-84bc-401f-bace-1d0c29256953to worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 57d7d146-f814-4632-a528-0c01570135feto worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 5c32f871-84bc-401f-bace-1d0c29256953from worker 682ad629-084b-407c-a65c-9f159a0e218e
+97 have been fulfilled so far
+Received results of task id 57d7d146-f814-4632-a528-0c01570135fefrom worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+98 have been fulfilled so far
+Received request of type matrix with id 7e9c0eac-3859-4c6d-963c-3c31865815ac
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id a53f6a8c-d049-4f09-a29e-a8204830650bto worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id a53f6a8c-d049-4f09-a29e-a8204830650bfrom worker 2d167645-2e01-4be4-9764-9202beefbf08
+99 have been fulfilled so far
+Received request of type matrix with id e5fedea1-8da1-46eb-bbc0-5a6b1e6c269f
+Received request of type matrix with id 459bef7f-ad25-495c-8779-5e839cec9715
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id c551263e-602d-477f-84b2-2215cba6d2afto worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Received results of task id c551263e-602d-477f-84b2-2215cba6d2affrom worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+100 have been fulfilled so far
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id a509320c-e79d-435b-a7fd-4a4bdfbbecb8to worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id a509320c-e79d-435b-a7fd-4a4bdfbbecb8from worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+101 have been fulfilled so far
+Received request of type matrix with id 74a6bc7b-ca50-4981-b173-864daffe6210
+Received request of type matrix with id eddb197a-5491-4c7a-87f1-7889183e00a9
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id dc96f12e-5c84-477d-bdf3-7b7a567fe6ebto worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id ace1bf5e-22f5-4653-90c3-1c83f1875694to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id dc96f12e-5c84-477d-bdf3-7b7a567fe6ebfrom worker 682ad629-084b-407c-a65c-9f159a0e218e
+102 have been fulfilled so far
+Received results of task id ace1bf5e-22f5-4653-90c3-1c83f1875694from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+103 have been fulfilled so far
+Received request of type matrix with id 6de63619-7ae3-45a0-b76b-668ff214a0cf
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 0b98b7f8-9797-4126-b005-d89168efc6c1to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 0b98b7f8-9797-4126-b005-d89168efc6c1from worker 2d167645-2e01-4be4-9764-9202beefbf08
+104 have been fulfilled so far
+Received request of type matrix with id 8ed20cf6-8ff7-4d36-bdc4-722f9344aa20
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id 2fc686f2-b531-4d14-af71-d550aa533394to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 7e9c0eac-3859-4c6d-963c-3c31865815acto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received request of type matrix with id e97c501b-e3a0-4ef6-8171-e6db984c956f
+Received results of task id 2fc686f2-b531-4d14-af71-d550aa533394from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+105 have been fulfilled so far
+Received request of type matrix with id 97a254b2-ddb0-4676-9b0a-b7931caedf3c
+Received request of type matrix with id 59cd69ab-ab02-4992-b95e-d91587443a3b
+Received results of task id 7e9c0eac-3859-4c6d-963c-3c31865815acfrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+106 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id e5fedea1-8da1-46eb-bbc0-5a6b1e6c269fto worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 459bef7f-ad25-495c-8779-5e839cec9715to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id e5fedea1-8da1-46eb-bbc0-5a6b1e6c269ffrom worker 682ad629-084b-407c-a65c-9f159a0e218e
+107 have been fulfilled so far
+Received results of task id 459bef7f-ad25-495c-8779-5e839cec9715from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+108 have been fulfilled so far
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 74a6bc7b-ca50-4981-b173-864daffe6210to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 74a6bc7b-ca50-4981-b173-864daffe6210from worker 2d167645-2e01-4be4-9764-9202beefbf08
+109 have been fulfilled so far
+Received request of type matrix with id 9a8a5d12-46ce-4e48-b864-2859152b5885
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id eddb197a-5491-4c7a-87f1-7889183e00a9to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Received request of type matrix with id 858b9eb8-1666-4b11-b3c6-10e3158a08da
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 6de63619-7ae3-45a0-b76b-668ff214a0cfto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id eddb197a-5491-4c7a-87f1-7889183e00a9from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+110 have been fulfilled so far
+Received request of type matrix with id 38310dd5-eb58-4e01-a3ae-66fda90184e0
+Received results of task id 6de63619-7ae3-45a0-b76b-668ff214a0cffrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+111 have been fulfilled so far
+Received request of type matrix with id 654c2349-3e4f-4718-a4c0-1efc7be5a5fa
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 8ed20cf6-8ff7-4d36-bdc4-722f9344aa20to worker 682ad629-084b-407c-a65c-9f159a0e218e
+Received request of type matrix with id b6f8225b-08c5-4884-ae01-df054b2dbee9
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id e97c501b-e3a0-4ef6-8171-e6db984c956fto worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 8ed20cf6-8ff7-4d36-bdc4-722f9344aa20from worker 682ad629-084b-407c-a65c-9f159a0e218e
+112 have been fulfilled so far
+Received results of task id e97c501b-e3a0-4ef6-8171-e6db984c956ffrom worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+113 have been fulfilled so far
+Received request of type matrix with id afb8a7ab-9c5c-4872-bb48-f410b9521b8e
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 97a254b2-ddb0-4676-9b0a-b7931caedf3cto worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 97a254b2-ddb0-4676-9b0a-b7931caedf3cfrom worker 2d167645-2e01-4be4-9764-9202beefbf08
+114 have been fulfilled so far
+Received request of type matrix with id 980d0f53-ed78-486e-88ff-c5d0f3e47c6a
+Received request of type matrix with id d09f6caa-cf72-4378-aff5-572ecd684439
+Received request of type matrix with id 5e961911-0bca-4280-8bff-deeadc968f20
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id 59cd69ab-ab02-4992-b95e-d91587443a3bto worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Received request of type matrix with id a44593b6-5bc9-47f4-a115-5f62e06988c3
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 9a8a5d12-46ce-4e48-b864-2859152b5885to worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id 59cd69ab-ab02-4992-b95e-d91587443a3bfrom worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+115 have been fulfilled so far
+Received results of task id 9a8a5d12-46ce-4e48-b864-2859152b5885from worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+116 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 858b9eb8-1666-4b11-b3c6-10e3158a08dato worker 682ad629-084b-407c-a65c-9f159a0e218e
+Received results of task id 858b9eb8-1666-4b11-b3c6-10e3158a08dafrom worker 682ad629-084b-407c-a65c-9f159a0e218e
+117 have been fulfilled so far
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 38310dd5-eb58-4e01-a3ae-66fda90184e0to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 38310dd5-eb58-4e01-a3ae-66fda90184e0from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+118 have been fulfilled so far
+Received request of type matrix with id 64817bf6-a1f3-4bf9-ae91-56c6ec91cdee
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 654c2349-3e4f-4718-a4c0-1efc7be5a5fato worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 654c2349-3e4f-4718-a4c0-1efc7be5a5fafrom worker 2d167645-2e01-4be4-9764-9202beefbf08
+119 have been fulfilled so far
+Received request of type matrix with id 6cd506b0-c401-450d-9e37-511e92339725
+Received request of type matrix with id fe6ae836-8947-4ce3-8f98-922c9c2e3b8c
+Received request of type matrix with id 8e82007b-8420-4103-9d7e-d692a7d42df0
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id b6f8225b-08c5-4884-ae01-df054b2dbee9to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id afb8a7ab-9c5c-4872-bb48-f410b9521b8eto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id b6f8225b-08c5-4884-ae01-df054b2dbee9from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+120 have been fulfilled so far
+Received results of task id afb8a7ab-9c5c-4872-bb48-f410b9521b8efrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+121 have been fulfilled so far
+Received request of type matrix with id c5378d78-c278-4343-9f75-d68a0f0c5544
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 980d0f53-ed78-486e-88ff-c5d0f3e47c6ato worker 682ad629-084b-407c-a65c-9f159a0e218e
+Received results of task id 980d0f53-ed78-486e-88ff-c5d0f3e47c6afrom worker 682ad629-084b-407c-a65c-9f159a0e218e
+122 have been fulfilled so far
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id d09f6caa-cf72-4378-aff5-572ecd684439to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id d09f6caa-cf72-4378-aff5-572ecd684439from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+123 have been fulfilled so far
+Received request of type matrix with id 9b00d5ec-990e-42d2-b5b0-080617b7ab2f
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 5e961911-0bca-4280-8bff-deeadc968f20to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 5e961911-0bca-4280-8bff-deeadc968f20from worker 2d167645-2e01-4be4-9764-9202beefbf08
+124 have been fulfilled so far
+Received request of type matrix with id 10b0f143-8b8f-4c0f-b1ba-763bc314bc56
+Received request of type matrix with id 45035e95-ac53-480d-a2f9-a46097b365ef
+Received request of type matrix with id 161aebe3-a7f5-4ee9-a294-17bebc3e33a6
+Received request of type matrix with id 0a3612e2-9cec-4c04-b49d-1cdb9e0a9262
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id a44593b6-5bc9-47f4-a115-5f62e06988c3to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 64817bf6-a1f3-4bf9-ae91-56c6ec91cdeeto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id a44593b6-5bc9-47f4-a115-5f62e06988c3from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+125 have been fulfilled so far
+Received results of task id 64817bf6-a1f3-4bf9-ae91-56c6ec91cdeefrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+126 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 6cd506b0-c401-450d-9e37-511e92339725to worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id fe6ae836-8947-4ce3-8f98-922c9c2e3b8cto worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 6cd506b0-c401-450d-9e37-511e92339725from worker 682ad629-084b-407c-a65c-9f159a0e218e
+127 have been fulfilled so far
+Received results of task id fe6ae836-8947-4ce3-8f98-922c9c2e3b8cfrom worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+128 have been fulfilled so far
+Received request of type matrix with id 6744ddd8-6b80-46e7-86d0-90c735795e74
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 8e82007b-8420-4103-9d7e-d692a7d42df0to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 8e82007b-8420-4103-9d7e-d692a7d42df0from worker 2d167645-2e01-4be4-9764-9202beefbf08
+129 have been fulfilled so far
+Received request of type matrix with id f02d7eb2-bed5-4fe9-9bf5-ca9b78a17405
+Received request of type matrix with id b45aa54c-3786-4afa-9ce8-4308f888be61
+Received request of type matrix with id e5324740-d489-49a6-bd83-9259527c9dfb
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id c5378d78-c278-4343-9f75-d68a0f0c5544to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 9b00d5ec-990e-42d2-b5b0-080617b7ab2fto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id c5378d78-c278-4343-9f75-d68a0f0c5544from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+130 have been fulfilled so far
+Received request of type matrix with id a3c8595a-f11a-4757-a2ea-aaf6c0b125f9
+Received results of task id 9b00d5ec-990e-42d2-b5b0-080617b7ab2ffrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+131 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id 10b0f143-8b8f-4c0f-b1ba-763bc314bc56to worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id 45035e95-ac53-480d-a2f9-a46097b365efto worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id 10b0f143-8b8f-4c0f-b1ba-763bc314bc56from worker 682ad629-084b-407c-a65c-9f159a0e218e
+132 have been fulfilled so far
+Received results of task id 45035e95-ac53-480d-a2f9-a46097b365effrom worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+133 have been fulfilled so far
+Received request of type matrix with id 0e600201-56b2-418d-8c2d-c906747e2bcc
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 161aebe3-a7f5-4ee9-a294-17bebc3e33a6to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 161aebe3-a7f5-4ee9-a294-17bebc3e33a6from worker 2d167645-2e01-4be4-9764-9202beefbf08
+134 have been fulfilled so far
+Received request of type matrix with id b4e864a4-41c9-408b-a6dd-0270c8fb673e
+Received request of type matrix with id 21fa9752-18f6-4a07-926f-ff532f7f0830
+Received request of type matrix with id 91fa0f5c-ccfa-42e7-9a0a-2531cbe13a8c
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id 0a3612e2-9cec-4c04-b49d-1cdb9e0a9262to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 6744ddd8-6b80-46e7-86d0-90c735795e74to worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received results of task id 0a3612e2-9cec-4c04-b49d-1cdb9e0a9262from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+135 have been fulfilled so far
+Received results of task id 6744ddd8-6b80-46e7-86d0-90c735795e74from worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+136 have been fulfilled so far
+Received request of type matrix with id a59b6060-efe1-408f-9b66-408bed31ba0d
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id f02d7eb2-bed5-4fe9-9bf5-ca9b78a17405to worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 has profile A
+Sending task id b45aa54c-3786-4afa-9ce8-4308f888be61to worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+Received results of task id f02d7eb2-bed5-4fe9-9bf5-ca9b78a17405from worker 682ad629-084b-407c-a65c-9f159a0e218e
+137 have been fulfilled so far
+Received results of task id b45aa54c-3786-4afa-9ce8-4308f888be61from worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98
+138 have been fulfilled so far
+Received request of type matrix with id e17f5fd3-331f-41d3-8490-099b7e1b0133
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id e5324740-d489-49a6-bd83-9259527c9dfbto worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id e5324740-d489-49a6-bd83-9259527c9dfbfrom worker 2d167645-2e01-4be4-9764-9202beefbf08
+139 have been fulfilled so far
+Received request of type matrix with id 6eb945be-72be-403a-936e-2ad668f36851
+Poll request received
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f has profile A
+Sending task id a3c8595a-f11a-4757-a2ea-aaf6c0b125f9to worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+Received request of type matrix with id 23db0c3c-9aa2-4f63-9b48-bc95ab77398d
+Received results of task id a3c8595a-f11a-4757-a2ea-aaf6c0b125f9from worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f
+140 have been fulfilled so far
+Received request of type matrix with id fcdcf0d3-d81f-4f95-bbf7-05cff394e7ce
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 0e600201-56b2-418d-8c2d-c906747e2bccto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Received request of type matrix with id 65a54e77-9ddb-4144-9f1b-cd6fbed85697
+Received results of task id 0e600201-56b2-418d-8c2d-c906747e2bccfrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+141 have been fulfilled so far
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e has profile A
+Sending task id b4e864a4-41c9-408b-a6dd-0270c8fb673eto worker 682ad629-084b-407c-a65c-9f159a0e218e
+Poll request received
+Signaling worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 to shutdown
+Received results of task id b4e864a4-41c9-408b-a6dd-0270c8fb673efrom worker 682ad629-084b-407c-a65c-9f159a0e218e
+142 have been fulfilled so far
+Worker 0cb581e7-d593-4b13-8044-4f5f2fb58f98 shutting down
+Received request of type matrix with id 3f4a3be8-1eb6-45d4-9c4b-800ea0f19abe
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 has profile A
+Sending task id 21fa9752-18f6-4a07-926f-ff532f7f0830to worker 2d167645-2e01-4be4-9764-9202beefbf08
+Received results of task id 21fa9752-18f6-4a07-926f-ff532f7f0830from worker 2d167645-2e01-4be4-9764-9202beefbf08
+143 have been fulfilled so far
+Poll request received
+Signaling worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f to shutdown
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 has profile A
+Sending task id 91fa0f5c-ccfa-42e7-9a0a-2531cbe13a8cto worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+Worker 332a61c2-9db1-4bc1-a5b2-250d7c8b568f shutting down
+Received results of task id 91fa0f5c-ccfa-42e7-9a0a-2531cbe13a8cfrom worker 165f73de-eef6-4100-8b2e-eb5db1c630d5
+BIG ERROR: REQUEST MISSING: 91fa0f5c-ccfa-42e7-9a0a-2531cbe13a8c
+Poll request received
+Worker 682ad629-084b-407c-a65c-9f159a0e218e shutting down
+Poll request received
+Worker 2d167645-2e01-4be4-9764-9202beefbf08 shutting down
+Poll request received
+Worker 165f73de-eef6-4100-8b2e-eb5db1c630d5 shutting down
+Launching new worker
+New container registered with id 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Poll request received
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 has profile A
+Sending task id a59b6060-efe1-408f-9b66-408bed31ba0dto worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Received results of task id a59b6060-efe1-408f-9b66-408bed31ba0dfrom worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+144 have been fulfilled so far
+Poll request received
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 has profile A
+Sending task id e17f5fd3-331f-41d3-8490-099b7e1b0133to worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Received results of task id e17f5fd3-331f-41d3-8490-099b7e1b0133from worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+145 have been fulfilled so far
+Poll request received
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 has profile A
+Sending task id 6eb945be-72be-403a-936e-2ad668f36851to worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Received results of task id 6eb945be-72be-403a-936e-2ad668f36851from worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+146 have been fulfilled so far
+Launching new worker
+New container registered with id de31fb96-f2ae-470f-9483-13c8bfca3887
+Poll request received
+Worker de31fb96-f2ae-470f-9483-13c8bfca3887 has profile A
+Sending task id 23db0c3c-9aa2-4f63-9b48-bc95ab77398dto worker de31fb96-f2ae-470f-9483-13c8bfca3887
+Received results of task id 23db0c3c-9aa2-4f63-9b48-bc95ab77398dfrom worker de31fb96-f2ae-470f-9483-13c8bfca3887
+147 have been fulfilled so far
+Poll request received
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 has profile A
+Sending task id fcdcf0d3-d81f-4f95-bbf7-05cff394e7ceto worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Received results of task id fcdcf0d3-d81f-4f95-bbf7-05cff394e7cefrom worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+148 have been fulfilled so far
+Poll request received
+Worker de31fb96-f2ae-470f-9483-13c8bfca3887 has profile A
+Sending task id 65a54e77-9ddb-4144-9f1b-cd6fbed85697to worker de31fb96-f2ae-470f-9483-13c8bfca3887
+Received results of task id 65a54e77-9ddb-4144-9f1b-cd6fbed85697from worker de31fb96-f2ae-470f-9483-13c8bfca3887
+149 have been fulfilled so far
+Poll request received
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 has profile A
+Sending task id 3f4a3be8-1eb6-45d4-9c4b-800ea0f19abeto worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+Received results of task id 3f4a3be8-1eb6-45d4-9c4b-800ea0f19abefrom worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98
+150 have been fulfilled so far
+Poll request received
+Signaling worker de31fb96-f2ae-470f-9483-13c8bfca3887 to shutdown
+Worker de31fb96-f2ae-470f-9483-13c8bfca3887 shutting down
+Poll request received
+Signaling worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 to shutdown
+Worker 284e598b-e331-409b-8fbd-ed5cd5ff1a98 shutting down

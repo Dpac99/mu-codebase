@@ -181,6 +181,7 @@ app.post('/sendResult/:reqID', (req, res) => {
     console.log(nResults + ' have been fulfilled so far')
   } else {
     console.log('BIG ERROR: REQUEST MISSING: ' + id)
+    console.log(workers)
   }
 })
 
