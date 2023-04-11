@@ -164,9 +164,10 @@ app.post('/poll', (req, res) => {
 app.post('/sendResult/:reqID', (req, res) => {
   let response = req.body
   let id = req.params.reqID
-  console.log('Received results of task id ' + id)
+  console.log('Received results of task id ' + id + 'from worker ' + response.id)
+  res.end()
 
-  let w = workers.find(k => k.UUID === response.ID)
+  let w = workers.find(k => k.uuid === response.id)
   if (w) {
     let i = w.requests.findIndex(k => k.id === id)
     let r = w.requests[i]
@@ -181,7 +182,6 @@ app.post('/sendResult/:reqID', (req, res) => {
     w.requests.splice(i, 1)
     r.response(JSON.stringify(response.data))
   }
-  res.send()
 })
 
 app.post('/invoke', async (req, res) => {

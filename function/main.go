@@ -116,6 +116,7 @@ func poll() {
 				log.Println("Task done executing")
 				res := &types.TaskResult{}
 				res.ID = id
+				log.Println(id)
 
 				if err != nil {
 					e, err2 := json.Marshal(err)
