@@ -240,7 +240,7 @@ async function registerRequest (request) {
 setInterval(function () {
   console.log('Workers: ' + workers.length)
   console.log('Pool: ' + pool.standard.length)
-  if (workers.length === 0 || pool.standard.length - 5 > workers.length) {
+  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length - 5 > workers.length) {
     launchWorker()
   }
 }, 500)
