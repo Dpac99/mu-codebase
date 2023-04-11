@@ -1,7 +1,7 @@
 import requests
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor
-from concurrent.futures import wait
+from concurrent.futures import as_completed
 import time
 
 
@@ -31,11 +31,4 @@ lim = 150
 with ThreadPoolExecutor() as pool:
     futures = [pool.submit(post, {"id": "matrix", "args": {
         "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
-    for i in range(lim):
-        try:
-            print("Waiting on future {}".format(i), flush=True)
-            futures[i].result(timeout=2)
-            print("Done Waiting on future {}".format(i), flush=True)
-        except:
-            print("Future {} timedout".format(i), flush=True)
-    pool.shutdown(wait=False)
+    result = [future.result() for future in as_completed(futures)]
