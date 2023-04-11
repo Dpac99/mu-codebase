@@ -88,6 +88,7 @@ app.post('/poll', (req, res) => {
   console.log('Poll request received')
 
   let stats = req.body
+  console.log(stats)
   let worker = workers.find((w) => w.uuid === stats.uuid)
   if (!worker) {
     return res.send({ id: '-1' })
