@@ -193,7 +193,7 @@ app.post('/count', (req, res) => {
 })
 
 app.get('/count', (req, res) => {
-  res.send(workerCount)
+  res.send(JSON.stringify(workerCount))
 })
 
 app.post('/invoke', async (req, res) => {

@@ -26,10 +26,10 @@ post({"id": "matrix", "args": {
             "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 
 
-lim = 150
+# lim = 150
 
-with ThreadPoolExecutor() as pool:
-    futures = [pool.submit(post, {"id": "matrix", "args": {
-        "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
-    results = [future.result() for future in as_completed(futures)]
-    print(results)
+# with ThreadPoolExecutor() as pool:
+#     futures = [pool.submit(post, {"id": "matrix", "args": {
+#         "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
+#     results = [future.result() for future in as_completed(futures)]
+#     print(results)

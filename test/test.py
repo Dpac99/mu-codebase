@@ -116,6 +116,7 @@ functionInvocations = []
 requests.post(control_url)
 functionStats.append(run(256, request_func))
 functionInvocations.append(int(requests.get(control_url).text))
+print(functionInvocations)
 # functionStats.append(run(512, request_func))
 # functionStats.append(run(1024, request_func))
 # functionStats.append(run(2048, request_func))
