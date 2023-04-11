@@ -93,7 +93,7 @@ app.post('/poll', (req, res) => {
     return res.send({ id: '-1' })
   }
   worker.clock++
-	console.log('Clock = ' + worker.clock)
+  console.log('Clock = ' + worker.clock)
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
     worker.cpu.tick = worker.clock
@@ -103,8 +103,8 @@ app.post('/poll', (req, res) => {
     worker.memory.memory = stats.memory
     worker.memory.tick = worker.clock
   }
-	console.log('Nworkers: ' + workers.length)
-	console.log('Ntasks: ' + pool.standard.length)
+  console.log('Nworkers: ' + workers.length)
+  console.log('Ntasks: ' + pool.standard.length)
 
   if (worker.requests.length === 0 && pool.trial.length > 0) {
     let request = pool.trial.shift()
@@ -120,7 +120,7 @@ app.post('/poll', (req, res) => {
     return res.send(response)
   }
 
-  if (pool.standard.length !== 0 && !worker.locked) {
+  if (pool.standard.length !== 0 && !worker.locked && worker.clock < 12) {
     let request = null
     if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
       request = pool.standard.D.shift()
@@ -150,9 +150,6 @@ app.post('/poll', (req, res) => {
     }
   }
   if (worker.requests.length === 0) {
-    if (worker.locked) {
-
-    }
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
     return res.send({ id: '-1' })
   } else {
@@ -216,7 +213,7 @@ async function registerRequest (request) {
     pool.standard.length++
   }
 
-  if (workers.length === 0 || request.lock) {
+  if (workers.length === 0 || request.lock || pool.standard.length - 10 > workers.length) {
     console.log('Launching new worker')
     let res
     try {
