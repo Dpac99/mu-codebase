@@ -1,13 +1,141 @@
 import numpy as np
-import matplotlib as plt
-import docker as docker
+import matplotlib.pyplot as plt
+import requests
+from concurrent.futures import ThreadPoolExecutor
+import time
 
-url = 'http://localhost:1234/invoke'
-image = 'test_function'
+function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
+baseline_url = 'https://dlogbc5lu6e4nkbuu6uycob64i0kklzf.lambda-url.eu-west-3.on.aws/'
+
+dim = 2048*2*2
+n_req = 128
+
+output = "Test for {} with {} vectors:\n\tTotal time:\t{}\n\tAverage Time:\t{}\n\tMin Time:\t{}\n\tMax Time:\t{}\n"
+
+matrix1 = np.random.rand(dim, dim)
+matrix2 = np.random.rand(dim, dim)
+matrix2_trans = matrix2.transpose()
 
 
-client = docker.from_env()
-containers = []
+def request_baseline(m1, m2):
+    start = time.time()
+    x = requests.post(
+        baseline_url, json={"a": m1.tolist(), "b": m2.tolist()})
+    end = time.time()
+    return end-start
 
-for i in range(100):
-    containers[i] = client.containers.run(image, detach=True, extra-hosts={'host.docker.internal': 'host-gateway'}, ports: {'9000': '8080'})
+
+def request_func(m1, m2):
+    start = time.time()
+    x = requests.post(
+        function_url, json={"id": "matrix", "args": {"a": m1.tolist(), "b": m2.tolist()}})
+    end = time.time()
+    return end-start
+
+
+def analyze(results):
+    min = results[0]
+    max = results[0]
+    avg = 0
+    for res in results:
+        if res < min:
+            min = res
+        elif res > max:
+            max = res
+        avg += res
+    return [avg/len(results), min, max]
+
+
+def runSequential(n):
+    start = time.time()
+    c = []
+    for i in range(n):
+        row = []
+        for j in range(n):
+            cell = 0
+            for k in range(n):
+                cell += matrix1[i][k] * matrix2[k][j]
+            row.append(cell)
+        c.append(row)
+    end = time.time()
+    return end-start
+
+
+def run(n, func):
+    with ThreadPoolExecutor() as pool:
+        m_size = n//n_req
+        futures = []
+        results = []
+        start = time.time()
+        for i in range(n_req):
+            a = i*m_size
+            b = (i+1)*m_size - 1
+            futures.append(pool.submit(func,
+                           matrix1[a:b], matrix2_trans[a:b].transpose()))
+        for i in range(n_req):
+            results.append(futures[i].result())
+        end = time.time()
+        stats = analyze(results)
+        print(output.format(func, n, end-start, stats[0], stats[1], stats[2]))
+        return [stats, end-start]
+
+
+# sequentialTimes = []
+
+# sequentialTimes.append(runSequential(256))
+# sequentialTimes.append(runSequential(512))
+# sequentialTimes.append(runSequential(1024))
+# sequentialTimes.append(runSequential(2048))
+# sequentialTimes.append(runSequential(4096))
+# sequentialTimes.append(runSequential(8192))
+
+# baselineStats = []
+# baselineStats.append(run(256, request_baseline))
+# baselineStats.append(run(512, request_baseline))
+# baselineStats.append(run(1024, request_baseline))
+# baselineStats.append(run(2048, request_baseline))
+# baselineStats.append(run(4096, request_baseline))
+# baselineStats.append(run(8192, request_baseline))
+
+# baselineTotals = [x[1] for x in baselineStats]
+# baselineAverages = [x[0][0] for x in baselineStats]
+# baselineMins = [x[0][1] for x in baselineStats]
+# baselineMaxs = [x[0][2] for x in baselineStats]
+
+functionStats = []
+functionStats.append(run(256, request_func))
+functionStats.append(run(512, request_func))
+functionStats.append(run(1024, request_func))
+functionStats.append(run(2048, request_func))
+functionStats.append(run(4096, request_func))
+functionStats.append(run(8192, request_func))
+
+functionTotals = [x[1] for x in functionStats]
+functionAverages = [x[0][0] for x in functionStats]
+functionMins = [x[0][1] for x in functionStats]
+functionMaxs = [x[0][2] for x in functionStats]
+
+
+figure, axis = plt.subplots(2, 2)
+
+
+values = [256, 512, 1024, 2048, 4096, 8192]
+
+# axis[0, 0].plot(values, sequentialTimes, label="sequential")
+axis[0, 0].plot(values, baselineTotals, label="baseline")
+axis[0, 0].plot(values, functionTotals, label="solution")
+axis[0, 0].set_title("Total run time")
+
+axis[0, 1].plot(values, baselineAverages, label="baseline")
+axis[0, 1].plot(values, functionAverages, label="solution")
+axis[0, 1].set_title("Average run time")
+
+axis[1, 0].plot(values, baselineMins, label="baseline")
+axis[1, 0].plot(values, functionMins, label="solution")
+axis[1, 0].set_title("Minimum run times")
+
+axis[1, 1].plot(values, baselineMaxs, label="baseline")
+axis[1, 1].plot(values, functionMaxs, label="solution")
+axis[1, 1].set_title("Maximum run times")
+
+plt.show()

@@ -10,27 +10,37 @@ import (
 )
 
 type Request struct {
-	N       int         `json:"n"`
-	Vectors [][]float64 `json:"vectors"`
+	A [][]float64 `json:"a"`
+	B [][]float64 `json:"b"`
 }
 
-func HandleRequest(ctx context.Context, req events.LambdaFunctionURLRequest) (float64, error) {
+func HandleRequest(ctx context.Context, req events.LambdaFunctionURLRequest) ([][]float64, error) {
 	log.Println(req.Body)
 	var r Request
 	json.Unmarshal([]byte(req.Body), &r)
-	var result float64 = 0
-	for i := 0; i < r.N; i += 2 {
-		result += dotProduct(r.Vectors[i], r.Vectors[i+1])
-	}
-	return result, nil
+	log.Println(r)
+	return multiplyMatrix(r.A, r.B), nil
 }
 
-func dotProduct(a []float64, b []float64) (result float64) {
-	k := len(a)
-	for i := 0; i < k; i++ {
-		result += a[i] * b[i]
+func multiplyMatrix(a [][]float64, b [][]float64) [][]float64 {
+	n_rows := len(a)
+	n_cols := len(b[0])
+	n_elems := len(b)
+	c := make([][]float64, n_rows)
+	for i := range c {
+		c[i] = make([]float64, n_cols)
 	}
-	return
+
+	for i := 0; i < n_rows; i++ {
+		for j := 0; j < n_cols; j++ {
+			c[i][j] = 0
+			for k := 0; k < n_elems; k++ {
+				c[i][j] += a[i][k] * b[k][j]
+			}
+		}
+	}
+
+	return c
 }
 
 func main() {

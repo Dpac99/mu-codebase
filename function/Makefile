@@ -1,7 +1,7 @@
 function:
 	go build main.go
-	docker compose build
-	docker compose up
+	docker compose -f ../docker-compose.yml build function
+	docker compose -f ../docker-compose.yml up function
 
 remote:
 	go build main.go

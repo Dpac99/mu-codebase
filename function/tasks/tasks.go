@@ -18,6 +18,11 @@ type SleepRequest struct {
 	Duration int `json:"duration"`
 }
 
+type MatrixRequest struct {
+	A [][]float64 `json:"a"`
+	B [][]float64 `json:"b"`
+}
+
 func ExecuteTask(req types.TaskRequest) (interface{}, error) {
 	log.Println("Executing request of type " + req.Type + " with args " + string(fmt.Sprintf("%v", req.Args)))
 	switch req.Type {
@@ -38,6 +43,13 @@ func ExecuteTask(req types.TaskRequest) (interface{}, error) {
 
 		return ret, nil
 
+	case "matrix":
+		var r MatrixRequest
+		jsonData, _ := json.Marshal(req.Args)
+		json.Unmarshal(jsonData, &r)
+		ret := multiplyMatrix(r.A, r.B)
+		return ret, nil
+
 	case "test":
 		name := req.Args["name"].(string)
 		ret := testfunction(name)
@@ -48,6 +60,27 @@ func ExecuteTask(req types.TaskRequest) (interface{}, error) {
 	default:
 		return nil, errors.New("unrecognized request")
 	}
+}
+
+func multiplyMatrix(a [][]float64, b [][]float64) [][]float64 {
+	n_rows := len(a)
+	n_cols := len(b[0])
+	n_elems := len(b)
+	c := make([][]float64, n_rows)
+	for i := range c {
+		c[i] = make([]float64, n_cols)
+	}
+
+	for i := 0; i < n_rows; i++ {
+		for j := 0; j < n_cols; j++ {
+			c[i][j] = 0
+			for k := 0; k < n_elems; k++ {
+				c[i][j] += a[i][k] * b[k][j]
+			}
+		}
+	}
+
+	return c
 }
 
 func placeHolderSleep(duration float64) int {

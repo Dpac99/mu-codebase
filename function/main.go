@@ -28,9 +28,6 @@ type T = struct{}
 var end_channel = make(chan T)
 
 func Listen(req events.LambdaFunctionURLRequest) (string, error) {
-	if req.Body != nil {
-		shimURL = req.Body
-	}
 	launch()
 	go poll()
 	end_channel <- struct{}{}

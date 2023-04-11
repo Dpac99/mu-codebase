@@ -6,6 +6,9 @@ const config = require('config')
 
 const app = express()
 app.use(bodyParser.json({ extended: true }))
+app.use(express.bodyParser({ limit: '50mb' }))
+app.use(express.json({ limit: '50mb' }))
+app.use(express.urlencoded({ limit: '50mb' }))
 const port = config.get('server.port')
 const url = config.get('server.host')
 
@@ -209,7 +212,7 @@ async function registerRequest (request) {
     console.log('Launching new worker')
     let res
     try {
-      res = await axios.post(config.get('server.trigger'), url)
+      res = await axios.post(config.get('server.trigger'), { 'url': url })
     } catch (e) {
       console.log(e)
     }
