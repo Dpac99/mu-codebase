@@ -27,8 +27,10 @@ def request_baseline(m1, m2):
 
 def request_func(m1, m2):
     start = time.time()
+    body = {"id": "matrix", "args": {"a": m1.tolist(), "b": m2.tolist()}}
+    print(body)
     x = requests.post(
-        function_url, json={"id": "matrix", "args": {"a": m1.tolist(), "b": m2.tolist()}})
+        function_url, json=body)
     end = time.time()
     return end-start
 

@@ -5,6 +5,8 @@ const axios = require('axios')
 const config = require('config')
 
 const app = express()
+app.use(bodyParser.json({ limit: '50mb', extended: true }))
+
 const port = config.get('server.port')
 const url = config.get('server.host')
 
@@ -121,9 +123,13 @@ app.post('/poll', (req, res) => {
       request = pool.standard.D.shift()
     } else {
       let pr = profile(worker.cpu, worker.memory)
+      console.log("Worker " + worker.uuid + " has profile " + pr)
       if (pool.standard[pr].length !== 0) {
         request = pool.standard[pr].shift()
-      }
+      } else if (pool.standard[matchProfile(pr)].length !== 0) {
+        request = pool.standard[matchProfile(pr)].shift()
+      } else if (pr !== Profiles.A && pool.standard[Profiles.A].length !== 0) {
+        request = pool.standard[Profiles.A].shift()
     }
 
     if (request !== null) {
@@ -153,7 +159,7 @@ app.post('/poll', (req, res) => {
 app.post('/sendResult/:reqID', (req, res) => {
   let response = req.body
   let id = req.params.reqID
-  console.log('Received results of task id ' + id)
+  console.log('Received results of task id ' + id + 'res = ' + response)
 
   let w = workers.find(k => k.UUID === response.ID)
   if (w) {
@@ -221,8 +227,6 @@ async function registerRequest (request) {
     workers.splice(i, 1)
   }
 }
-
-app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
 app.listen(port, () => {
   console.log(`Coordinator listening on ${url}`)
