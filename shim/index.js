@@ -152,7 +152,7 @@ app.post('/poll', (req, res) => {
   }
   if (worker.requests.length === 0) {
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
-    return res.send({ id: '-1', type: worker.clock })
+    return res.send({ id: '-1', type: worker.clock.toString() })
   } else {
     return res.send({ id: '0' })
   }
