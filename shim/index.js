@@ -181,7 +181,6 @@ app.post('/sendResult/:reqID', (req, res) => {
     console.log(nResults + ' have been fulfilled so far')
   } else {
     console.log('BIG ERROR: REQUEST MISSING: ' + id)
-    console.log(workers)
   }
 })
 
@@ -225,7 +224,6 @@ async function launchWorker () {
 
   console.log('Worker ' + res.data + ' shutting down')
   let i = workers.findIndex(k => k.uuid === res.data)
-  console.log(workers.splice(i, 1))
 }
 
 async function registerRequest (request) {
