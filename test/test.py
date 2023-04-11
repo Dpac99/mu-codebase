@@ -71,7 +71,7 @@ def run(n, func):
         start = time.time()
         for i in range(n_req):
             a = i*m_size
-            b = (i+1)*m_size - 1
+            b = (i+1)*m_size
             futures.append(pool.submit(func,
                            matrix1[a:b], matrix2_trans[a:b].transpose()))
         for i in range(n_req):
