@@ -71,6 +71,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
+  var count = req.body
   var uuid = crypto.randomUUID()
   console.log('New container registered with id ' + uuid)
   workers.push({
@@ -79,7 +80,7 @@ app.post('/register', (req, res) => {
     cpu: { cpu: -1, tick: null },
     requests: [],
     locked: false,
-    clock: 0
+    clock: count
   })
   res.send(JSON.stringify(uuid))
 })
@@ -151,7 +152,7 @@ app.post('/poll', (req, res) => {
   }
   if (worker.requests.length === 0) {
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
-    return res.send({ id: '-1' })
+    return res.send({ id: '-1', type: worker.clock })
   } else {
     return res.send({ id: '0' })
   }

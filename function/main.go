@@ -8,6 +8,7 @@ import (
 	"os"
 	"serverless/tasks"
 	"serverless/types"
+	"strconv"
 	"sync"
 	"time"
 
@@ -18,6 +19,7 @@ import (
 )
 
 var shimURL = "http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com"
+var countFile = "/tmp/count.txt"
 
 var totalMem = float64(memory.TotalMemory())
 
@@ -25,18 +27,51 @@ var id string
 
 type T = struct{}
 
+var F *os.File
+
 var end_channel = make(chan T)
 
 func Listen(req events.LambdaFunctionURLRequest) (string, error) {
-	launch()
+	count := 0
+	_, error := os.Stat(countFile)
+	if os.IsNotExist(error) {
+		F, err := os.Create(countFile)
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+	} else {
+		F, err := os.Open(countFile)
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+		b1 := make([]byte, 16)
+		_, err = F.Read(b1)
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+		count, err = strconv.Atoi(string(b1))
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+	}
+
+	launch(count)
 	go poll()
 	end_channel <- struct{}{}
+	err := F.Close()
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
 	return id, nil
 }
 
-func launch() {
+func launch(count int) {
 	var rr = &types.RegisterResponse{}
-	res, err := http.Post(shimURL+"/register", "application/json", nil)
+	json_data, err := json.Marshal(count)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	res, err := http.Post(shimURL+"/register", "application/json", bytes.NewBuffer(json_data))
 	if err != nil {
 		log.Fatalf("Could not communicate with coordinator")
 	}
@@ -96,6 +131,8 @@ func poll() {
 		/* If no request to execute, end */
 		if pollResponse.ID == "-1" {
 			log.Println("Received shutdown signal")
+			bs := []byte(pollResponse.Type)
+			F.Write(bs)
 			end = true
 			wg.Wait()
 			log.Println("Ending poll")
