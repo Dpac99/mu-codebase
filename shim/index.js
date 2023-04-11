@@ -185,6 +185,17 @@ app.post('/sendResult/:reqID', (req, res) => {
   }
 })
 
+var workerCount = 0
+
+app.post('/count', (req, res) => {
+  workerCount = 0
+  res.send()
+})
+
+app.get('/count', (req, res) => {
+  res.send(workerCount)
+})
+
 app.post('/invoke', async (req, res) => {
   let type = req.body.id
   let request = {
@@ -216,6 +227,7 @@ app.post('/invoke', async (req, res) => {
 
 async function launchWorker () {
   console.log('Launching new worker')
+  workerCount++
   let res
   try {
     res = await axios.post(config.get('server.trigger'), { 'url': url })

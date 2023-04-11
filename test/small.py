@@ -31,4 +31,5 @@ lim = 150
 with ThreadPoolExecutor() as pool:
     futures = [pool.submit(post, {"id": "matrix", "args": {
         "a": m1.tolist(), "b": m2.tolist()}}, i) for i in range(lim)]
-    result = [future.result() for future in as_completed(futures)]
+    results = [future.result() for future in as_completed(futures)]
+    print(results)
