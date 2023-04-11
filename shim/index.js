@@ -182,7 +182,6 @@ app.post('/sendResult/:reqID', (req, res) => {
 
 app.post('/invoke', (req, res) => {
   let type = req.body.id
-  console.log('Received request of type ' + type)
 
   let request = {
     id: crypto.randomUUID(),
@@ -191,6 +190,7 @@ app.post('/invoke', (req, res) => {
     response: res,
     lock: false
   }
+  console.log('Received request of type ' + type + ' with id ' + request.id)
 
   let k = registeredFunctions.find(k => k.id === type)
   if (!k) {
