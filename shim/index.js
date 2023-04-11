@@ -43,14 +43,14 @@ function matchProfile (profile) {
 }
 
 function approx (a, b) {
-  return a - 0.1 < b && b < a + 0.1
+  return a - 10 < b && b < a + 10
 }
 
 function profile (cpu, memory) {
-  if (cpu.cpu < 0.2 && memory.memory < 0.2) {
+  if (cpu.cpu < 20 && memory.memory < 20) {
     return Profiles.A
   }
-  if (cpu.cpu > 0.5 && memory.memory > 0.5) {
+  if (cpu.cpu > 50 && memory.memory > 50) {
     return Profiles.D
   }
   if (approx(cpu.cpu, memory.memory)) {
@@ -93,6 +93,7 @@ app.post('/poll', (req, res) => {
     return res.send({ id: '-1' })
   }
   worker.clock++
+	console.log('Clock = ' + worker.clock)
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
     worker.cpu.tick = worker.clock
@@ -102,6 +103,8 @@ app.post('/poll', (req, res) => {
     worker.memory.memory = stats.memory
     worker.memory.tick = worker.clock
   }
+	console.log('Nworkers: ' + workers.length)
+	console.log('Ntasks: ' + pool.standard.length)
 
   if (worker.requests.length === 0 && pool.trial.length > 0) {
     let request = pool.trial.shift()
@@ -135,7 +138,7 @@ app.post('/poll', (req, res) => {
 
     if (request !== null) {
       pool.standard.length--
-      console.log('Sending task id ' + request.id + 'of profile' + request.profile)
+      console.log('Sending task id ' + request.id + 'to worker ' + worker.uuid)
       let response = {
         id: request.id,
         type: request.type,
@@ -161,7 +164,6 @@ app.post('/sendResult/:reqID', (req, res) => {
   let response = req.body
   let id = req.params.reqID
   console.log('Received results of task id ' + id)
-  console.log(response)
 
   let w = workers.find(k => k.UUID === response.ID)
   if (w) {
@@ -174,7 +176,6 @@ app.post('/sendResult/:reqID', (req, res) => {
       console.log('Function ' + k.id + ' has been profiled as ' + p)
     }
     w.requests.splice(i, 1)
-    console.log(r)
     r.response.send(JSON.stringify(response.data))
   }
   res.send()
@@ -182,7 +183,6 @@ app.post('/sendResult/:reqID', (req, res) => {
 
 app.post('/invoke', async (req, res) => {
   let type = req.body.id
-  await new Promise(resolve => setTimeout(resolve, 5000))
   let request = {
     id: crypto.randomUUID(),
     type: type,
@@ -191,7 +191,6 @@ app.post('/invoke', async (req, res) => {
     lock: false
   }
   console.log('Received request of type ' + type + ' with id ' + request.id)
-  console.log(request)
 
   let k = registeredFunctions.find(k => k.id === type)
   if (!k) {
