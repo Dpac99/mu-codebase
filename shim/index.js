@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-  var count = req.body
+  var count = req.body.count
   var uuid = crypto.randomUUID()
   console.log('New container registered with id ' + uuid)
   workers.push({

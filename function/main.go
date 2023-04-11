@@ -26,6 +26,9 @@ var totalMem = float64(memory.TotalMemory())
 var id string
 
 type T = struct{}
+type Register struct {
+	Count int `json:"count"`
+}
 
 var F *os.File
 
@@ -33,9 +36,9 @@ var end_channel = make(chan T)
 
 func Listen(req events.LambdaFunctionURLRequest) (string, error) {
 	count := 0
-	_, error := os.Stat(countFile)
-	if os.IsNotExist(error) {
-		F, err := os.Create(countFile)
+	_, err := os.Stat(countFile)
+	if os.IsNotExist(err) {
+		F, err = os.Create(countFile)
 		if err != nil {
 			log.Fatalf(err.Error())
 		}
@@ -58,7 +61,7 @@ func Listen(req events.LambdaFunctionURLRequest) (string, error) {
 	launch(count)
 	go poll()
 	end_channel <- struct{}{}
-	err := F.Close()
+	err = F.Close()
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
@@ -67,7 +70,8 @@ func Listen(req events.LambdaFunctionURLRequest) (string, error) {
 
 func launch(count int) {
 	var rr = &types.RegisterResponse{}
-	json_data, err := json.Marshal(count)
+	var r = Register{Count: count}
+	json_data, err := json.Marshal(r)
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
