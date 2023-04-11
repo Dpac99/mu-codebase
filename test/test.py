@@ -4,6 +4,7 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import as_completed
 import time
+from datetime import datetime
 
 function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
 baseline_url = 'https://dlogbc5lu6e4nkbuu6uycob64i0kklzf.lambda-url.eu-west-3.on.aws/'
@@ -98,13 +99,13 @@ def run(n, func):
 # sequentialTimes.append(runSequential(4096))
 # sequentialTimes.append(runSequential(8192))
 
-baselineStats = []
-baselineStats.append(run(256, request_baseline))
-# baselineStats.append(run(512, request_baseline))
-# baselineStats.append(run(1024, request_baseline))
-# baselineStats.append(run(2048, request_baseline))
-# baselineStats.append(run(4096, request_baseline))
-# baselineStats.append(run(8192, request_baseline))
+values = [256, 512, 1024, 2048, 4096]
+
+# baselineStats = []
+
+# for value in values:
+#     baselineStats.append(run(value, request_baseline))
+
 
 # baselineTotals = [x[1] for x in baselineStats]
 # baselineAverages = [x[0][0] for x in baselineStats]
@@ -113,14 +114,12 @@ baselineStats.append(run(256, request_baseline))
 
 functionStats = []
 functionInvocations = []
-requests.post(control_url)
-functionStats.append(run(256, request_func))
-functionInvocations.append(int(requests.get(control_url).text))
-print(functionInvocations)
-# functionStats.append(run(512, request_func))
-# functionStats.append(run(1024, request_func))
-# functionStats.append(run(2048, request_func))
-# functionStats.append(run(4096, request_func))
+
+for value in values:
+    requests.post(control_url)
+    functionStats.append(run(value, request_func))
+    functionInvocations.append(int(requests.get(control_url).text))
+
 
 functionTotals = [x[1] for x in functionStats]
 functionAverages = [x[0][0] for x in functionStats]
@@ -130,8 +129,6 @@ functionMaxs = [x[0][2] for x in functionStats]
 
 figure, axis = plt.subplots(2, 3)
 
-
-values = [256, 512, 1024, 2048, 4096, 8192]
 
 # axis[0, 0].plot(values, sequentialTimes, label="sequential")
 # axis[0, 0].plot(values, baselineTotals, label="baseline")
@@ -151,5 +148,11 @@ axis[1, 1].plot(values, functionMaxs, label="solution")
 axis[1, 1].set_title("Maximum run times")
 
 axis[1, 2].plot(values, values, lable="baseline")
+axis[1, 2].plot(values, functionInvocations, label="solution")
 
+now = datetime.now()
+try:
+    plt.savefig("{}.png".format(now.strftime("%m/%d/%Y, %H:%M:%S")))
+except:
+    plt.savefig("plots.png")
 plt.show()

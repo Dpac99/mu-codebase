@@ -26,7 +26,7 @@ post({"id": "matrix", "args": {
             "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 
 
-# lim = 150
+# lim = 4096
 
 # with ThreadPoolExecutor() as pool:
 #     futures = [pool.submit(post, {"id": "matrix", "args": {
