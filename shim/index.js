@@ -225,7 +225,7 @@ async function launchWorker () {
 
   console.log('Worker ' + res.data + ' shutting down')
   let i = workers.findIndex(k => k.id === res.data)
-  workers.splice(i, 1)
+  console.log(workers.splice(i, 1))
 }
 
 async function registerRequest (request) {
