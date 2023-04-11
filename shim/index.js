@@ -180,9 +180,9 @@ app.post('/sendResult/:reqID', (req, res) => {
   res.send()
 })
 
-app.post('/invoke', (req, res) => {
+app.post('/invoke', async (req, res) => {
   let type = req.body.id
-
+  await new Promise(resolve => setTimeout(resolve, 5000))
   let request = {
     id: crypto.randomUUID(),
     type: type,
