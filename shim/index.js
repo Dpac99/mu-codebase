@@ -6,9 +6,8 @@ const config = require('config')
 
 const app = express()
 app.use(bodyParser.json({ extended: true }))
-app.use(express.bodyParser({ limit: '50mb' }))
-app.use(express.json({ limit: '50mb' }))
-app.use(express.urlencoded({ limit: '50mb' }))
+app.use(bodyParser.json({ limit: '50mb' }))
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 const port = config.get('server.port')
 const url = config.get('server.host')
 
