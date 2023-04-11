@@ -123,13 +123,14 @@ app.post('/poll', (req, res) => {
       request = pool.standard.D.shift()
     } else {
       let pr = profile(worker.cpu, worker.memory)
-      console.log("Worker " + worker.uuid + " has profile " + pr)
+      console.log('Worker ' + worker.uuid + ' has profile ' + pr)
       if (pool.standard[pr].length !== 0) {
         request = pool.standard[pr].shift()
       } else if (pool.standard[matchProfile(pr)].length !== 0) {
         request = pool.standard[matchProfile(pr)].shift()
       } else if (pr !== Profiles.A && pool.standard[Profiles.A].length !== 0) {
         request = pool.standard[Profiles.A].shift()
+      }
     }
 
     if (request !== null) {
