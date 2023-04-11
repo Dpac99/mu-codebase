@@ -176,7 +176,7 @@ app.post('/sendResult/:reqID', (req, res) => {
       console.log('Function ' + k.id + ' has been profiled as ' + p)
     }
     w.requests.splice(i, 1)
-    r.response.write(JSON.stringify(response.data))
+    r.response(JSON.stringify(response.data))
   }
   res.send()
 })
@@ -187,7 +187,9 @@ app.post('/invoke', async (req, res) => {
     id: crypto.randomUUID(),
     type: type,
     args: req.body.args,
-    response: res,
+    response: (data) => {
+      res.send(data)
+    },
     lock: false
   }
   console.log('Received request of type ' + type + ' with id ' + request.id)
@@ -217,7 +219,7 @@ async function registerRequest (request) {
   }
   console.log('Nworkers: ' + workers.length)
   console.log('Ntasks: ' + pool.standard.length)
-  if (workers.length === 0 || request.lock || pool.standard.length - 10 > workers.length) {
+  if (workers.length === 0 || request.lock || pool.standard.length - 5 > workers.length) {
     console.log('Launching new worker')
     let res
     try {
