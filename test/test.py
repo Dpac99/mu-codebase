@@ -7,13 +7,13 @@ import time
 function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
 baseline_url = 'https://dlogbc5lu6e4nkbuu6uycob64i0kklzf.lambda-url.eu-west-3.on.aws/'
 
-dim = 2048*2*2
-n_req = 128
+dim = 4096
+n_req = 256
 
 output = "Test for {} with {} vectors:\n\tTotal time:\t{}\n\tAverage Time:\t{}\n\tMin Time:\t{}\n\tMax Time:\t{}\n"
 
-matrix1 = np.random.rand(dim, dim)
-matrix2 = np.random.rand(dim, dim)
+matrix1 = np.random.randint(1000, size=(dim, dim))
+matrix2 = np.random.randint(1000, size=(dim, dim))
 matrix2_trans = matrix2.transpose()
 
 
@@ -62,6 +62,7 @@ def runSequential(n):
 
 
 def run(n, func):
+    print("Startint test for {} with {}".format(func, n))
     with ThreadPoolExecutor() as pool:
         m_size = n//n_req
         futures = []
@@ -108,7 +109,6 @@ functionStats.append(run(512, request_func))
 functionStats.append(run(1024, request_func))
 functionStats.append(run(2048, request_func))
 functionStats.append(run(4096, request_func))
-functionStats.append(run(8192, request_func))
 
 functionTotals = [x[1] for x in functionStats]
 functionAverages = [x[0][0] for x in functionStats]
@@ -122,19 +122,19 @@ figure, axis = plt.subplots(2, 2)
 values = [256, 512, 1024, 2048, 4096, 8192]
 
 # axis[0, 0].plot(values, sequentialTimes, label="sequential")
-axis[0, 0].plot(values, baselineTotals, label="baseline")
+# axis[0, 0].plot(values, baselineTotals, label="baseline")
 axis[0, 0].plot(values, functionTotals, label="solution")
 axis[0, 0].set_title("Total run time")
 
-axis[0, 1].plot(values, baselineAverages, label="baseline")
+# axis[0, 1].plot(values, baselineAverages, label="baseline")
 axis[0, 1].plot(values, functionAverages, label="solution")
 axis[0, 1].set_title("Average run time")
 
-axis[1, 0].plot(values, baselineMins, label="baseline")
+# axis[1, 0].plot(values, baselineMins, label="baseline")
 axis[1, 0].plot(values, functionMins, label="solution")
 axis[1, 0].set_title("Minimum run times")
 
-axis[1, 1].plot(values, baselineMaxs, label="baseline")
+# axis[1, 1].plot(values, baselineMaxs, label="baseline")
 axis[1, 1].plot(values, functionMaxs, label="solution")
 axis[1, 1].set_title("Maximum run times")
 

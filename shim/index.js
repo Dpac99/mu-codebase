@@ -5,12 +5,6 @@ const axios = require('axios')
 const config = require('config')
 
 const app = express()
-app.use(bodyParser.json({ extended: true }))
-app.use(bodyParser.json({ limit: '50mb' }))
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
-app.use(express.json({ limit: '25mb' }))
-app.use(express.urlencoded({ limit: '25mb' }))
-app.use(express.json)
 const port = config.get('server.port')
 const url = config.get('server.host')
 
@@ -93,6 +87,9 @@ app.post('/poll', (req, res) => {
 
   let stats = req.body
   let worker = workers.find((w) => w.uuid === stats.uuid)
+  if (!worker) {
+    return res.send({ id: '-1' })
+  }
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
@@ -224,6 +221,8 @@ async function registerRequest (request) {
     workers.splice(i, 1)
   }
 }
+
+app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
 app.listen(port, () => {
   console.log(`Coordinator listening on ${url}`)

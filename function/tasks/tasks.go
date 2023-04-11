@@ -3,7 +3,6 @@ package tasks
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"log"
 	"serverless/types"
 	"time"
@@ -24,7 +23,6 @@ type MatrixRequest struct {
 }
 
 func ExecuteTask(req types.TaskRequest) (interface{}, error) {
-	log.Println("Executing request of type " + req.Type + " with args " + string(fmt.Sprintf("%v", req.Args)))
 	switch req.Type {
 	case "sleep":
 		duration := req.Args["duration"].(float64)

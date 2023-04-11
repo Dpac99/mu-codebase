@@ -61,12 +61,13 @@ func poll() {
 	end := false
 	for !end {
 
+		log.Println("Polling")
+
 		/* START collecting data */
 		sysInfo, err := pidusage.GetStat(os.Getpid())
 		if err != nil {
 			log.Fatalf("could not get process stat: %s\n", err)
 		}
-		log.Println(sysInfo.Memory)
 		pr := &types.PollRequest{}
 		pr.CPU = sysInfo.CPU
 		pr.Memory = (sysInfo.Memory / totalMem) * 100
@@ -80,7 +81,6 @@ func poll() {
 
 		/* Send data to coordinator */
 		res, err := http.Post(shimURL+"/poll", "application/json", bytes.NewBuffer(json_data))
-		res.Close = true
 		if err != nil {
 			log.Fatalf("Error sending data to central: %s\n", err)
 			res.Body.Close()
@@ -102,8 +102,10 @@ func poll() {
 			res.Body.Close()
 			log.Println("Ending poll")
 		} else if pollResponse.ID == "0" {
+			log.Println("Continuing as normal")
 			// Continue polling
 		} else {
+			log.Println("Received new Task")
 			wg.Add(1) // Increment WaitGroup
 
 			/* Send request to executor, defer WaitGroup finish*/
