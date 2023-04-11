@@ -160,7 +160,8 @@ app.post('/poll', (req, res) => {
 app.post('/sendResult/:reqID', (req, res) => {
   let response = req.body
   let id = req.params.reqID
-  console.log('Received results of task id ' + id + 'res = ' + response)
+  console.log('Received results of task id ' + id)
+  console.log(response)
 
   let w = workers.find(k => k.UUID === response.ID)
   if (w) {
