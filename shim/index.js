@@ -29,7 +29,7 @@ const Profiles = {
   D: 'D'
 }
 
-function matchProfile (profile) {
+function matchProfile(profile) {
   switch (profile) {
     case Profiles.A:
       return Profiles.A
@@ -42,11 +42,11 @@ function matchProfile (profile) {
   }
 }
 
-function approx (a, b) {
+function approx(a, b) {
   return a - 10 < b && b < a + 10
 }
 
-function profile (cpu, memory) {
+function profile(cpu, memory) {
   if (cpu.cpu < 20 && memory.memory < 20) {
     return Profiles.A
   }
@@ -91,6 +91,7 @@ app.post('/poll', (req, res) => {
   let stats = req.body
   let worker = workers.find((w) => w.uuid === stats.uuid)
   if (!worker) {
+    console.log('Cannot find worker ' + stats.uuid)
     return res.send({ id: '-1' })
   }
   worker.clock++
@@ -226,7 +227,7 @@ app.post('/invoke', async (req, res) => {
   registerRequest(request)
 })
 
-async function launchWorker () {
+async function launchWorker() {
   console.log('Launching new worker')
   workerCount++
   let res
@@ -241,7 +242,7 @@ async function launchWorker () {
   workers.splice(i, 1)
 }
 
-async function registerRequest (request) {
+async function registerRequest(request) {
   if (request.lock) {
     pool.trial.push(request)
   } else {
