@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-  var count = req.body.count
+  // var count = req.body.count
   var uuid = crypto.randomUUID()
   console.log('New container registered with id ' + uuid)
   workers.push({
@@ -80,7 +80,7 @@ app.post('/register', (req, res) => {
     cpu: { cpu: -1, tick: null },
     requests: [],
     locked: false,
-    clock: count
+    clock: 0
   })
   res.send(JSON.stringify(uuid))
 })
