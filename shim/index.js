@@ -119,11 +119,10 @@ app.post('/poll', (req, res) => {
     return res.send(response)
   }
   let pr = profile(worker.cpu, worker.memory)
-  console.log('Worker ' + worker.uuid + ' has profile ' + pr)
-  console.log(worker)
 
 
-  if (pool.standard.length !== 0 && !worker.locked && worker.clock < 12 && pr !== Profiles.D) {
+
+  if (pool.standard.length !== 0 && !worker.locked && worker.clock < 8 && pr !== Profiles.D) {
     let request = null
     if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
       request = pool.standard.D.shift()
