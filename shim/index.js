@@ -120,6 +120,7 @@ app.post('/poll', (req, res) => {
   }
   let pr = profile(worker.cpu, worker.memory)
   console.log('Worker ' + worker.uuid + ' has profile ' + pr)
+  console.log(worker)
 
 
   if (pool.standard.length !== 0 && !worker.locked && worker.clock < 12 && pr !== Profiles.D) {
