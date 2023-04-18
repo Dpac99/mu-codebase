@@ -10,8 +10,8 @@ function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke
 baseline_url = 'https://dlogbc5lu6e4nkbuu6uycob64i0kklzf.lambda-url.eu-west-3.on.aws/'
 control_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/count'
 
-dim = 4096
-n_req = 256
+dim = 1024
+n_req = 64
 
 output = "Test for {} with {} vectors:\n\tTotal time:\t{}\n\tAverage Time:\t{}\n\tMin Time:\t{}\n\tMax Time:\t{}\n"
 
@@ -99,18 +99,18 @@ def run(n, func):
 # sequentialTimes.append(runSequential(4096))
 # sequentialTimes.append(runSequential(8192))
 
-values = [256, 512, 1024, 2048, 4096]
+values = [64, 128, 256, 512, 1024]
 
-# baselineStats = []
+baselineStats = []
 
-# for value in values:
-#     baselineStats.append(run(value, request_baseline))
+for value in values:
+    baselineStats.append(run(value, request_baseline))
 
 
-# baselineTotals = [x[1] for x in baselineStats]
-# baselineAverages = [x[0][0] for x in baselineStats]
-# baselineMins = [x[0][1] for x in baselineStats]
-# baselineMaxs = [x[0][2] for x in baselineStats]
+baselineTotals = [x[1] for x in baselineStats]
+baselineAverages = [x[0][0] for x in baselineStats]
+baselineMins = [x[0][1] for x in baselineStats]
+baselineMaxs = [x[0][2] for x in baselineStats]
 
 functionStats = []
 functionInvocations = []
@@ -131,24 +131,40 @@ figure, axis = plt.subplots(2, 3)
 
 
 # axis[0, 0].plot(values, sequentialTimes, label="sequential")
-# axis[0, 0].plot(values, baselineTotals, label="baseline")
-axis[0, 0].plot(values, functionTotals, label="solution")
+axis[0, 0].plot(values, baselineTotals, label="baseline", marker='|')
+axis[0, 0].plot(values, functionTotals, label="solution", marker='|')
 axis[0, 0].set_title("Total run time")
+axis[0,0].set_ylabel("Time in Seconds")
+axis[0,0].set_xlabel("Size of data")
+axis[0,0].legend()
 
-# axis[0, 1].plot(values, baselineAverages, label="baseline")
-axis[0, 1].plot(values, functionAverages, label="solution")
+axis[0, 1].plot(values, baselineAverages, label="baseline", marker='|')
+axis[0, 1].plot(values, functionAverages, label="solution", marker='|')
 axis[0, 1].set_title("Average run time")
+axis[0,1].set_ylabel("Time in Seconds")
+axis[0,1].set_xlabel("Size of data")
+axis[0,1].legend()
 
-# axis[1, 0].plot(values, baselineMins, label="baseline")
-axis[1, 0].plot(values, functionMins, label="solution")
+axis[1, 0].plot(values, baselineMins, label="baseline", marker='|')
+axis[1, 0].plot(values, functionMins, label="solution", marker='|')
 axis[1, 0].set_title("Minimum run times")
+axis[1,0].set_ylabel("Time in Seconds")
+axis[1,0].set_xlabel("Size of data")
+axis[1,0].legend()
 
-# axis[1, 1].plot(values, baselineMaxs, label="baseline")
-axis[1, 1].plot(values, functionMaxs, label="solution")
+axis[1, 1].plot(values, baselineMaxs, label="baseline", marker='|')
+axis[1, 1].plot(values, functionMaxs, label="solution", marker='|')
 axis[1, 1].set_title("Maximum run times")
+axis[1,1].set_ylabel("Time in Seconds")
+axis[1,1].set_xlabel("Size of data")
+axis[1,1].legend()
 
-axis[1, 2].plot(values, values, lable="baseline")
-axis[1, 2].plot(values, functionInvocations, label="solution")
+axis[1, 2].plot(values, values, label="baseline", marker='|')
+axis[1, 2].plot(values, functionInvocations, label="solution", marker='|')
+axis[1, 2].set_title("Number of invocations")
+axis[1,2].set_ylabel("Lambdas Invoked")
+axis[1,2].set_xlabel("Size of data")
+axis[1,2].legend()
 
 now = datetime.now()
 try:

@@ -1,10 +1,10 @@
 function:
-	go build main.go
+	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build main.go
 	docker compose build baseline
 	docker compose up baseline
 
 remote:
-	go build main.go
+	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build main.go
 	docker build . -t baseline_function:latest
 	docker tag baseline_function:latest 087297168378.dkr.ecr.eu-west-3.amazonaws.com/baseline_function:latest
 	docker push 087297168378.dkr.ecr.eu-west-3.amazonaws.com/baseline_function:latest

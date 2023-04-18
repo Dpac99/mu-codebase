@@ -8,7 +8,6 @@ import (
 	"os"
 	"serverless/tasks"
 	"serverless/types"
-	"strconv"
 	"sync"
 	"time"
 
@@ -26,56 +25,21 @@ var totalMem = float64(memory.TotalMemory())
 var id string
 
 type T = struct{}
-type Register struct {
-	Count int `json:"count"`
-}
-
-var F *os.File
 
 var end_channel = make(chan T)
 
 func Listen(req events.LambdaFunctionURLRequest) (string, error) {
-	count := 0
-	_, err := os.Stat(countFile)
-	if os.IsNotExist(err) {
-		F, err = os.Create(countFile)
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-	} else {
-		F, err := os.Open(countFile)
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-		b1 := make([]byte, 16)
-		_, err = F.Read(b1)
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-		count, err = strconv.Atoi(string(b1))
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-	}
 
-	launch(count)
+	launch()
 	go poll()
 	end_channel <- struct{}{}
-	err = F.Close()
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
 	return id, nil
 }
 
-func launch(count int) {
+func launch() {
 	var rr = &types.RegisterResponse{}
-	var r = Register{Count: count}
-	json_data, err := json.Marshal(r)
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
-	res, err := http.Post(shimURL+"/register", "application/json", bytes.NewBuffer(json_data))
+
+	res, err := http.Post(shimURL+"/register", "application/json", nil)
 	if err != nil {
 		log.Fatalf("Could not communicate with coordinator")
 	}
@@ -135,8 +99,7 @@ func poll() {
 		/* If no request to execute, end */
 		if pollResponse.ID == "-1" {
 			log.Println("Received shutdown signal")
-			bs := []byte(pollResponse.Type)
-			F.Write(bs)
+
 			end = true
 			wg.Wait()
 			log.Println("Ending poll")
