@@ -268,5 +268,5 @@ setInterval(function () {
 }, 500)
 
 app.listen(port, () => {
-  console.log(`Coordinator listening on ${url}`)
+  console.log(`Coordinator listening on ${url}, no_parallel mode = ${no_parallel}`)
 })
