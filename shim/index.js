@@ -242,13 +242,13 @@ async function launchWorker() {
   let res
   try {
     res = await axios.post(config.get('server.trigger'), { 'url': url })
+    console.log('Worker ' + res.data + ' shutting down')
+    let i = workers.findIndex(k => k.uuid === res.data)
+    workers.splice(i, 1)
   } catch (e) {
-    console.log(e)
+
   }
 
-  console.log('Worker ' + res.data + ' shutting down')
-  let i = workers.findIndex(k => k.uuid === res.data)
-  workers.splice(i, 1)
 }
 
 async function registerRequest(request) {
