@@ -6,7 +6,7 @@ const config = require('config')
 const args = require('yargs').argv;
 
 
-const no_parallel = args.no_parallel
+const no_parallel = args.no_parallel ?? false
 const app = express()
 app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
