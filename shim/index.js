@@ -83,6 +83,7 @@ app.post('/register', (req, res) => {
     cpu: { cpu: -1, tick: null },
     requests: [],
     locked: false,
+    no_parallel: false,
     clock: 0
   })
   res.send(JSON.stringify(uuid))
@@ -125,7 +126,8 @@ app.post('/poll', (req, res) => {
 
 
 
-  if (pool.standard.length !== 0 && !worker.locked && worker.clock < 8 && pr !== Profiles.D) {
+
+  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && pr !== Profiles.D) {
     let request = null
     if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
       request = pool.standard.D.shift()
@@ -153,7 +155,7 @@ app.post('/poll', (req, res) => {
       }
       worker.requests.push(request)
       if (no_parallel) {
-        worker.locked = true
+        worker.no_parallel = true
       }
       return res.send(response)
     }
