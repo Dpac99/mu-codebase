@@ -3,7 +3,10 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const axios = require('axios')
 const config = require('config')
+const args = require('yargs').argv;
 
+
+const no_parallel = args.no_parallel
 const app = express()
 app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
@@ -149,6 +152,9 @@ app.post('/poll', (req, res) => {
         lock: request.lock
       }
       worker.requests.push(request)
+      if (no_parallel) {
+        worker.locked = true
+      }
       return res.send(response)
     }
   }
