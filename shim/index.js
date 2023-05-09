@@ -3,7 +3,10 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const axios = require('axios')
 const config = require('config')
+const args = require('yargs').argv;
 
+
+const no_parallel = args.no_parallel ?? false
 const app = express()
 app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
@@ -80,6 +83,7 @@ app.post('/register', (req, res) => {
     cpu: { cpu: -1, tick: null },
     requests: [],
     locked: false,
+    no_parallel: false,
     clock: 0
   })
   res.send(JSON.stringify(uuid))
@@ -122,7 +126,8 @@ app.post('/poll', (req, res) => {
 
 
 
-  if (pool.standard.length !== 0 && !worker.locked && worker.clock < 8 && pr !== Profiles.D) {
+
+  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && pr !== Profiles.D) {
     let request = null
     if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
       request = pool.standard.D.shift()
@@ -149,6 +154,9 @@ app.post('/poll', (req, res) => {
         lock: request.lock
       }
       worker.requests.push(request)
+      if (no_parallel) {
+        worker.no_parallel = true
+      }
       return res.send(response)
     }
   }
@@ -234,13 +242,13 @@ async function launchWorker() {
   let res
   try {
     res = await axios.post(config.get('server.trigger'), { 'url': url })
+    console.log('Worker ' + res.data + ' shutting down')
+    let i = workers.findIndex(k => k.uuid === res.data)
+    workers.splice(i, 1)
   } catch (e) {
-    console.log(e)
+
   }
 
-  console.log('Worker ' + res.data + ' shutting down')
-  let i = workers.findIndex(k => k.uuid === res.data)
-  workers.splice(i, 1)
 }
 
 async function registerRequest(request) {
@@ -262,5 +270,5 @@ setInterval(function () {
 }, 500)
 
 app.listen(port, () => {
-  console.log(`Coordinator listening on ${url}`)
+  console.log(`Coordinator listening on ${url}, no_parallel mode = ${no_parallel}`)
 })
