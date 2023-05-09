@@ -13,3 +13,4 @@ remote:
 login:
 	aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 087297168378.dkr.ecr.eu-west-3.amazonaws.com
  
+
