@@ -7,7 +7,6 @@ import (
 	"image/color"
 	"image/png"
 	"log"
-	"os"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
@@ -27,17 +26,10 @@ type Request struct {
 }
 
 func HandleRequest(ctx context.Context, r Request) (int, error) {
-	var region = os.Getenv("AWS_REGION")
-	log.Println(region)
 
 	sess := session.Must(session.NewSession(&aws.Config{
 		Region: aws.String("eu-west-3")}))
 	downloader := s3manager.NewDownloader(sess)
-
-	// var r Request
-	// log.Println(req.Body)
-	// json.Unmarshal([]byte(req.Body), &r)
-	// log.Println(r)
 
 	buff := &aws.WriteAtBuffer{}
 	_, err := downloader.Download(buff, &s3.GetObjectInput{
