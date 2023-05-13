@@ -13,4 +13,10 @@ services:
   baseline:
     build: ./baseline/
     ports:
-      - "9001:8080"
+      - "9000:8080"
+  thumbnailer:
+    build: ./thumbnailer/
+    ports:
+      - "9000:8080"    
+    volumes:
+      - ~/.aws:/root/.aws
