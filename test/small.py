@@ -26,9 +26,9 @@ post({"id": "matrix", "args": {
             "a": matrix1.tolist(), "b": matrix2.tolist()}}, -1)
 post({"id": "thumbnail", "args": {
     "input_bucket": "dpac-serverless-thesis",
-    "input_key": "logo_ist.jpg",
+    "input_key": "big_image.jpg",
     "output_bucket": "dpac-serverless-output",
-    "output_key": "logo_ist_thumb.jpg",
+    "output_key": "big_small.jpg",
     "width": 100,
     "height": 100,
 }}, -1)

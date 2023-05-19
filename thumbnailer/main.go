@@ -2,12 +2,13 @@ package main
 
 import (
 	"bytes"
-	"context"
+	"encoding/json"
 	"image"
 	"image/color"
 	"image/png"
 	"log"
 
+	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -25,7 +26,13 @@ type Request struct {
 	Height        int    `json:"height"`
 }
 
-func HandleRequest(ctx context.Context, r Request) (int, error) {
+func HandleRequest(req events.LambdaFunctionURLRequest) (int, error) {
+
+	log.Println(req.Body)
+	var r Request
+	json.Unmarshal([]byte(req.Body), &r)
+	log.Println(r.Input_bucket)
+	log.Println(r.Input_key)
 
 	sess := session.Must(session.NewSession(&aws.Config{
 		Region: aws.String("eu-west-3")}))

@@ -67,6 +67,18 @@ function profile(cpu, memory) {
   }
 }
 
+function profileOrder(profile) {
+  switch (profile) {
+    case Profiles.A:
+      return [Profiles.A, Profiles.B, Profiles.C, Profiles.D]
+    case Profiles.B:
+      return [Profiles.C, Profiles.A, Profiles.B, Profiles.D]
+    case Profiles.C:
+      return [Profiles.B, Profiles.A, Profiles.C, Profiles.D]
+    case Profiles.D:
+      return [Profiles.A, Profiles.B, Profiles.C, Profiles.D]
+  }
+}
 let registeredFunctions = []
 
 
@@ -81,7 +93,8 @@ app.post('/register', (req, res) => {
     requests: [],
     locked: false,
     no_parallel: false,
-    clock: 0
+    clock: 0,
+    cores: 0,
   })
   res.send(JSON.stringify(uuid))
 })
@@ -95,6 +108,7 @@ app.post('/poll', (req, res) => {
     console.log('Cannot find worker ' + stats.uuid)
     return res.send({ id: '-1' })
   }
+  worker.cores = stats.cores
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
@@ -121,27 +135,15 @@ app.post('/poll', (req, res) => {
   }
   let pr = profile(worker.cpu, worker.memory)
 
-
-
-
-  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && pr !== Profiles.D) {
+  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && worker.requests.length < worker.cores - 1) {
     let request = null
-    if (worker.requests.length === 0 && pool.standard.D.length !== 0) {
-      request = pool.standard.D.shift()
-      pool.standard.length--
-    } else {
-      if (pool.standard[pr].length !== 0) {
-        request = pool.standard[pr].shift()
-        pool.standard.length--
-      } else if (pool.standard[matchProfile(pr)].length !== 0) {
-        request = pool.standard[matchProfile(pr)].shift()
-        pool.standard.length--
-      } else if (pr !== Profiles.A && pool.standard[Profiles.A].length !== 0) {
-        request = pool.standard[Profiles.A].shift()
+    order = profileOrder(pr)
+    for (prof in order) {
+      if (pool.standard[prof].length !== 0) {
+        request = pool.standard[prof].shift()
         pool.standard.length--
       }
     }
-
     if (request !== null) {
       console.log('Sending task id ' + request.id + 'to worker ' + worker.uuid)
       let response = {

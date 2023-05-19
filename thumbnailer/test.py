@@ -1,6 +1,6 @@
 import requests
 
-function_url = "http://localhost:9000/2015-03-31/functions/function/invocations"
+function_url = "https://uxyihtkanjsorrwibbqezaapxy0nazhw.lambda-url.eu-west-3.on.aws/"
 
 
 def post(body):
@@ -12,7 +12,7 @@ post({
     "input_bucket": "dpac-serverless-thesis",
     "input_key": "logo_ist.jpg",
     "output_bucket": "dpac-serverless-output",
-    "output_key": "logo_ist_thumb.jpg",
+    "output_key": "logo_ist_thumb_base.jpg",
     "width": 100,
     "height": 100,
 })

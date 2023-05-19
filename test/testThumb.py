@@ -9,7 +9,7 @@ from datetime import datetime
 
 
 function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
-baseline_url = 'https://jm2jta5u7pmjosjuai75qzxgme0bnzhg.lambda-url.eu-west-3.on.aws/'
+baseline_url = 'https://uxyihtkanjsorrwibbqezaapxy0nazhw.lambda-url.eu-west-3.on.aws/'
 control_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/count'
 
 dim = 1024
@@ -29,7 +29,7 @@ def request_baseline(m1, m2, i):
     requests.post(
         baseline_url, json={
     "input_bucket": "dpac-serverless-thesis",
-    "input_key": "logo_ist.jpg",
+    "input_key": "big_image.jpg",
     "output_bucket": "dpac-serverless-output",
     "output_key": "logo_ist_thumb_{}.jpg".format(str(i)),
     "width": 100,
@@ -44,7 +44,7 @@ def request_func(m1, m2, i):
     start = time.time()
     body = {"id": "thumbnail", "args": {
     "input_bucket": "dpac-serverless-thesis",
-    "input_key": "logo_ist.jpg",
+    "input_key": "big_image.jpg",
     "output_bucket": "dpac-serverless-output",
     "output_key": "logo_ist_thumb_{}.jpg".format(str(i)),
     "width": 100,
@@ -91,7 +91,7 @@ def run(n, func):
         return [stats, end-start, ]
 
 
-run(1024, request_baseline)
+# run(1024, request_baseline)
 run(1024, request_func)
 
 # values = [64, 128, 256, 512, 1024]
