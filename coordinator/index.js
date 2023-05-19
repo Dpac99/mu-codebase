@@ -78,6 +78,7 @@ function profileOrder(profile) {
     case Profiles.D:
       return [Profiles.A, Profiles.B, Profiles.C, Profiles.D]
   }
+  return [Profiles.A, Profiles.B, Profiles.C, Profiles.D]
 }
 let registeredFunctions = []
 
