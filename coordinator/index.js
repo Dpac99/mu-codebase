@@ -140,6 +140,8 @@ app.post('/poll', (req, res) => {
     let request = null
     order = profileOrder(pr)
     for (let prof in order) {
+      console.log(prof)
+      console.log(pool.standard[prof])
       if (pool.standard[prof].length !== 0) {
         request = pool.standard[prof].shift()
         pool.standard.length--
