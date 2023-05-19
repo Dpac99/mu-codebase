@@ -69,9 +69,6 @@ function profile(cpu, memory) {
 
 let registeredFunctions = []
 
-app.get('/', (req, res) => {
-  res.send('Hello World2!')
-})
 
 app.post('/register', (req, res) => {
   // var count = req.body.count
