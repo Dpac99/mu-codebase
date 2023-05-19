@@ -75,7 +75,7 @@ func ExecuteTask(req types.TaskRequest) (interface{}, error) {
 		return ret, nil
 	case "thumbnail":
 		var r ThumbnailRequest
-		jsonData, _ := json.Marshal(req.args)
+		jsonData, _ := json.Marshal(req.Args)
 		json.Unmarshal(jsonData, &r)
 		ret, err := HandleThumbnailRequest(r)
 		return ret, err

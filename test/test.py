@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import requests
+import sys
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import as_completed
 import time
@@ -12,6 +13,7 @@ control_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/count'
 
 dim = 1024
 n_req = 64
+
 
 output = "Test for {} with {} vectors:\n\tTotal time:\t{}\n\tAverage Time:\t{}\n\tMin Time:\t{}\n\tMax Time:\t{}\n"
 
@@ -66,6 +68,26 @@ def runSequential(n):
         c.append(row)
     end = time.time()
     return end-start
+
+def runScale(n, func):
+    print("Starting scaling test for {} with {}".format(func, n))
+
+    with ThreadPoolExecutor() as pool:
+        start = time.time()
+
+        futures = []
+        results = []
+
+        futures = [pool.submit(func,
+                                matrix1[i],
+                                matrix2_trans[i].transpose())
+                    for i in range(n)]
+        results = [future.result() for future in as_completed(futures)]
+        end = time.time()
+        stats = analyze(results)
+        print(output.format(func, n, end-start,
+                stats[0], stats[1], stats[2]), flush=True)
+        return [stats, end-start, ]
 
 
 def run(n, func):
@@ -127,7 +149,7 @@ functionMins = [x[0][1] for x in functionStats]
 functionMaxs = [x[0][2] for x in functionStats]
 
 
-figure, axis = plt.subplots(2, 3)
+figure, axis = plt.subplots(2, 2)
 
 
 # axis[0, 0].plot(values, sequentialTimes, label="sequential")
@@ -138,37 +160,24 @@ axis[0,0].set_ylabel("Time in Seconds")
 axis[0,0].set_xlabel("Size of data")
 axis[0,0].legend()
 
-axis[0, 1].plot(values, baselineAverages, label="baseline", marker='|')
-axis[0, 1].plot(values, functionAverages, label="solution", marker='|')
+axis[0, 1].errorbar(values, baselineAverages, yerr=[baselineMins, baselineMaxs], label="baseline", marker='|')
+axis[0, 1].errorbar(values, functionAverages, yerr=[functionMins, functionMaxs], label="solution", marker='|')
 axis[0, 1].set_title("Average run time")
 axis[0,1].set_ylabel("Time in Seconds")
 axis[0,1].set_xlabel("Size of data")
 axis[0,1].legend()
 
-axis[1, 0].plot(values, baselineMins, label="baseline", marker='|')
-axis[1, 0].plot(values, functionMins, label="solution", marker='|')
-axis[1, 0].set_title("Minimum run times")
-axis[1,0].set_ylabel("Time in Seconds")
+
+axis[1, 0].plot(values, [64,64,64,64,64], label="baseline", marker='|')
+axis[1, 0].plot(values, functionInvocations, label="solution", marker='|')
+axis[1, 0].set_title("Number of invocations")
+axis[1,0].set_ylabel("Lambdas Invoked")
 axis[1,0].set_xlabel("Size of data")
 axis[1,0].legend()
 
-axis[1, 1].plot(values, baselineMaxs, label="baseline", marker='|')
-axis[1, 1].plot(values, functionMaxs, label="solution", marker='|')
-axis[1, 1].set_title("Maximum run times")
-axis[1,1].set_ylabel("Time in Seconds")
-axis[1,1].set_xlabel("Size of data")
-axis[1,1].legend()
-
-axis[1, 2].plot(values, values, label="baseline", marker='|')
-axis[1, 2].plot(values, functionInvocations, label="solution", marker='|')
-axis[1, 2].set_title("Number of invocations")
-axis[1,2].set_ylabel("Lambdas Invoked")
-axis[1,2].set_xlabel("Size of data")
-axis[1,2].legend()
-
 now = datetime.now()
 try:
-    plt.savefig("{}.png".format(now.strftime("%m/%d/%Y, %H:%M:%S")))
+    plt.savefig("../images/{}.png".format(now.strftime("%d-%m-%Y_%H:%M:%S")), dpi=200)
 except:
     plt.savefig("plots.png")
 plt.show()
