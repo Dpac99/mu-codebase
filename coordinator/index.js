@@ -139,6 +139,7 @@ app.post('/poll', (req, res) => {
   if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && worker.requests.length < worker.cores - 1) {
     let request = null
     order = profileOrder(pr)
+    console.log(order)
     for (let prof in order) {
       if (pool.standard[prof].length !== 0) {
         request = pool.standard[prof].shift()
