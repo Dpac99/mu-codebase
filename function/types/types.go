@@ -15,6 +15,7 @@ type PollRequest struct {
 	UUID   string  `json:"uuid"`
 	CPU    float64 `json:"cpu"`
 	Memory float64 `json:"memory"`
+	Cores  int     `json:"cores"`
 }
 
 type TaskRequest struct {

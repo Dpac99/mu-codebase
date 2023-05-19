@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 	"serverless/tasks"
 	"serverless/types"
 	"sync"
@@ -62,6 +63,7 @@ func launch() {
 func poll() {
 	var wg sync.WaitGroup
 	end := false
+	n_cores := runtime.NumCPU()
 	for !end {
 
 		log.Println("Polling")
@@ -75,6 +77,7 @@ func poll() {
 		pr.CPU = sysInfo.CPU
 		pr.Memory = (sysInfo.Memory / totalMem) * 100
 		pr.UUID = id
+		pr.Cores = n_cores
 
 		json_data, err := json.Marshal(pr)
 		if err != nil {
