@@ -137,7 +137,7 @@ app.post('/poll', (req, res) => {
   }
   let pr = profile(worker.cpu, worker.memory)
 
-  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 45 && worker.requests.length < worker.cores - 1) {
+  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 35 && worker.requests.length < worker.cores - 1) {
     let request = null
     order = profileOrder(pr)
     for (let prof of order) {
