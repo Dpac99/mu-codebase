@@ -84,7 +84,6 @@ let registeredFunctions = []
 
 
 app.post('/register', (req, res) => {
-  // var count = req.body.count
   var uuid = crypto.randomUUID()
   console.log('New container registered with id ' + uuid)
   workers.push({
@@ -96,6 +95,7 @@ app.post('/register', (req, res) => {
     no_parallel: false,
     clock: 0,
     cores: 0,
+    stats: []
   })
   res.send(JSON.stringify(uuid))
 })
@@ -110,6 +110,7 @@ app.post('/poll', (req, res) => {
     return res.send({ id: '-1' })
   }
   worker.cores = stats.cores
+  worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock })
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
@@ -136,7 +137,7 @@ app.post('/poll', (req, res) => {
   }
   let pr = profile(worker.cpu, worker.memory)
 
-  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 8 && worker.requests.length < worker.cores - 1) {
+  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 45 && worker.requests.length < worker.cores - 1) {
     let request = null
     order = profileOrder(pr)
     for (let prof of order) {
@@ -162,6 +163,7 @@ app.post('/poll', (req, res) => {
     }
   }
   if (worker.requests.length === 0) {
+    global_stats.push(worker.stats)
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
     return res.send({ id: '-1', type: worker.clock.toString() })
   } else {
@@ -198,14 +200,16 @@ app.post('/sendResult/:reqID', (req, res) => {
 })
 
 var workerCount = 0
-
+var global_stats = []
 app.post('/count', (req, res) => {
   workerCount = 0
+  global_stats = []
   res.send()
 })
 
+
 app.get('/count', (req, res) => {
-  res.send(JSON.stringify(workerCount))
+  res.send({ workers: workerCount, stats: global_stats })
 })
 
 app.post('/invoke', async (req, res) => {

@@ -91,8 +91,11 @@ def run(n, func):
         return [stats, end-start, ]
 
 
-# run(1024, request_baseline)
-run(1024, request_func)
+run(100, request_baseline)
+requests.post(control_url)
+run(100, request_func)
+stats = requests.get(control_url)
+print(stats.text)
 
 # values = [64, 128, 256, 512, 1024]
 
