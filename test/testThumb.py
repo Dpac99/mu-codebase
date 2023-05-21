@@ -90,7 +90,7 @@ def run(n, func):
                 stats[0], stats[1], stats[2]), flush=True)
         return [stats, end-start, ]
 
-f = open("2048_v3.json", "w")
+f = open("10240_v3.json", "w")
 # run(100, request_baseline)
 requests.post(control_url)
 run(100, request_func)

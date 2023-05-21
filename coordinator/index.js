@@ -14,6 +14,7 @@ const port = config.get('server.port')
 const url = config.get('server.host')
 
 let workers = []
+let globalWorkerCount = 0
 let pool = {
   standard: {
     length: 0,
@@ -101,8 +102,6 @@ app.post('/register', (req, res) => {
 })
 
 app.post('/poll', (req, res) => {
-  console.log('Poll request received')
-
   let stats = req.body
   let worker = workers.find((w) => w.uuid === stats.uuid)
   if (!worker) {
@@ -249,12 +248,14 @@ app.post('/invoke', async (req, res) => {
 async function launchWorker() {
   console.log('Launching new worker')
   workerCount++
+  globalWorkerCount++
   let res
   try {
     res = await axios.post(config.get('server.trigger'), { 'url': url })
     console.log('Worker ' + res.data + ' shutting down')
     let i = workers.findIndex(k => k.uuid === res.data)
     workers.splice(i, 1)
+    globalWorkerCount--
   } catch (e) {
 
   }
@@ -268,13 +269,13 @@ async function registerRequest(request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (workers.length === 0 || request.lock || pool.standard.length > 4 * workers.length) {
+  if (workers.length === 0 || request.lock || pool.standard.length > 4 * globalWorkerCount) {
     launchWorker()
   }
 }
 
 setInterval(function () {
-  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 4 * workers.length) {
+  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 4 * globalWorkerCount) {
     launchWorker()
   }
 }, 500)
