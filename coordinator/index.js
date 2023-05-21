@@ -110,7 +110,6 @@ app.post('/poll', (req, res) => {
     return res.send({ id: '-1' })
   }
   worker.cores = stats.cores
-  worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock })
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
@@ -159,14 +158,20 @@ app.post('/poll', (req, res) => {
       if (no_parallel) {
         worker.no_parallel = true
       }
+      worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "req", cores: worker.cores })
       return res.send(response)
+
     }
   }
   if (worker.requests.length === 0) {
     global_stats.push(worker.stats)
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
+    worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "shutdown", cores: worker.cores })
+
     return res.send({ id: '-1', type: worker.clock.toString() })
   } else {
+    worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "resume", cores: worker.cores })
+
     return res.send({ id: '0' })
   }
 })
@@ -263,13 +268,13 @@ async function registerRequest(request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (workers.length === 0 || request.lock || pool.standard.length > 3 * workers.length) {
+  if (workers.length === 0 || request.lock || pool.standard.length > 4 * workers.length) {
     launchWorker()
   }
 }
 
 setInterval(function () {
-  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 3 * workers.length) {
+  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 4 * workers.length) {
     launchWorker()
   }
 }, 500)

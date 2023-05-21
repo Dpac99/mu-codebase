@@ -15,6 +15,7 @@ import (
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/pbnjay/memory"
+	"github.com/shirou/gopsutil/cpu"
 	"github.com/struCoder/pidusage"
 )
 
@@ -58,6 +59,14 @@ func launch() {
 	id = rr.UUID
 
 }
+func avg(perc []float64) (res float64) {
+	k := len(perc)
+	for i := 0; i < k; i++ {
+		res += perc[i]
+	}
+	res /= float64(k)
+	return
+}
 
 /* Sends resource usage data to coordinator as well as calculated return values */
 func poll() {
@@ -73,8 +82,10 @@ func poll() {
 		if err != nil {
 			log.Fatalf("could not get process stat: %s\n", err)
 		}
+		percents, _ := cpu.Percent(0, true)
+		perc := avg(percents)
 		pr := &types.PollRequest{}
-		pr.CPU = sysInfo.CPU
+		pr.CPU = perc
 		pr.Memory = (sysInfo.Memory / totalMem) * 100
 		pr.UUID = id
 		pr.Cores = n_cores
