@@ -269,13 +269,13 @@ async function registerRequest(request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (workers.length === 0 || request.lock || pool.standard.length > 4 * globalWorkerCount) {
+  if (globalWorkerCount === 0 || request.lock || pool.standard.length > 3 * globalWorkerCount) {
     launchWorker()
   }
 }
 
 setInterval(function () {
-  if ((workers.length === 0 && pool.standard.length !== 0) || pool.standard.length > 4 * globalWorkerCount) {
+  if ((workers.globalWorkerCount === 0 && pool.standard.length !== 0) || pool.standard.length > 3 * globalWorkerCount) {
     launchWorker()
   }
 }, 500)
