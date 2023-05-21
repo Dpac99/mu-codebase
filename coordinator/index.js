@@ -246,7 +246,7 @@ app.post('/invoke', async (req, res) => {
 })
 
 async function launchWorker() {
-  console.log('Launching new worker')
+  console.log('Launching new worker, workers = ', globalWorkerCount, ' task = ', pool.standard.length)
   workerCount++
   globalWorkerCount++
   let res
