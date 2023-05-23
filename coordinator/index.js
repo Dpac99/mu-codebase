@@ -262,6 +262,7 @@ var spawn_threshold = 4
 
 app.post('/threshold', (req, res) => {
   spawn_threshold = Number(req.body)
+  console.log('Function threshold set to', spawn_threshold)
   res.send()
 })
 

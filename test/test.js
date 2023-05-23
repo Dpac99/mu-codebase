@@ -4,6 +4,7 @@ const fs = require('fs')
 const function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
 const baseline_url = 'https://uxyihtkanjsorrwibbqezaapxy0nazhw.lambda-url.eu-west-3.on.aws/'
 const control_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/count'
+const thread_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/threshold'
 
 
 
@@ -78,7 +79,9 @@ async function init() {
 
 async function solution() {
     // await init()
-    await axios.post(control_url, {})
+    // await axios.post(control_url, {})
+    let ncores = Number(process.argv[2])
+    await axios.post(thread_url, ncores)
     let start = Date.now()
     let promises = []
 
@@ -105,11 +108,11 @@ async function solution() {
     await Promise.all(promises)
     let end = Date.now() - start
     console.log(`Time for func: ${end} ms`)
-    let res = await axios.get(control_url, {})
-    fs.writeFile('stats2/2048_v2.json', JSON.stringify(res.data), function (err) {
-        if (err) throw err;
-        console.log('Saved!');
-    })
+    // let res = await axios.get(control_url, {})
+    // fs.writeFile('stats2/10240_v2.json', JSON.stringify(res.data), function (err) {
+    //     if (err) throw err;
+    //     console.log('Saved!');
+    // })
 }
 
 
