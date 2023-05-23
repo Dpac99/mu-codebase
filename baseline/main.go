@@ -10,11 +10,11 @@ import (
 )
 
 type Request struct {
-	A [][]float64 `json:"a"`
-	B [][]float64 `json:"b"`
+	A [][]int64 `json:"a"`
+	B [][]int64 `json:"b"`
 }
 
-func HandleRequest(ctx context.Context, req events.LambdaFunctionURLRequest) ([][]float64, error) {
+func HandleRequest(ctx context.Context, req events.LambdaFunctionURLRequest) ([][]int64, error) {
 	log.Println(req.Body)
 	var r Request
 	json.Unmarshal([]byte(req.Body), &r)
@@ -22,13 +22,13 @@ func HandleRequest(ctx context.Context, req events.LambdaFunctionURLRequest) ([]
 	return multiplyMatrix(r.A, r.B), nil
 }
 
-func multiplyMatrix(a [][]float64, b [][]float64) [][]float64 {
+func multiplyMatrix(a [][]int64, b [][]int64) [][]int64 {
 	n_rows := len(a)
 	n_cols := len(b[0])
 	n_elems := len(b)
-	c := make([][]float64, n_rows)
+	c := make([][]int64, n_rows)
 	for i := range c {
-		c[i] = make([]float64, n_cols)
+		c[i] = make([]int64, n_cols)
 	}
 
 	for i := 0; i < n_rows; i++ {

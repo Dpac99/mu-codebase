@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const axios = require('axios')
 const config = require('config')
+const { time } = require('console')
 const args = require('yargs').argv;
 
 
@@ -102,6 +103,14 @@ app.post('/register', (req, res) => {
 })
 
 app.post('/poll', (req, res) => {
+  if (start_tick !== null) {
+    let tick = Date.now() - start_tick
+    workerTrace[0].append(tick)
+    workerTrace[1].append(globalWorkerCount)
+    requestTrace[0].append(tick)
+    requestTrace[1].append(pool.standard.length)
+  }
+
   let stats = req.body
   let worker = workers.find((w) => w.uuid === stats.uuid)
   if (!worker) {
@@ -109,6 +118,9 @@ app.post('/poll', (req, res) => {
     return res.send({ id: '-1' })
   }
   worker.cores = stats.cores
+  if (worker.clock === 0 && start_tick !== null) {
+    worker.start_tick = Date.now() - start_tick
+  }
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
     worker.cpu.cpu = stats.cpu
@@ -157,7 +169,15 @@ app.post('/poll', (req, res) => {
       if (no_parallel) {
         worker.no_parallel = true
       }
-      worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "req", cores: worker.cores })
+      worker.stats.push({
+        cpu: stats.cpu,
+        memory: stats.memory,
+        req: worker.requests.length,
+        tick: worker.clock,
+        res: "req",
+        cores: worker.cores,
+        global_tick: start_tick !== null ? Date.now() - start_tick : -1
+      })
       return res.send(response)
 
     }
@@ -165,11 +185,27 @@ app.post('/poll', (req, res) => {
   if (worker.requests.length === 0) {
     global_stats.push(worker.stats)
     console.log('Signaling worker ' + worker.uuid + ' to shutdown')
-    worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "shutdown", cores: worker.cores })
+    worker.stats.push({
+      cpu: stats.cpu,
+      memory: stats.memory,
+      req: worker.requests.length,
+      tick: worker.clock,
+      res: "shutdown",
+      cores: worker.cores,
+      global_tick: start_tick !== null ? Date.now() - start_tick : -1
+    })
 
     return res.send({ id: '-1', type: worker.clock.toString() })
   } else {
-    worker.stats.push({ cpu: stats.cpu, memory: stats.memory, req: worker.requests.length, tick: worker.clock, res: "resume", cores: worker.cores })
+    worker.stats.push({
+      cpu: stats.cpu,
+      memory: stats.memory,
+      req: worker.requests.length,
+      tick: worker.clock,
+      res: "resume",
+      cores: worker.cores,
+      global_tick: start_tick !== null ? Date.now() - start_tick : -1
+    })
 
     return res.send({ id: '0' })
   }
@@ -204,16 +240,29 @@ app.post('/sendResult/:reqID', (req, res) => {
 })
 
 var workerCount = 0
+var workerTrace = [[], []]
+var requestTrace = [[], []]
 var global_stats = []
+var start_tick = null
 app.post('/count', (req, res) => {
   workerCount = 0
   global_stats = []
+  workerTrace = [[], []]
+  requestTrace = [[], []]
+  start_tick = Date.now()
   res.send()
 })
 
 
 app.get('/count', (req, res) => {
-  res.send({ workers: workerCount, stats: global_stats })
+  res.send({ workers: workerCount, stats: global_stats, workerTrace: workerTrace, requestTrace: requestTrace })
+})
+
+var spawn_threshold = 4
+
+app.post('/threshold', (req, res) => {
+  spawn_threshold = Number(req.body)
+  res.send()
 })
 
 app.post('/invoke', async (req, res) => {
@@ -269,13 +318,13 @@ async function registerRequest(request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (globalWorkerCount === 0 || request.lock || pool.standard.length > 3 * globalWorkerCount) {
+  if (globalWorkerCount === 0 || request.lock || pool.standard.length > spawn_threshold * globalWorkerCount) {
     launchWorker()
   }
 }
 
 setInterval(function () {
-  if ((workers.globalWorkerCount === 0 && pool.standard.length !== 0) || pool.standard.length > 3 * globalWorkerCount) {
+  if ((workers.globalWorkerCount === 0 && pool.standard.length !== 0) || pool.standard.length > spawn_threshold * globalWorkerCount) {
     launchWorker()
   }
 }, 500)

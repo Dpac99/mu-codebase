@@ -1,7 +1,10 @@
 const axios = require('axios')
+const fs = require('fs')
 
 const function_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/invoke'
 const baseline_url = 'https://uxyihtkanjsorrwibbqezaapxy0nazhw.lambda-url.eu-west-3.on.aws/'
+const control_url = 'http://ec2-15-188-193-232.eu-west-3.compute.amazonaws.com/count'
+
 
 
 
@@ -16,7 +19,7 @@ async function request_func(i) {
             "height": 100,
         }
     }
-    axios.post(function_url, body)
+    return axios.post(function_url, body)
 
 }
 
@@ -29,20 +32,87 @@ async function request_baseline(i) {
         "width": 100,
         "height": 100,
     }
-    axios.post(baseline_url, body)
+    return axios.post(baseline_url, body)
 }
 
-start = Date.now()
-for (let i = 0; i < 128; i++) {
-    request_baseline(i)
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
 }
-end = Date.now() - start
-console.log(`Time for baseline: ${end} ms`)
+
+async function baseline() {
+    let start = Date.now()
+    let promises = []
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 5; i++) {
+            promises.push(request_baseline(i))
+        }
+        await sleep(1000)
+    }
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 20; i++) {
+            promises.push(request_baseline(i))
+        }
+        await sleep(1000)
+    }
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 5; i++) {
+            promises.push(request_baseline(i))
+        }
+        await sleep(1000)
+    }
+    await Promise.all(promises)
+    let end = Date.now() - start
+    console.log(`Time for baseline: ${end} ms`)
+
+}
+
+async function init() {
+    await request_func('small')
+}
 
 
-start = Date.now()
-for (let i = 0; i < 128; i++) {
-    request_func(i)
+async function solution() {
+    // await init()
+    await axios.post(control_url, {})
+    let start = Date.now()
+    let promises = []
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 5; i++) {
+            promises.push(request_func(i))
+        }
+        await sleep(1000)
+    }
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 20; i++) {
+            promises.push(request_func(i))
+        }
+        await sleep(1000)
+    }
+
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 5; i++) {
+            promises.push(request_func(i))
+        }
+        await sleep(1000)
+    }
+    await Promise.all(promises)
+    let end = Date.now() - start
+    console.log(`Time for func: ${end} ms`)
+    let res = await axios.get(control_url, {})
+    fs.writeFile('stats2/2048_v2.json', JSON.stringify(res.data), function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+    })
 }
-end = Date.now() - start
-console.log(`Time for function: ${end} ms`)
+
+
+
+// baseline()
+solution()
