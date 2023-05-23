@@ -105,10 +105,10 @@ app.post('/register', (req, res) => {
 app.post('/poll', (req, res) => {
   if (start_tick !== null) {
     let tick = Date.now() - start_tick
-    workerTrace[0].append(tick)
-    workerTrace[1].append(globalWorkerCount)
-    requestTrace[0].append(tick)
-    requestTrace[1].append(pool.standard.length)
+    workerTrace[0].push(tick)
+    workerTrace[1].push(globalWorkerCount)
+    requestTrace[0].push(tick)
+    requestTrace[1].push(pool.standard.length)
   }
 
   let stats = req.body
