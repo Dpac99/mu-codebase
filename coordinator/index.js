@@ -121,6 +121,8 @@ app.post('/poll', (req, res) => {
     workerTrace[1].push(globalWorkerCount)
     requestTrace[0].push(tick)
     requestTrace[1].push(pool.standard.length)
+    avgThreshold[0].push(tick)
+    avgThreshold[1].push(dynamic_spawn ? avgThreads : spawn_threshold)
   }
 
   let stats = req.body
@@ -265,6 +267,7 @@ app.post('/sendResult/:reqID', (req, res) => {
 var workerCount = 0
 var workerTrace = [[], []]
 var requestTrace = [[], []]
+var avgThreshold = [[], []]
 var global_stats = []
 var start_tick = null
 app.post('/count', (req, res) => {
@@ -272,6 +275,7 @@ app.post('/count', (req, res) => {
   global_stats = []
   workerTrace = [[], []]
   requestTrace = [[], []]
+  avgThreshold = [[], []]
   start_tick = Date.now()
   res.send()
 })
