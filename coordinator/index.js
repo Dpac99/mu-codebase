@@ -133,7 +133,7 @@ app.post('/poll', (req, res) => {
   }
   // if first poll request, recalculate avgThreads
   if (worker.cores === 0) {
-    avgThreads = Math.floor(((avgThreads * workers.length - 1) + stats.cores) / workers.length)
+    avgThreads = Math.floor(((avgThreads * (workers.length - 1)) + stats.cores) / workers.length)
   }
 
   worker.cores = stats.cores
@@ -143,7 +143,7 @@ app.post('/poll', (req, res) => {
 
   //if one task per thread limit is removed, once a function goes over the limit then recalculate the avgThreads
   if (no_limit && worker.requests.length > worker.cores - 1) {
-    avgThreads = Math.floor(((avgThreads * workers.length - 1) + worker.requests.length) / workers.length)
+    avgThreads = Math.floor(((avgThreads * (workers.length - 1)) + worker.requests.length) / workers.length)
 
   }
   worker.clock++
