@@ -7,7 +7,10 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "export NODE_ENV=prod && nodemon index.js",
-    "prod_base": "export NODE_ENV=prod && nodemon index.js --no_parallel"
+    "prod_base": "export NODE_ENV=prod && nodemon index.js --no_parallel",
+    "prod_spawn": "export NODE_ENV=prod && nodemon index.js --dynamic_spawn",
+    "prod_limit": "export NODE_ENV=prod && nodemon index.js --no_limit",
+    "prod_dynamic_limit": "export NODE_ENV=prod && nodemon index.js --no_limit --dynamic_spawn"
   },
   "author": "Dpac99",
   "license": "ISC",

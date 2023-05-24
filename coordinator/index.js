@@ -8,6 +8,8 @@ const args = require('yargs').argv;
 
 
 const no_parallel = args.no_parallel ?? false
+const dynamic_spawn = args.dynamic_spawn ?? false
+const no_limit = args.no_limit ?? false
 const app = express()
 app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
@@ -16,6 +18,7 @@ const url = config.get('server.host')
 
 let workers = []
 let globalWorkerCount = 0
+let avgThreads = 1
 let pool = {
   standard: {
     length: 0,
@@ -102,6 +105,15 @@ app.post('/register', (req, res) => {
   res.send(JSON.stringify(uuid))
 })
 
+function canHandleTask(worker) {
+  return pool.standard.length !== 0
+    && !worker.locked
+    && !worker.no_parallel
+    && worker.clock < 35
+    && (no_limit ? true : worker.requests.length < worker.cores - 1) //if no limit, dont enforce one task per core
+    && worker.cpu.cpu < 95
+}
+
 app.post('/poll', (req, res) => {
   if (start_tick !== null) {
     let tick = Date.now() - start_tick
@@ -117,9 +129,20 @@ app.post('/poll', (req, res) => {
     console.log('Cannot find worker ' + stats.uuid)
     return res.send({ id: '-1' })
   }
+  // if first poll request, recalculate avgThreads
+  if (worker.cores === 0) {
+    avgThreads = Math.floor(((avgThreads * workers.length - 1) + stats.cores) / workers.length)
+  }
+
   worker.cores = stats.cores
   if (worker.clock === 0 && start_tick !== null) {
     worker.start_tick = Date.now() - start_tick
+  }
+
+  //if one task per thread limit is removed, once a function goes over the limit then recalculate the avgThreads
+  if (no_limit && worker.requests.length > worker.cores - 1) {
+    avgThreads = Math.floor(((avgThreads * workers.length - 1) + worker.requests.length) / workers.length)
+
   }
   worker.clock++
   if (stats.cpu > worker.cpu.cpu) {
@@ -147,7 +170,7 @@ app.post('/poll', (req, res) => {
   }
   let pr = profile(worker.cpu, worker.memory)
 
-  if (pool.standard.length !== 0 && !worker.locked && !worker.no_parallel && worker.clock < 35 && worker.requests.length < worker.cores - 1) {
+  if (canHandleTask(worker)) {
     let request = null
     order = profileOrder(pr)
     for (let prof of order) {
@@ -266,6 +289,11 @@ app.post('/threshold', (req, res) => {
   res.send()
 })
 
+app.post('/resetThreshold', (req, res) => {
+  avgThreads = 1
+  res.send()
+})
+
 app.post('/invoke', async (req, res) => {
   let type = req.body.id
   let request = {
@@ -312,6 +340,7 @@ async function launchWorker() {
 
 }
 
+
 async function registerRequest(request) {
   if (request.lock) {
     pool.trial.push(request)
@@ -319,17 +348,19 @@ async function registerRequest(request) {
     pool.standard[request.profile].push(request)
     pool.standard.length++
   }
-  if (globalWorkerCount === 0 || request.lock || pool.standard.length > spawn_threshold * globalWorkerCount) {
+  if ((globalWorkerCount === 0 || request.lock || pool.standard.length > (dynamic_spawn ? avgThreads : spawn_threshold) * globalWorkerCount) && globalWorkerCount < 50) {
     launchWorker()
   }
 }
 
 setInterval(function () {
-  if ((workers.globalWorkerCount === 0 && pool.standard.length !== 0) || pool.standard.length > spawn_threshold * globalWorkerCount) {
+  if (((workers.globalWorkerCount === 0 && pool.standard.length !== 0)
+    || pool.standard.length > (dynamic_spawn ? avgThreads : spawn_threshold) * globalWorkerCount)
+    && globalWorkerCount < 50) {
     launchWorker()
   }
 }, 500)
 
 app.listen(port, () => {
-  console.log(`Coordinator listening on ${url}, no_parallel mode = ${no_parallel}`)
+  console.log(`Coordinator listening on ${url}, no_parallel = ${no_parallel}, dynamic_spawn = ${dynamic_spawn}, no_limit = ${no_limit}`)
 })
