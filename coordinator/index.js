@@ -282,7 +282,7 @@ app.post('/count', (req, res) => {
 
 
 app.get('/count', (req, res) => {
-  res.send({ workers: workerCount, stats: global_stats, workerTrace: workerTrace, requestTrace: requestTrace })
+  res.send({ workers: workerCount, stats: global_stats, workerTrace: workerTrace, requestTrace: requestTrace, thresholdTrace: avgThreshold })
 })
 
 var spawn_threshold = 4
